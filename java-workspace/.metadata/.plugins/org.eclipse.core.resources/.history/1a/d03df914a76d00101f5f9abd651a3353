@@ -1,0 +1,13 @@
+package com.kh.variable;
+
+public class B_KeyboardInput {
+	
+	/*
+	 * 키보드를 이용해서 사용자에게 값을 입력받을 예정
+	 * 자바에서 제공해주는 Scanner라는 클래스를 사용합시다! 
+	 */
+	
+	public void inputTest() {
+		System.out.println("하하하호");
+	}
+}
