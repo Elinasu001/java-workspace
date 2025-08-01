@@ -11,7 +11,8 @@ public class Run {
 		//a.method2();
 		//a.lunchMenu();
 		
-		a.method3();
+		//a.method3();
+		a.method4();
 	}
 	
 }

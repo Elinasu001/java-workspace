@@ -143,4 +143,66 @@ public class A_If {
 		
 	}
 	
+	// 원섬후레이스
+	public void method4() {
+		
+		// 1. 메뉴판 보여주기 (2개만)
+		// 출력문 == System.out.print();
+		System.out.println("======술집 메뉴판=====");
+		System.out.println("1.맥주");
+		System.out.println("2.소주");
+		
+		
+		// 2. 메뉴번호로 메뉴 입력받기
+		// Scanner 사용해서 nextInt()
+		
+		System.out.println("메뉴를 선택해주세요 > ");
+		Scanner sc = new Scanner(System.in);
+		int menuNo = sc.nextInt();
+		System.out.println("선택한 메뉴 번호 : " + menuNo);
+		
+		// 3. 수량 입력받기
+		// Scanner 사용해서 nextInt()
+		System.out.println("수량을 입력해주세요 > ");
+		int bottle = sc.nextInt();
+		System.out.println("수량 : " + bottle);
+		
+		// 4. 조건문
+		// if 문을 이용해서 입력한 메뉴번호에 따라 메뉴명 대입하기
+		// 혹시 없는 메뉴 번호를 입력했다면 없는 메뉴라고 대입하기
+		// 만약에 사용자가 입력한 메뉴번호가 1번이라면
+		// if 			menuNo == 1
+		
+		String menuName = "";
+		if(menuNo == 1) menuName = "맥주";
+		
+		if(menuNo == 2) menuName = "소주";
+		
+		if(!(menuNo == 1) && !(menuNo ==2)) menuName = "없는메뉴";
+		
+		// 5. xxx메뉴를 xxx잔 주문하셨습니다. 출력해주기 print()
+		System.out.println(menuName + "를(을)" + bottle + "잔 주문하셨습니다.");
+		
+		
+		// 6. 진짜 주문할건지 물어보기
+		// Y / N 입력받아서 확인하기
+		System.out.println("\n 위 주문내역으로 주문하시겠습니까? (Y / N) > ");
+		sc.nextLine();
+		char answer = sc.nextLine().charAt(0);
+		System.out.println(answer);
+		
+		// 7. 6.번에서 입력받은 단일 문자가 'Y'또는 'y'와 일치하다면
+		// 메뉴명과 수량과 가격 출력하기 if문 + 중첩 if문 + 출력문
+		boolean result = (answer == 'Y') || (answer == 'y');
+		
+		if(result) {
+			int price = 0;
+			if(menuNo == 1) price = 5000;
+			if(menuNo == 2) price = 3000;
+			System.out.println("총 결제 금액은 " + (price * bottle) + "원 입니다.");
+		}
+		
+		
+	}
+	
 }
