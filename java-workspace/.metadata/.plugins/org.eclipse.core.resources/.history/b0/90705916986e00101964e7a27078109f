@@ -73,11 +73,9 @@ public class G_Triple {
 		
 		// num % 2 != 0
 		// num % 2 == 1
-		// num % 2 == 0 ==> 연산 (판별)은 요걸로 하기로 결정
+		// num % 2 == 0
 		
-		char oddEven =  (num % 2 == 0) ? '짝' : '홀';
-		
-		System.out.println("입력하신 " + num + "은(는)" +  oddEven + "수 입니다.");
+		String result =  (num % 2 == 0) ? "짝수" : "홀수";
 		
 	}
 	

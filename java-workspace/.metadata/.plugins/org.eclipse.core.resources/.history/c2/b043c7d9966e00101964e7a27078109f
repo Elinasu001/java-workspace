@@ -41,8 +41,7 @@ public class Run {
 		//f.tip();
 		
 		G_Triple g = new G_Triple();
-		//g.method1();
-		g.method2();
+		g.method1();
 	}
 }
 
