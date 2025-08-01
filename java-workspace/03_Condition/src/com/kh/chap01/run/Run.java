@@ -8,7 +8,8 @@ public class Run {
 		
 		A_If a = new A_If();
 		//a.method1();
-		a.method2();
+		//a.method2();
+		a.lunchMenu();
 	}
 	
 }

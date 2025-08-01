@@ -1,5 +1,7 @@
 package com.kh.chap01.condition;
 
+import java.util.Scanner;
+
 public class A_If {
 	
 	/*
@@ -49,6 +51,47 @@ public class A_If {
 		if(loginCheck) {
 			System.out.println("홍길동님 환영합니다 :)");
 			System.out.println("메일 | 카페 | 블로그 | 쇼핑 | 예약");
+		}
+		
+	}
+	
+	public void lunchMenu() {
+		
+		// 오늘의 날씨를 입력받아서
+		Scanner sc = new Scanner(System.in);
+		
+		// 더움 / 맑음 / 비옴
+		System.out.println("오늘의 날씨는 어떤가요(더움 / 맑음 / 비옴) > ");
+		
+		String weather = sc.nextLine();
+		// System.out.println(weather);
+		
+		// 점심메뉴를 추천해주는 프로그램
+		// 비온을 입력했다면 김밥 천국을 가라고 하자
+		
+		// 사용자가 입력한 값과 "비옴"이라는 문자열값을 동등비교해서 일치하는 지 비교
+		// weather "비옴"
+		// System.out.println(weather == "비옴");
+		// 문자열 비교
+		// 동등비교연산자(==)를 사용할 수 없음
+		// .equals()
+		// System.out.println(weather.equals("비옴"));
+		
+		
+		// 조건
+		// 만약에 사용자가 입력한 문자열 값이 "비움"과 일치하다면
+		if(weather.equals("비옴")) {
+			System.out.println("김밥천국에서 스페셜정식드세요~");
+		}
+		
+		// 만약에 사용자가 입력한 문자열 값이 "더움"과 일치하다면
+		if(weather.equals("더움")) {
+			System.out.println("김밥일번가에서 냉모밀 드세요~");
+		}
+		
+		// 만약에 사용자가 입력한 문자열 값이 "맑음"과 일치하다면
+		if(weather.equals("맑음")) {
+			System.out.println("샌드위치 드세요");
 		}
 		
 	}
