@@ -120,6 +120,16 @@ public class A_If {
 		System.out.println("홀수"); // 가능은 하지만 권장사항은 아님.
 		*/
 		
+		//if 문 중첩 
+//		if(number > 0) {
+//			if(number % 2 == 0) {
+//				System.out.println("짝수");
+//			}
+//			if(number % 2 == 1) {
+//				System.out.println("홀수");
+//			}
+//		}
+		
 		
 		boolean result = (number > 0) && (number % 2 == 0);
 		
@@ -128,6 +138,8 @@ public class A_If {
 		}else {
 			System.out.println("홀수");
 		}
+		
+
 		
 	}
 	
