@@ -36,8 +36,7 @@ public class Run {
 		F_Logical f = new F_Logical();
 		//f.method1();
 		//f.method2();
-		//f.method3();
-		f.tip();
+		f.method3();
 	}
 }
 

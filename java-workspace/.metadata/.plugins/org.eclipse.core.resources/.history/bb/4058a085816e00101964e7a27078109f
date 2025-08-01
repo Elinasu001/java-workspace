@@ -124,30 +124,4 @@ public class F_Logical {
 
 	}
 	
-	/*
-	 * AND(&&) : 두 개의 조건이 모두 true 일 경우 true
-	 * 
-	 * true && true : true
-	 * true && false : false
-	 * true && true : false
-	 * false && false : false
-	 * 
-	 * OR(||) : 두 개의 조건 중 하나라도 true 일 경우 true
-	 * true || true : true
-	 * true || false : true
-	 * false || true : true
-	 * false || false : false 
-	 * 
-	 */
-	
-	public void tip() {
-		System.out.println("33");
-		
-		int num = 10;
-		//Short-circuit : 왼쪽이 false이면 아예 계산을 안해버림
-		boolean result = false && (num > 0);
-		boolean result2 = (num < 0) && (num == 10);
-		
-	}
-	
 }

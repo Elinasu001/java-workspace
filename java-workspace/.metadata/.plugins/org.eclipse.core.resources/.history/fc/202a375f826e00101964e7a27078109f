@@ -148,6 +148,7 @@ public class F_Logical {
 		boolean result = false && (num > 0);
 		boolean result2 = (num < 0) && (num == 10);
 		
+		
 	}
 	
 }

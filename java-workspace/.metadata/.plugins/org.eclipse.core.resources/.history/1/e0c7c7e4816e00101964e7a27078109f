@@ -144,9 +144,9 @@ public class F_Logical {
 		System.out.println("33");
 		
 		int num = 10;
-		//Short-circuit : 왼쪽이 false이면 아예 계산을 안해버림
+		
 		boolean result = false && (num > 0);
-		boolean result2 = (num < 0) && (num == 10);
+		
 		
 	}
 	
