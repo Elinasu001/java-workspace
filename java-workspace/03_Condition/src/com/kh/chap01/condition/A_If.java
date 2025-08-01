@@ -35,4 +35,23 @@ public class A_If {
 			System.out.print("조건식 자리에는 최종적으로 true가 와야함");
 		}
 	}
+	
+	public void method2() {
+		
+		boolean loginCheck = false; // 로그인 상태를 저장해둔 변수
+		
+		if(loginCheck == false) {
+			System.out.println("네이버를 더 안전하고 편리하게 이용해보세요.");
+			System.out.println("NAVER 로그인");
+			System.out.println("아이디 찾기 | 비밀번호 찾기 | 회원가입");
+		}
+		
+		if(loginCheck) {
+			System.out.println("홍길동님 환영합니다 :)");
+			System.out.println("메일 | 카페 | 블로그 | 쇼핑 | 예약");
+		}
+		
+	}
+	
+	
 }

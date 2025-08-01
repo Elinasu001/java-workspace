@@ -7,7 +7,8 @@ public class Run {
 	public static void main(String[] args) {
 		
 		A_If a = new A_If();
-		a.method1();
+		//a.method1();
+		a.method2();
 	}
 	
 }
