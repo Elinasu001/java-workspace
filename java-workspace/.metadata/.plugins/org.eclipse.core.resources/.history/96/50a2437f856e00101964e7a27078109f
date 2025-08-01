@@ -40,8 +40,8 @@ public class Run {
 		//f.method3();
 		//f.tip();
 		
+		
 		G_Triple g = new G_Triple();
-		g.method1();
 	}
 }
 

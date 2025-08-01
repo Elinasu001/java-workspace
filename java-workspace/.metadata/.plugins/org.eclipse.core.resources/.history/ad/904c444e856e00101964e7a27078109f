@@ -1,0 +1,9 @@
+package com.kh.operator;
+
+public class G_Triple {
+	/*
+	 * 삼항 연산자 : 피 연산자 3개 => 값 3개의 1개의 연산자로 이루어짐(조건문의 형식으로 쓰임)
+	 * 
+	 * 
+	 */
+}

@@ -1,0 +1,23 @@
+package com.kh.operator;
+
+public class G_Triple {
+	/*
+	 * 삼항 연산자 : 피 연산자 3개 => 값 3개의 1개의 연산자로 이루어짐(조건문의 형식으로 쓰임)
+	 * 
+	 * 
+	 * 조건문 : 값에 따라 연산을 처리하는 방식
+	 * 		   결과값이 true 일 경우 첫 번째 문장을 처리 ~~~
+	 * 		   결과값이 false 일 경우 두 번째 문장을 처리 ~~~
+	 * 
+	 * [표현식]
+	 * 조건식? 조건식이 true 일 경우 결과값 : 조건식이 false 일 경우 결과값
+	 * 
+	 */
+	
+	// 원섬후레이스
+	public void method1() {
+		System.out.println("시즌 메뉴판 : ");
+		System.out.println("1. 더 멜론 오브 멜론 프라푸치노");
+		System.out.println("2. 자몽 망고 코코 프라푸치노");
+	}
+}

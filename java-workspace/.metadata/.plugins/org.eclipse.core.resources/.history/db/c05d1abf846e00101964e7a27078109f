@@ -7,7 +7,6 @@ import com.kh.operator.C_Compund;
 import com.kh.operator.D_LogicalNagation;
 import com.kh.operator.E_Comparison;
 import com.kh.operator.F_Logical;
-import com.kh.operator.G_Triple;
 
 // 이 클래스를 만든 이유 : 프로그램 실행하려고
 public class Run {
@@ -38,10 +37,7 @@ public class Run {
 		//f.method1();
 		//f.method2();
 		//f.method3();
-		//f.tip();
-		
-		G_Triple g = new G_Triple();
-		g.method1();
+		f.tip();
 	}
 }
 
