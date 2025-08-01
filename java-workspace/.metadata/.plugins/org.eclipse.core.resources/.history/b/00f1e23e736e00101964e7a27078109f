@@ -27,7 +27,7 @@ public class Run {
 		//c.method1();
 		
 		D_LogicalNagation d = new D_LogicalNagation();
-		//d.method1();
+		d.method1();
 		
 		E_Comparison e = new E_Comparison();
 		e.method1();
