@@ -43,7 +43,7 @@ public class Run {
 		G_Triple g = new G_Triple();
 		//g.method1();
 		//g.method2();
-		g.practice();
+		//g.practice();
 	}
 }
 
