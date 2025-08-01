@@ -96,5 +96,25 @@ public class A_If {
 		
 	}
 	
+	public void method3() {
+		
+		// 사용자에게 정수값을 입력 받아서 홀/ 짝을 판별 => 출력
+		// if문을 이용해서 출력!
+		// 단, 입력받은 정수가 0보다 클경우에만 조건문을 실행
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("0보다 큰 정수주세요 > ");
+		
+		int number = sc.nextInt();
+		
+		boolean result = (number > 0) && (number % 2 == 0);
+		
+		if(result) {
+			System.out.println("짝수");
+		}else {
+			System.out.println("홀수");
+		}
+		
+	}
 	
 }
