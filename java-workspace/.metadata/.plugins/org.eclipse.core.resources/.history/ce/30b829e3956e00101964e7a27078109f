@@ -37,10 +37,10 @@ public class G_Triple {
 //							? "더 멜론 오브 멜론 프라푸치노를 주문하셨습니다."
 //							: "1번 아닌거 시킴";
 		
-		String selectedMenu = (menuNo == 1) ? "더 멜론 오브 멜론 프라푸치노를 주문하셨습니다."
-							: (menuNo == 2) ? "자몽 망고 코코 프라푸치노를 주문하셨습니다."
-							: (menuNo == 3) ? "카페 브륄레 프라푸치노를 주문하셨습니다."
-							: "없는 메뉴를 주문하셨습니다.";
+		String selectedMenu = (menuNo == 1) 
+											? "더 멜론 오브 멜론 프라푸치노를 주문하셨습니다."
+											: (menuNo == 2)
+											? "자몽 망고 코코 프라푸치노를 주문하셨습니다."
 		
 		// 조건식 ? 조건식이 true 일 경우 결과값 : 조건식이 false 일 경우 결과값
 		
@@ -52,11 +52,4 @@ public class G_Triple {
 		
 		
 	}
-	
-	// 홀짝 구하기
-	public void method2() {
-		
-	}
-	
-	
 }

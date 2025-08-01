@@ -33,30 +33,13 @@ public class G_Triple {
 		
 		int menuNo = sc.nextInt();
 		
-//		String selectedMenu = (menuNo == 1) 
-//							? "더 멜론 오브 멜론 프라푸치노를 주문하셨습니다."
-//							: "1번 아닌거 시킴";
+		String selectedMenu = (menuNo == 1)
+							? "더 멜론 오브 멜론 프라푸치노를 주문하셨습니다."
+							: "1번 아닌거 시킴";
 		
-		String selectedMenu = (menuNo == 1) ? "더 멜론 오브 멜론 프라푸치노를 주문하셨습니다."
-							: (menuNo == 2) ? "자몽 망고 코코 프라푸치노를 주문하셨습니다."
-							: (menuNo == 3) ? "카페 브륄레 프라푸치노를 주문하셨습니다."
-							: "없는 메뉴를 주문하셨습니다.";
+		System.out.println(selectedMenu);
 		
-		// 조건식 ? 조건식이 true 일 경우 결과값 : 조건식이 false 일 경우 결과값
-		
-		
-		// 선택한 번호에 따라서 메뉴명을 출력
-		// 1번 입력 시 == "더 멜론 오브 멜론 프라푸치노를 주문하셨습니다."
-		
-		System.out.println(selectedMenu); // stack 에서 out
 		
 		
 	}
-	
-	// 홀짝 구하기
-	public void method2() {
-		
-	}
-	
-	
 }

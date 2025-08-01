@@ -52,11 +52,4 @@ public class G_Triple {
 		
 		
 	}
-	
-	// 홀짝 구하기
-	public void method2() {
-		
-	}
-	
-	
 }
