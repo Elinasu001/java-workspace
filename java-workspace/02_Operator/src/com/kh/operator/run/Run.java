@@ -4,6 +4,7 @@ package com.kh.operator.run;
 import com.kh.operator.A_Arithmetic;
 import com.kh.operator.B_InDecreasse;
 import com.kh.operator.C_Compund;
+import com.kh.operator.D_LogicalNagation;
 
 // 이 클래스를 만든 이유 : 프로그램 실행하려고
 public class Run {
@@ -22,8 +23,10 @@ public class Run {
 		//b.method3();
 		
 		C_Compund c = new C_Compund();
+		//c.method1();
 		
-		
+		D_LogicalNagation d = new D_LogicalNagation();
+		d.method1();
 		
 	}
 }

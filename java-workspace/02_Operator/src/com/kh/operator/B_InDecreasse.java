@@ -18,7 +18,7 @@ public class B_InDecreasse {
 	
 	// 후위연산 첫 번째 메소드 
 	public void method1() {
-		// System.out.println("중간점검검검");
+		System.out.println("중간점검검검");
 		
 		int num = 10; 
 		System.out.println("num : " + num); // num : 10
