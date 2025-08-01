@@ -98,9 +98,11 @@ public class G_Triple {
 		
 		//System.out.println(letter);
 		
-		String result = (65 <= letter) && (letter <= 90) ? "대문자" : "소문자";
+		String result = (letter == 'A') ? "대문자" 
+						:(letter == 'a') ? "소문자"
+						: "없습니다.";
 		
-		System.out.println("사용자가 입력한 알파벳 은(는) " + result + "입니다.");
+		System.out.println("사용자가 입력한 알파벳 은(는)" + result);
 		
 		
 	}
