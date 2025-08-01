@@ -107,6 +107,20 @@ public class A_If {
 		
 		int number = sc.nextInt();
 		
+		// 1.비교연산
+		//  입력받은 정수가 0보다 클 경우
+		// number > 0
+		// 2. 홀/짝
+		// 	입력받은 정수를 2로 나눈 나머지를 0과 동등비교해서
+		// !number % 2 == 0 홀수 (true 일 때)
+		
+		/*
+		if(number % 2 == 0 && number > 0) { System.out.println("짝수");} // number > 0 앞으로 가야 버그가 없음
+		if(number % 2 != 0 && number > 0)  
+		System.out.println("홀수"); // 가능은 하지만 권장사항은 아님.
+		*/
+		
+		
 		boolean result = (number > 0) && (number % 2 == 0);
 		
 		if(result) {
