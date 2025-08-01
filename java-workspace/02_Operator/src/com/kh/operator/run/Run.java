@@ -6,6 +6,7 @@ import com.kh.operator.B_InDecreasse;
 import com.kh.operator.C_Compund;
 import com.kh.operator.D_LogicalNagation;
 import com.kh.operator.E_Comparison;
+import com.kh.operator.F_Logical;
 
 // 이 클래스를 만든 이유 : 프로그램 실행하려고
 public class Run {
@@ -30,7 +31,11 @@ public class Run {
 		//d.method1();
 		
 		E_Comparison e = new E_Comparison();
-		e.method1();
+		//e.method1();
+		
+		F_Logical f = new F_Logical();
+		//f.method1();
+		f.method2();
 		
 	}
 }

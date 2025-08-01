@@ -1,0 +1,11 @@
+package com.kh.operator;
+
+public class F_Logical {
+	/*
+	 * 논리 연산자 : 두 개의 논리값을 연산하는 연산자
+	 * 
+	 * [표현법]
+	 * 
+	 * 논리값 논리연산자 논리값 => 결과값도 논리값
+	 */
+}

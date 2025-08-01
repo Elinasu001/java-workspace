@@ -1,0 +1,71 @@
+package com.kh.operator;
+
+import java.util.Scanner;
+
+public class F_Logical {
+	/*
+	 * 논리 연산자 : 두 개의 논리값을 연산하는 연산자
+	 * 
+	 * [표현법]
+	 * 
+	 * 논리값 논리연산자 논리값 => 결과값도 논리값
+	 * 
+	 * 종류
+	 * 
+	 * 1. AND연산자 : 논리값 && 논리값
+	 * 좌항과 우항의 값이 모두 true여야만 최종 결과값이 true
+	 * 
+	 * 2. OR연산자 : 논리값 || 논리값
+	 * 좌항과 우항의 값 중 하나라도 true일 경우 최종 결과값이 true
+	 */
+	
+	// AND
+	public void method1() {
+		System.out.println("rrr");
+		
+		// 계획
+		// 사용자에게 정수값을 하나 입력받은 후 
+		// 사용자가 입력한 정수 값이 0보다 크면서 짝수인지 판별
+		// 그리고 나서 결과를 출력
+		
+		// 1.
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("정수 값을 입력해주세요 > ");
+		
+		int num = sc.nextInt(); 
+		
+		System.out.println("잘 나오나 ?? : " + num);
+		
+		//2.
+		// 무슨 연산?
+		// 0 보다 큰가? (대소비교) num > 0
+		// 2로 나눈 나머지가 0과 일치하는가? (동등비교) num % 2 == 0
+	
+		
+		// AND 연산자
+		// &&의 의미 : 그리고 , ~~이면서, ~~이고
+		//(num > 0) && (num % 2 == 0)
+		
+		boolean result = (num > 0) && (num % 2 == 0);
+						// 1.사용자가 입력한 정수가 0 보다 크다 
+						// 2.그리고 사용자가 입력한 정수를 2로 나눴을 때 나머지가 0 인가요?
+		System.out.print("입력값이 0보다 크면서 짝수인가요? : " + result);
+		
+		
+	}
+	
+	public void method2() {
+		
+		// 사용자에게 정수 값을 입력받아서
+		
+		// 변수에 대입해주세요.
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("정수 값을 입력해 주세요. >");
+		
+		
+		
+	}
+	
+}
