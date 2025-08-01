@@ -86,4 +86,45 @@ public class F_Logical {
 		
 	}
 	
+	//OR
+	public void method3() {
+		
+		// 사용자에게 한 글자를 입력 받아서
+		// 입력받은 값이 'A' 또는 'a' 인지 확인해서 출력하기
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("한 글자만 입력해주세요. >");
+		
+		char letter = sc.nextLine().charAt(0);
+		System.out.println(letter);
+		/*
+		 * index : 0부터 시작한다.
+		 * String str = "KH정보교육원"; // index에 문자 나열대로 배열
+		 * char ch = str.charAt(2); // index 2번에 정이라는 문자를 빼오기
+		 * System.out.println(ch); // 정
+		 * 
+		*/
+		
+		// 무슨 값?
+		// 1_1. 사용자가 입력한 한 글자 == letter
+		// 1_2. 'A'
+		// 1_3. 'a'
+		
+		// 무슨 연산?
+		// == 동등비교 연산
+		// 단일 문자의 경우 동등비교 연산이 가능한가?
+		// 가능하다! ==> 왜??
+		// char 형이 int 형으로 자동형변환이 일어난 뒤 연산을 함
+		
+		boolean result = (letter == 'a') || (letter == 'A');
+		// || : ~~~이거나, 또는
+		System.out.println("사용자가 입력한 값이 'A' 또는 'a'인가요? > " + result);
+		
+		
+		
+		
+
+	}
+	
 }
