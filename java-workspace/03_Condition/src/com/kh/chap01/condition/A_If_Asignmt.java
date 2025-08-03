@@ -12,6 +12,10 @@ public class A_If_Asignmt {
 		System.out.println("1. 파인선셋스무디");
 		System.out.println("2. 빅포즈 아메리카노");
 		System.out.println("3. 논산에서 온 수박주스");
+		System.out.println("4. 인절미팥빙");
+		System.out.println("5. 하와이안에이드");
+		System.out.println("6. 쫀득카노");
+		System.out.println("7. 라떼 말차야");
 		
 		// 2. 메뉴번호로 메뉴 입력받기
 		// Scanner 사용해서 nextInt()
@@ -19,7 +23,7 @@ public class A_If_Asignmt {
 		int menuNo = sc.nextInt();
 		
 		// 유효성 검사
-		if(menuNo >= 1 && menuNo <= 3) {
+		if(menuNo >= 1 && menuNo <= 7) {
 			
 			// 3. 수량 입력받기
 			System.out.println("수량을 입력해주세요 > ");
@@ -43,7 +47,20 @@ public class A_If_Asignmt {
 			}else if(menuNo == 3) {
 				menuName = "논산에서 온 수박주스";
 				price = 6500;
+			}else if(menuNo == 4) {
+				menuName = "인절미팥빙";
+				price = 6500;
+			}else if(menuNo == 5) {
+				menuName = "하와이안에이드";
+				price = 6500;
+			}else if(menuNo == 6) {
+				menuName = "쫀득카노";
+				price = 6500;
+			}else if(menuNo == 7) {
+				menuName = "라떼 말차야";
+				price = 6500;
 			}
+			
 			// 5. xxx메뉴를 xxx잔 주문하셨습니다. 출력해주기 print()
 			System.out.println("\n" + menuName + "메뉴를" + bottle + "잔 주문하셨습니다.");
 			
