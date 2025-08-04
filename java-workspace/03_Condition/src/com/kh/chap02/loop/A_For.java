@@ -126,7 +126,6 @@ public class A_For {
 	}
 	
 	public void method2() {
-		
 		// 정사각형
 		// ★★★
 		// ★★★
@@ -139,6 +138,7 @@ public class A_For {
 
 		System.out.println("================");
 		
+		// for문 중첩 출력
 		for(int i = 0; i < 3; i++) { // 가로
 			for(int j = 0; j < 3; j++) { // 세로
 				System.out.print("★");
@@ -146,6 +146,27 @@ public class A_For {
 			System.out.println();
 		}
 		
-
+		System.out.println("================");
+		
+		// 출력 :  X번째 반복입니다.
+		// 		  100번째 반복
+		// 		  10번째 반복바다 ♡를 하나씩 찍어주기
+		for(int i = 0; i < 100; i++) {
+			System.out.println((i + 1) + "번째 반복입니다.");
+			
+			// 제가 하고 싶었던 부분 하지만 밑에 좀 더 심화 버전으로...
+			// (i + 1) == 10 || (i + 1 ) == 20 ||(i + 1) == 30
+			
+//			if((i + 1) % 10 == 0) {
+//				System.out.println("♡");
+//			}
+			
+			boolean result = (i + 1) % 10 == 0;
+			if(result) {
+				System.out.println("♡");
+			}
+			
+		}
+		
 	}
 }
