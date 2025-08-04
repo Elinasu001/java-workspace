@@ -24,7 +24,7 @@ public class Run {
 		C_Switch c = new C_Switch();
 		//c.method0();
 		//c.method1();
-		c.login();
+		//c.login();
 		
 		A_If_Asignmt t = new A_If_Asignmt();
 		//t.menuOrder();
