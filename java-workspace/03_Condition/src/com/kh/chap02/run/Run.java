@@ -1,6 +1,7 @@
 package com.kh.chap02.run;
 
 import com.kh.chap02.loop.A_For;
+import com.kh.chap02.loop.B_While;
 
 public class Run {
 	
@@ -11,6 +12,11 @@ public class Run {
 		//a.method1();
 		//a.gugudan();
 		//a.method2();
-		a.method3();
+		//a.method3();
+		
+		B_While b = new B_While();
+		//b.method1();
+		//b.method2();
+		b.method3();
 	}
 }
