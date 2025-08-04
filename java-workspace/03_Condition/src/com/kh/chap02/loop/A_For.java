@@ -85,6 +85,18 @@ public class A_For {
 			System.out.println(i + "번 반복");
 		}
 		
+		//꼭 증감식이 ++ 이 아니라 짝수만 출력하고 싶을 경우 아래와 같이 작성 가능.
+		for(int i = 0; i < 240; i += 2) {
+			System.out.println(i);
+		}
+		
+		System.out.println("===========================");
+		
+		// 감소도 가능
+		for(int i = 100; i >= 1; i--) {
+			System.out.println(i);
+		}
+		
 		
 	}
 	
