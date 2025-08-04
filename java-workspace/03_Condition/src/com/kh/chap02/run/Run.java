@@ -8,7 +8,8 @@ public class Run {
 		
 		A_For a = new A_For();
 		//a.method0();
-		a.method1();
+		//a.method1();
+		a.gugudan();
 		
 	}
 }

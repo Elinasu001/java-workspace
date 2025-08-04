@@ -1,5 +1,7 @@
 package com.kh.chap02.loop;
 
+import java.util.Scanner;
+
 public class A_For {
 	
 	public void method0() {
@@ -96,8 +98,33 @@ public class A_For {
 		for(int i = 100; i >= 1; i--) {
 			System.out.println(i);
 		}
+	}
+	
+	public void gugudan() {
+		
+		// 구구단 프로그램
+		// 
+		// 사용자에게 정수를 입력받아서
+		// 사용자가 입력한 정수를 이용해서 구구단을 출력해보기
+		Scanner sc = new Scanner(System.in);
+		
+		// ※ 구구단을 외자 ※
+		// 몇 단을 출력하시겠습니까 ? > 8
+		System.out.println(" ※ 구구단을 외자 ※ ");
+		System.out.println("몇 단을 출력하시겠습니까 ? > ");
 		
 		
+		int dan = sc.nextInt();
+		System.out.println(dan + "단을 출력하겠습니다.");
+		
+		// 8 X 1 = 8; ...
+//		System.out.println(dan + "X 1 = " + (dan * 1));...
+		
+		for(int i = 1; i <= 9; i++) {
+			System.out.print("\n" + dan + " X " + i + " = " + (dan * i));
+		}
+		
+
 	}
 	
 }
