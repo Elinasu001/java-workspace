@@ -43,12 +43,33 @@ public class C_Switch {
 	 * } 
 	 */
 	
+	// 메뉴 주문
+	// 부대찌개, 떡갈비, 제육볶음, 칼국수, 수제비
 	public void method1() {
 		
-		// 메뉴 주문
-		// 
+		// 사용자에게 구매할 음식의 이름을 입력받아
+		// 각 음식바다 가격을 출력해줄 것
+		
+		// 부대찌개, 떡갈비, 제육볶음, 칼국수, 수제비
+		// 11000,  13000,   9000, 10000, 7000 
 		Scanner sc = new Scanner(System.in);
-		System.out.println(" > ");
+		System.out.println("메뉴를 선택해주세요(부대찌개, 떡갈비, 제육볶음, 칼국수, 수제비) > ");
+		String menu = sc.nextLine();
+		//System.out.println(menu);
+		// 다시 보기 ** 문자열 == 은 equals 으로 !
+		switch(menu) {
+		case "부대찌개" : System.out.println("11000 원입니다.");
+		break;
+		case "떡갈비" : System.out.println("13000 원입니다.");
+		break;
+		case "제육볶음" : System.out.println("9000 원입니다.");
+		break;
+		case "칼국수" : System.out.println("10000 원입니다.");
+		break;
+		case "수제비" : System.out.println("7000 원입니다.");
+		break;
+		default : System.out.println("그런 메뉴는 존재하지 않습니다.");
+		}
 		
 	}
 	
