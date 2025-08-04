@@ -7,7 +7,7 @@ public class A_If_Asignmt {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		// 1. 메뉴판 보여주기 (2개만)
+		// 1. 메뉴판 보여주기
 		System.out.println("====== 음료 메뉴판 ======");
 		System.out.println("1. 파인선셋스무디");
 		System.out.println("2. 빅포즈 아메리카노");
