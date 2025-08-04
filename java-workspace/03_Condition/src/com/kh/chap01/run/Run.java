@@ -18,8 +18,8 @@ public class Run {
 		
 		B_Else b = new B_Else();
 		//b.method1();
-		//b.method2();
-		b.ageCheck();
+		b.method2();
+		//b.ageCheck();
 		
 		
 		A_If_Asignmt t = new A_If_Asignmt();

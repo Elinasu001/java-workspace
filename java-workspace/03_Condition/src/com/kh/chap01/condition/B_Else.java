@@ -71,12 +71,21 @@ public class B_Else {
 		
 		int num = sc.nextInt();
 		
-		if(num == 0) {
-			System.out.println("0입니다.");
+//		if(num == 0) {
+//			System.out.println("0입니다.");
+//		}else if(num < 0) {
+//			System.out.println("0보다 작습니다.");
+//		}else {
+//			System.out.println("0보다 큽니다.");
+//		}
+		
+		// 가장 많이 들어오는 값부터 가장 적게 들어오는 수로 차례대로 들어오는 게 좋다.
+		if(num > 0) {
+			System.out.println("0보다 큽니다.");
 		}else if(num < 0) {
 			System.out.println("0보다 작습니다.");
 		}else {
-			System.out.println("0보다 큽니다.");
+			System.out.println("0입니다.");
 		}
 	}
 	
@@ -104,7 +113,7 @@ public class B_Else {
 //			System.out.println("외계인 입니다...");
 //		}
 		
-		if(age < 0) { // 값이 많은 것부터 적어주는게 좋음!!
+		if(age < 0) { // 가장 많이 들어오는 값부터 가장 적게 들어오는 수로 차례대로 들어오는 게 좋다.
 			System.out.println("올바른 나이를 입력해주세요.");
 		} else if (age >= 18) {
 			System.out.println("성인 입니다.");
