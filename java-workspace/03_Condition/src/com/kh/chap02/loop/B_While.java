@@ -68,6 +68,60 @@ public class B_While {
 		
 	}
 	
+	public void method4() {
+		
+		// 1부터 시작해서 
+		// 1 ~ 10 사이의 랜덤한 정수까지를 모두 더한 합계를 출력
+		// 1  5
+		// 1 2 3 4 5 
+		// random : 무작위
+		// Random 이라는 클래스가 존재
+		// Math라는 클래스가 가지고 있는 random()를 호출해서 만들어 볼 예정
+		// => 별칭 짓기
+		
+		// Math math = new Math();
+		
+		//Math.random();
+		//System.out.println(Math.random()); //0.36415056389364064
+		
+		// random()의 결과값 : 0.0 ~ 0.9999999999999999 
+		
+		// 1단계. random() 호출 결과 체크
+		double num = Math.random();
+		//System.out.println(num);
+		
+		// 1 ~ 10
+		
+		// 2_1. num 에 10을 곱하면?
+		//System.out.println(num * 10);
+		// 0.0 ~ 9.9999999999999
+		
+		// 2_2. int형으로 강제형 변환
+		// 	0 ~ 9 소수점 뒤에가 날아감
+		//System.out.println((int)(num * 10));
+		
+		//2_3. +1
+		//  1 ~ 10
+		
+		int randomNum = (int)(Math.random() * 10) + 1;
+		System.out.println("가공이 끝난 무작위 정수 : " + randomNum);
+		// (int)(Math.random() * 몇개의 랜덤값) + 시작값;
+		
+		// 3단계. 누적합계 구하기
+		// 1부터 랜덤한 수 (1 ~ 10) 까지를 모두 더한 합계
+		
+		int i = 1;
+		int sum = 0;
+		
+		// 1부터 10 까지중 무작위까지 반복하겠다.
+		while(i <= randomNum) {
+			sum += i;
+			i++;
+		}
+		System.out.println("1부터 " + randomNum + "까지 더한 결과 : " + sum);
+		
+		
+	}
 	
 	
 }
