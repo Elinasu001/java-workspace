@@ -2,6 +2,8 @@ package com.kh.chap01.run;
 
 import com.kh.chap01.condition.A_If;
 import com.kh.chap01.condition.A_If_Asignmt;
+import com.kh.chap01.condition.B_Else;
+
 public class Run {
 	
 	public static void main(String[] args) {
@@ -14,10 +16,13 @@ public class Run {
 		//a.method3();
 		//a.method4();
 		
+		B_Else b = new B_Else();
+		b.method1();
+		
 		
 		
 		A_If_Asignmt t = new A_If_Asignmt();
-		t.menuOrder();
+		//t.menuOrder();
 	}
 	
 }

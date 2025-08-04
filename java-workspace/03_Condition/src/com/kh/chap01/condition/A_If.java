@@ -178,7 +178,7 @@ public class A_If {
 		
 		if(menuNo == 2) menuName = "소주";
 		
-		if(!(menuNo == 1) && !(menuNo ==2)) menuName = "없는메뉴";
+		if(!(menuNo == 1) && !(menuNo == 2)) menuName = "없는메뉴";
 		
 		// 5. xxx메뉴를 xxx잔 주문하셨습니다. 출력해주기 print()
 		System.out.println(menuName + "를(을)" + bottle + "잔 주문하셨습니다.");
