@@ -114,4 +114,75 @@ public class C_Switch {
 		
 	} // return 을 만나면 빠져나오는 부분
 	
+	// 조건문 끝 !
+	public void login() {
+		
+		// 로그인 구현하기
+		// 기획 / 설계
+		// 기획 -> 뭘 만들지?
+		// 설계 -> 어떻게 만들지?
+		
+		// 로그인 사용 -> 분석 -> 이해
+		// 로그인이란 뭘까...?
+		
+		// 아이디랑, 비밀번호
+		// 입력
+		
+		// 로그인 구현할 때 필요한 값 : 
+		// 1. 사용자가 입력한 아이디 값 		-> 문자열(String)
+		// 2. 사용자가 입력한 비밀번호 값		-> 문자열(String)
+		
+		// 로그인 시 필요한 선행 작업 :
+		// 회원가입
+		
+		// 1. 회원가입 시 사용자가 원하는 아이디 값과 비밀번호 값을 입력하여 회원가입을 진행함.
+		// 2. 가입 시 입력했던 아이디와 비밀번호를 둘 다 정확히 입력한다면 로그인 성공 화면 출력
+		// 3. 가입 시 입력했던 아이디 또는 비밀번호가 하나라도 일치하지 않다면 로그인 실패 화면 출력
+		
+		// 하단의 정보로 회원가입을 진행했다고 가정
+		String id = "use01";
+		String password = "pass01";
+		String name = "홍길동";
+		
+		//---------------------------------------------------------------
+		
+		System.out.println("KH업텐");
+		System.out.println("===================");
+		System.out.println("로그인 서비스 입니다.");
+		System.out.println("===================");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("-------------------");
+		System.out.println("아이디 > ");
+		String userId = sc.nextLine();
+		
+		System.out.println("-------------------");
+		System.out.println("비밀번호 > ");
+		String userPwd = sc.nextLine();
+		
+		System.out.println("-------------------");
+		
+		// 만약에 사용자가 로그인 시 입력한 아이디값과 회원가입 시 가입한 아이디값이 동일하고
+		// 사용자가 로그인 시 입력한 비밀번호 값과 회원가입 시 가입한 비밀번호 값이 동일하다면
+//		String id = "use01";
+//		String password = "pass01";
+//		String name = "홍길동";
+		
+		if(userId.equals(id) && userPwd.equals(password)) {
+			System.out.println("로그인 성공 ~ " + name + "님 환영합니다!");
+		}else {
+			System.out.println("아이디 또는 비밀번호가 일치하지 않습니다.");
+		}
+		
+		// 기본자료형 : boolean, char, byte, short, int, long, float, double
+		// => 기본자료형의 경우 동등비교 연산자를 수행하는데 있어 문제가 없음(== !=)
+		
+		// 참조자료형 : 그 외 
+		// => 동등비교  연산자(==, !=)를 통해서 값을 비교하는 것이 불가능 !
+		// 실제 변수에 담기는 값이 '주소값' 이기 때문
+		// 문자열의 값을 비교 : equals() => true / false
+		
+	}
+	
 }

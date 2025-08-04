@@ -13,7 +13,6 @@ public class Run {
 		//a.method1();
 		//a.method2();
 		//a.lunchMenu();
-		
 		//a.method3();
 		//a.method4();
 		
@@ -24,7 +23,8 @@ public class Run {
 		
 		C_Switch c = new C_Switch();
 		//c.method0();
-		c.method1();
+		//c.method1();
+		c.login();
 		
 		A_If_Asignmt t = new A_If_Asignmt();
 		//t.menuOrder();
