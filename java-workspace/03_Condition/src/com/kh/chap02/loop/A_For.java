@@ -123,8 +123,29 @@ public class A_For {
 		for(int i = 1; i <= 9; i++) {
 			System.out.print("\n" + dan + " X " + i + " = " + (dan * i));
 		}
+	}
+	
+	public void method2() {
+		
+		// 정사각형
+		// ★★★
+		// ★★★
+		// ★★★
+		
+		// 단순 출력 : 확장성 떨어짐.
+		System.out.println("★★★");
+		System.out.println("★★★");
+		System.out.println("★★★");
+
+		System.out.println("================");
+		
+		for(int i = 0; i < 3; i++) { // 가로
+			for(int j = 0; j < 3; j++) { // 세로
+				System.out.print("★");
+			}
+			System.out.println();
+		}
 		
 
 	}
-	
 }
