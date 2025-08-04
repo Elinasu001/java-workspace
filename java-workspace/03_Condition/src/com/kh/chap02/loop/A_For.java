@@ -167,6 +167,35 @@ public class A_For {
 			}
 			
 		}
+	}
+	
+	public void method3() {
+		for(;;) { // 무한 반복
+			System.out.println("========= 구구단 프로그램 =========");
+			System.out.println("1. 구구단 프로그램 시작하기");
+			System.out.println("2. 구구단 프로그램 설명보기");
+			System.out.println("3. 프로그램 종료하기");
+			
+			System.out.println("\n메뉴를 선택해주세요 > ");
+			
+			Scanner sc = new Scanner(System.in);
+			int menuNo = sc.nextInt();
+			sc.nextLine();
+			
+			if(menuNo == 1) {
+				gugudan();
+			} else if (menuNo == 2) {
+				System.out.println("구구단을 동작시켜줘요");
+				System.out.println("참 재밌어요");
+			} else if (menuNo == 3) {
+				System.out.println("프로그램을 종료합니다.");
+			} else {
+				System.out.println("이런 메뉴는 없어요 ~");
+			}
+			System.out.println();
+			
+		}
 		
 	}
+	
 }

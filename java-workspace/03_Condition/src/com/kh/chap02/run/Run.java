@@ -10,6 +10,7 @@ public class Run {
 		//a.method0();
 		//a.method1();
 		//a.gugudan();
-		a.method2();
+		//a.method2();
+		a.method3();
 	}
 }
