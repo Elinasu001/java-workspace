@@ -20,7 +20,7 @@ public class C_Switch {
 		case "B3" : System.out.println("지하 3층입니다. 문이 열립니다."); 
 		break;
 		}
-		// 일반적으로 break 문은 switch의 case마다 달려있음.
+		// **일반적으로 break 문은 switch의 case마다 달려있음.** 
 		
 	}
 	/*
@@ -57,19 +57,50 @@ public class C_Switch {
 		String menu = sc.nextLine();
 		//System.out.println(menu);
 		// 다시 보기 ** 문자열 == 은 equals 으로 !
+//		switch(menu) {
+//		case "부대찌개" : System.out.println("11000 원입니다.");
+//		break;
+//		case "떡갈비" : System.out.println("13000 원입니다.");
+//		break;
+//		case "제육볶음" : System.out.println("7000 원입니다.");
+//		break;
+//		case "칼국수" : System.out.println("10000 원입니다.");
+//		break;
+//		case "수제비" : System.out.println("7000 원입니다.");
+//		break;
+//		default : System.out.println("그런 메뉴는 존재하지 않습니다.");
+//		}
+		
+//		switch(menu) {
+//		case "부대찌개" : System.out.println("11000 원입니다.");
+//		break;
+//		case "떡갈비" : System.out.println("13000 원입니다.");
+//		break;
+//		case "칼국수" : System.out.println("10000 원입니다.");
+//		break;
+//		case  "제육볶음", "수제비" : System.out.println("7000 원입니다."); // Java 14버전부터만 사용.
+//		break;
+//		default : System.out.println("그런 메뉴는 존재하지 않습니다.");
+//		}
+		
+		// 팁 : 중복 제거하기
+		// 1. 중복된 부분은 하나로 빼기
+		// 2. 중복이 아닌 부분은 변수로 처리
+		int price = 0; // 호출 하려면 초기화 필요.
 		switch(menu) {
-		case "부대찌개" : System.out.println("11000 원입니다.");
-		break;
-		case "떡갈비" : System.out.println("13000 원입니다.");
-		break;
-		case "제육볶음" : System.out.println("9000 원입니다.");
-		break;
-		case "칼국수" : System.out.println("10000 원입니다.");
-		break;
-		case "수제비" : System.out.println("7000 원입니다.");
-		break;
+		case "부대찌개" : price = 11000; break;
+		case "제육볶음" : price = 7000; break;
+		case "떡갈비" : price = 13000; break;
+		case "칼국수" : price = 10000; break;
+		case "수제비" : price = 7000; break;
 		default : System.out.println("그런 메뉴는 존재하지 않습니다.");
 		}
+		if(price != 0) { // 가격이 있을 때만 호출
+			System.out.println(price +"원 입니다."); // 중복이 되는 부분을 switch 문 밖으로 뺌.
+		}
+		//System.out.println(price +"원 입니다."); // 중복이 되는 부분을 switch 문 밖으로 뺌.
+		
+		
 		
 	}
 	
