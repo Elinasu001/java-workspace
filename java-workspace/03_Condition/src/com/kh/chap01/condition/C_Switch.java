@@ -94,14 +94,17 @@ public class C_Switch {
 		case "칼국수" : price = 10000; break;
 		case "수제비" : price = 7000; break;
 		default : System.out.println("그런 메뉴는 존재하지 않습니다.");
-		}
+		return; // 현재 실행되고 있는 메소드 영역을 아예 빠져 나간다.
+				// 메소드를 호출한 곳으로 돌아감.
+		} // break 를 만나면 빠져나오는 부분
+		
+		/*
 		if(price != 0) { // 가격이 있을 때만 호출
 			System.out.println(price +"원 입니다."); // 중복이 되는 부분을 switch 문 밖으로 뺌.
 		}
-		//System.out.println(price +"원 입니다."); // 중복이 되는 부분을 switch 문 밖으로 뺌.
+		*/
+		System.out.println(price +"원 입니다."); // 중복이 되는 부분을 switch 문 밖으로 뺌.
 		
-		
-		
-	}
+	} // return 을 만나면 빠져나오는 부분
 	
 }
