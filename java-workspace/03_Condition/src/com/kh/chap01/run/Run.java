@@ -3,6 +3,7 @@ package com.kh.chap01.run;
 import com.kh.chap01.condition.A_If;
 import com.kh.chap01.condition.A_If_Asignmt;
 import com.kh.chap01.condition.B_Else;
+import com.kh.chap01.condition.C_Switch;
 
 public class Run {
 	
@@ -18,9 +19,12 @@ public class Run {
 		
 		B_Else b = new B_Else();
 		//b.method1();
-		b.method2();
+		//b.method2();
 		//b.ageCheck();
 		
+		C_Switch c = new C_Switch();
+		//c.method0();
+		c.method1();
 		
 		A_If_Asignmt t = new A_If_Asignmt();
 		//t.menuOrder();

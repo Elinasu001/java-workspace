@@ -29,9 +29,9 @@ public class A_If {
 		}
 		
 		// if 문의 조건식 자리에는 결론적으로 true 아니면 false 값이 들어가도록 만들어야함!
-		if(false) {
-			System.out.print("얘는 죽었다 깨나도 안나옴");
-		}
+//		if(false) {
+//			System.out.print("얘는 죽었다 깨나도 안나옴");
+//		}
 		
 		if(true) {
 			System.out.print("조건식 자리에는 최종적으로 true가 와야함");
