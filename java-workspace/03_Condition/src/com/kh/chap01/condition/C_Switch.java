@@ -82,6 +82,13 @@ public class C_Switch {
 //		break;
 //		default : System.out.println("그런 메뉴는 존재하지 않습니다.");
 //		}
+		// switch문을 이용하여 값을 대입하고 싶을 경우 ( 잘 사용되지 않음 )
+//		int result = switch(menu) {
+//		case "제육", "수제비", "칼국수" -> 3000;
+//		case "떡갈비", "부찌"-> 5000;
+//		default -> 0;
+//		}
+//		System.out.println(result);
 		
 		// 팁 : 중복 제거하기
 		// 1. 중복된 부분은 하나로 빼기
