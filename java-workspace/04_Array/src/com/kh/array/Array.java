@@ -415,8 +415,24 @@ public class Array {
 	
 	public void methodE() {
 		System.out.println("rrrr");
+		
 		// 그래서 배열 어따씀?
 		// 그래서 배열 보통 어케씀?
+		
+		// 설명을 위해 이렇게 쓴 것
+		int[] arr = new int[3]; // 0, 1, 2
+		arr[0] = 10;
+		arr[1] = 20;
+		arr[2] = 30;
+		System.out.println(Arrays.toString(arr));
+		
+		// 보통 쓰는 배열 방법 : 배열 보통 선언과 동시에 요소를 대입해서 사용하곤함.
+		int[] arr1 = new int[] {1, 2, 3};
+		System.out.println(Arrays.toString(arr));
+		
+		// 원래 사용하는 방식 !
+		int[] arr2 = {100, 200, 300};
+		System.out.println(Arrays.toString(arr));
 	}
 	
 	
