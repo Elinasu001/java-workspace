@@ -70,5 +70,44 @@ public class A_Break {
 			}
 		}
 	}
+	
+	
+	/*
+	 * 사용자로부터 한 개의 정수값을 입력받아서
+	 * 입력받은 숫자부터 1까지의 모든 숫자를 출력해보아요.
+	 * 
+	 * 단, 입력받는 정수는 1보다 커야합니다.
+	 * 
+	 * 만약 1미만의 숫자를 입력받았다면 "1이상의 숫자를 입력해주세요"라고 출력한 뒤
+	 * 다시 사용자에게 값을 입력받을 수 있도록 만들어보아요
+	 * 
+	 * 출력 예시)
+	 * 1이상의 숫자를 입력하세요 > 4
+	 * 4 3 2 1
+	 * 
+	 * 1이상의 숫자를 입력하세요 > -1
+	 * 1이상의 숫자를 입력하세요!!!!!!
+	 * 1이상의 숫자를 입력하세요 > 6
+	 * 6 5 4 3 2 1
+	 */
+	public void method4() {
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			
+			System.out.print("1보다 큰 정수를 입력하세요. > ");
+			int num = sc.nextInt();
+			
+			if(num > 1) {
+				for(int i = num; i > 0; i--) {
+					System.out.print(i + " ");
+				}	
+//				break;
+				System.out.println("");
+			} else {
+				System.out.println("1이상의 숫자를 입력하세요. > ");
+			}
+		}
+	}
 
 }
