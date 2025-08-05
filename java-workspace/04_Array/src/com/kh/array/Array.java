@@ -351,5 +351,74 @@ public class Array {
 		
 		// 해시값이 같으면 해시충돌이 일어날 수 있다 다르면 충돌이 안생겨 참이다.
 		
+		
+		
+		
+
+		/* --> 어셈블리어 형태의 언어 (LOW LEVEL)
+		 * 101011 111 00 1111 111 11
+		 * -> 추상화
+		 * -> MOV
+		 * -> AL 
+		 * 
+		 * --> 3세대 언어 : 현시대 주류 언어 (HIGH LEVEL == 고급언어)_자바 (자바 이전에는 C언어)
+		 * 
+		 * 자바 : 하드웨어나 운영체제에 종속되지 않는다.
+		 * 		실제 프로그램을 동작할 때는 가상의 컴퓨터(JVM : Virtual Computer) 위에서 동작한다.
+		 *      즉, JVM가 메인 메서드를 호출하여 동작한다.
+		 *      (unix > unix, web > web,,,)
+		 *      
+		 *  자바라는 특성 중 하나인 "자동 메모리 관리"라 한다.=> 주소 : aaa(rc : reference counter == 0) -> bbb (rc == 1)로 바뀔 때 기존 aaa는 쓰레기이기 때문에  (gc : garbage collector)가 가져가서 삭제 시켜 버린다. 
+		 */
+		
+		
+		
+		
+		/*
+		 * 연결이 끊긴 기존의 배열은 
+		 * 일정 시간이 지나면 G.C가 알아서 삭제 해준다.' : 자동 메모리 관리
+		 * 
+		 * 
+		 * 기존배열식별자에 할당만 새롭게 한다면,
+		 * => 기존 참조하고 있던 연결이 끊기고 새로운 배열을 참조함
+		 * 
+		 */
+		
+		// null : 아무것도 조재하지 않음을 의미하는 값.
+		/*
+		 * 기본값
+		 * 
+		 * 정수 = 0
+		 * 실수 = 0.0
+		 * 문자 = ''
+		 * 
+		 * 참조자료형 = null
+		 * 
+		 * 참조자료형
+		 * null이라는 값이 들어가는데
+		 * 주소값이 존재하는가 그렇지 않은가
+		 * 
+		 */
+		
+		
+		name = null; // 현재 연결고리를 끊고싶다.
+		System.out.println(name);
+		name[0] = "홍길동";
+		/*
+		 * ** 가리키고 있는 대상이 null인데 주소가 없는데 어디 접근함??
+		 * 
+		 Exception in thread "main" java.lang.NullPointerException: Cannot store to object array because "name" is null
+			at com.kh.array.Array.methodD(Array.java:406)
+			at com.kh.array.Run.main(Run.java:13)
+		*/
 	}
+	
+	public void methodE() {
+		System.out.println("rrrr");
+		// 그래서 배열 어따씀?
+		// 그래서 배열 보통 어케씀?
+	}
+	
+	
+	
 }
