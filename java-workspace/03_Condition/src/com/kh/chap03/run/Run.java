@@ -6,7 +6,8 @@ public class Run {
 	public static void main(String args[]) {
 		
 		A_Break a = new A_Break();
-		a.method1();
+		//a.method1();
+		a.method2();
 		
 	}
 }
