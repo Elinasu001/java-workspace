@@ -1,6 +1,7 @@
 package com.kh.array;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Array {
 	
@@ -225,7 +226,98 @@ public class Array {
 	}
 	
 	public void methodB() {
-		// 5개의 요소를 담을 수 있는 String 형 배열을 선언 및 할당하시오.
 		
+		// 5개의 요소를 담을 수 있는 String 형 배열을 선언 및 할당하시오.
+		// 동물 5총사
+		// 1. 배열 선언 및 할당
+		String[] animals = new String[5];
+		
+		// 2. 배열 인덱스에 동물 대입
+		animals[0] = "쥐";
+		animals[1] = "양";
+		animals[2] = "소";
+		animals[3] = "뱀";
+		animals[4] = "개";
+		//animals[5] = "말"; //Index 5 out of bounds for length 5
+		// animals[5] = "토끼"; <-- 문법적으로 문제는 없음.
+		
+		// at com.kh.array.Array.methodB(Array.java:240)
+		// ArrayIndexOutOfBounds
+		// 배열의 인데스가 범위를 벗어남.
+		
+		/*
+		Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5
+		at com.kh.array.Array.methodB(Array.java:240)
+		at com.kh.array.Run.main(Run.java:11)
+		*/
+		
+		System.out.println(Arrays.toString(animals)); // 쥐, 양, 소, 뱀, 개
+		
+		// 생각 안해도 괜찮은것
+		// 1. ;
+		// 2. 어? 조건이다 if
+		// 3. 어? 합계다 sum
+		
+	}
+	
+	public void methodC() {
+		
+		// 사용자에게 세 개의 정수를 입력받아서
+		// 입력받은 정수 중 최소값 구하기
+		
+		// 현 시점에서 배열을 선택할 때의 기준
+		// 1. 두 개 이상의 같은 자료형의 값을 다룰 것
+		// 2. 다룰 값의 개수가 명확하게 정해져 있을 것
+		
+		// 1) 사용자로부터 값을 입력받아서 배열의 각 인덱스에 대임
+		Scanner sc = new Scanner(System.in); // 입력도구
+		int[] nums = new int[3]; // 저장소
+		
+		// 배열은 물리적인구조와 논리적인 구조가 동일합니다.
+		/*System.out.println("첫 번째 정수를 입력해주세여 > ");
+		
+		nums[0] = sc.nextInt();
+		System.out.println("nums라는 배열의 0번째 인덱스에 대입된 값 : " + nums[0]);
+		
+		System.out.println("두 번째 정수를 입력해주세여 > ");
+		nums[1] = sc.nextInt();
+		System.out.println("nums라는 배열의 1번째 인덱스에 대입된 값 : " + nums[1]);
+		
+		System.out.println("세 번째 정수를 입력해주세여 > ");
+		nums[2] = sc.nextInt();
+		System.out.println("nums라는 배열의 2번쨰 인덱스에 대입된 값 : " + nums[2]);
+		
+		
+		System.out.println("nums 배열 : " + Arrays.toString(nums)); 
+		*/
+		
+		// 중복된 부분 변수로 처리 int[] 
+		for(int i = 0; i < nums.length; i++) { // i < 3 3이 바뀌면 여기도 바꿔야 되기 때문에 확장성을 위해 length로 바꿔주기.
+			System.out.println("정수를 입력하세요 > ");
+			nums[i] = sc.nextInt();
+			System.out.println("nums라는 배열의 " + i +"번째 인덱스 값 : " + nums[i]);
+		}
+		
+		System.out.println(Arrays.toString(nums));
+		
+		// 2. 해당 배열의 요소 중 가장 작은값 == 최소값을 출력하는 것이 목적
+		int min = nums[0];
+		
+//		if(min > nums[1]) {
+//			min = nums[1];
+//		}
+//		
+//		if(min > nums[2]) {
+//			min = nums[2];
+//		}
+		
+		// 중복 삭제
+		for(int i = 1; i < nums.length; i++) { // 이미 초기값이 0이니 두 번째 인덱스인 1과 비교를 해서 최소값을 찾으면 된다.
+			
+			if(min > nums[i]) {
+				min = nums[i];
+			}
+		}
+		System.out.println("배열의 요소 중 가장 작은 값 : " + min);
 	}
 }
