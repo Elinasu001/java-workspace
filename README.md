@@ -53,8 +53,8 @@
   - Continue
     - 회원가입 서비스
 ---
-Java Start
 - Array
+  - hasCode()
 
 🛠 개발 환경
 AWS JDK 2021
