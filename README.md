@@ -55,6 +55,7 @@
 ---
 - Array
   - hasCode()
+  - 로또번호_Arrays.toString()
 
 🛠 개발 환경
 AWS JDK 2021
