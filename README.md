@@ -48,6 +48,7 @@
   - Do ~ While문
 - Escape
   - Break
+    - Break(Math.random())
 
 🛠 개발 환경
 AWS JDK 2021
