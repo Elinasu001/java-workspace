@@ -119,7 +119,55 @@ public class Array {
 		System.out.println(sum);
 		// 현시점에서 우리가 배열을 사용해서 얻을 수 있는 장점 : 반복문 사용 가능
 		
+	}
+	
+	public void methodA() {
+		
+		// 배열을 공부해보자.
+		
+		// 1. 배열 선언 및 할당
+		int i;
+		int[] integers = new int[3];/*Heap : 12byte*/ 			// 0, 1, 2
+		//double[] doubles = new double[2]; 	// 0, 1
+
+		// 배열식별자.length : 배열의 크기(길이) => 정수
+		System.out.println(integers.length);		//3
+		//System.out.println(doubles.length);		//2
+		
+		//System.out.println(i); : localvariable == 초기화를 진행하지 않으면 사용할 수 없음.
+		i = 1;
+		System.out.println(i);				//1
+		System.out.println(integers);		//[I@7960847b
+		System.out.println(integers[0]);	//0
+		
+		//integers = 1;		// x
+		integers[0] = 1;	// o
+		
+		/*
+		 * 기본자료형 : boolean, char, byte, short, int, long, float, double
+		 * 			=> 변수 공간에 실제 값을 바로 담을 수 있음 : 지역 변수 (scope)
+		 * 
+		 * 참조자료형 : boolean[], char[], byte[], int[] ... String
+		 * 			=> 주소값을 담고 있는 변수 : 참조 변수 (레퍼런스(reference))
+		 */
+		
+		// 인포, A강의장, B강의장, C강의장, 사무실
+		String[] KH정보교육원종로지원;
+		
+		KH정보교육원종로지원 =  new String[5];
+		
+		System.out.println("종로점 주소 : " + KH정보교육원종로지원); // 주소값이지만 자바에서는 실제 주소값을 알지 못한다.
+			
+		// heap : 각각 주소값이다르니 변수명의 주속를 가지고 heap에 있는 주소값을 찾아간다.
+		KH정보교육원종로지원[0] = "인포";
+		KH정보교육원종로지원[1] = "A강의장";
+		KH정보교육원종로지원[2] = "B강의장";
+		KH정보교육원종로지원[3] = "C강의장";
+		KH정보교육원종로지원[4] = "사무실";
+		
+		System.out.println(KH정보교육원종로지원[3]);
 		
 	}
+	
 	
 }
