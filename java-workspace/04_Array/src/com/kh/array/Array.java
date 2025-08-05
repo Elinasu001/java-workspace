@@ -320,4 +320,36 @@ public class Array {
 		}
 		System.out.println("배열의 요소 중 가장 작은 값 : " + min);
 	}
+	
+	public void methodD() {
+		
+		/*
+		 * 한 번 할당 받은 배열의 크기를 변경할 수 없음
+		 * (값은 요소를 바꿔서 넣을 수는 있음)
+		 */
+		
+		String[] name = new String[3];
+		name[0] = "박";
+		name[1] = "수";
+		name[2] = "현";
+		System.out.println(Arrays.toString(name)); // [박, 수, 현]
+		name[2] = "옥";
+		System.out.println(Arrays.toString(name)); // [박, 수, 옥]
+		System.out.println(name.hashCode()); // 주소값이 다름.
+		
+		// 외자를 바꾸고 싶을 경우 ...? 그럼 두칸으로 변경 해야됨.
+		// 큰거에서 작은걸로 _ 이럴 경우 바뀌지 않는다.
+		name = new String[2];
+		name[1] = "굿";
+		System.out.println(Arrays.toString(name));
+		System.out.println(name.hashCode()); // 주소값이 다름.
+		// 작은거에서 큰걸로  _ 이럴 경우 바뀌지 않는다.
+		name = new String[4];
+		name[3] = "굿";
+		System.out.println(Arrays.toString(name)); // [null, null, null, 굿]
+		System.out.println(name.hashCode()); // 주소값이 다름.
+		
+		// 해시값이 같으면 해시충돌이 일어날 수 있다 다르면 충돌이 안생겨 참이다.
+		
+	}
 }

@@ -9,6 +9,7 @@ public class Run {
 		//a.methodA();
 		//a.lotto();
 		//a.methodB();
-		a.methodC();
+		//a.methodC();
+		a.methodD();
 	}
 }
