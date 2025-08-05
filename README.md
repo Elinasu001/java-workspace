@@ -56,7 +56,7 @@
 - Array
   - hasCode()
   - 로또번호_Arrays.toString()
-
+  - Scanner
 🛠 개발 환경
 AWS JDK 2021
 Eclipse 2024.06
