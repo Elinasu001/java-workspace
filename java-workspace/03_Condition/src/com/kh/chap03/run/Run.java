@@ -1,6 +1,7 @@
 package com.kh.chap03.run;
 
 import com.kh.chap03.escape.A_Break;
+import com.kh.chap03.escape.B_Continue;
 
 public class Run {
 	public static void main(String args[]) {
@@ -10,6 +11,10 @@ public class Run {
 		//a.method2();
 		//a.method21();
 //		a.method4();
-		a.method41();
+		//a.method41();
+		
+		B_Continue b = new B_Continue();
+		//b.method1();
+		b.method2();
 	}
 }
