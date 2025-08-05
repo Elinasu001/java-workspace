@@ -1,5 +1,7 @@
 package com.kh.array;
 
+import java.util.Arrays;
+
 public class Array {
 	
 	// 변수(Variable)
@@ -176,7 +178,54 @@ public class Array {
 			System.out.println(KH정보교육원종로지원[index]);// 인포 A강의장 B강의장 C강의장 사무실
 		}
 		*/
+		
+		int number1 = 3;
+		int number2 = 3;
+		
+		System.out.println(number1 == number2); // true
+		
+		int[] numbers1 = new int[3];
+		int[] numbers2 = new int[3];
+		
+		System.out.println(numbers1 == numbers2); // false : 주소값이 다르기 때문이다.
+		
+		
+		// 참조자료형에서는 ==(동등비교 연산자) 사용 시
+		// 주소값을 비교하기 때문에 원하는 결과를 얻을 수 없음
+		// 문자열 == 문자열 x 문자열.equals("비교할 문자열");
+		
+		// 해시코드 : 주소값을 10진수(int형태) 형태로 나타낸 것.
+		System.out.println(numbers1.hashCode()); // hashCode 란? 운영체제 내부에 있는걸 사용하는 것.
+		System.out.println(numbers2.hashCode());
+		
 	}
 	
+	public void lotto() {
+		
+		// 로또번호생성기 ver0_2;
+		int[] lottoNumbers = new int[6];
+		/*
+		lottoNumbers[0] = (int)(Math.random() * 45)	+ 1;
+		lottoNumbers[1] = (int)(Math.random() * 45)	+ 1;
+		lottoNumbers[2] = (int)(Math.random() * 45)	+ 1;
+		lottoNumbers[3] = (int)(Math.random() * 45)	+ 1;
+		lottoNumbers[4] = (int)(Math.random() * 45)	+ 1;
+		lottoNumbers[5] = (int)(Math.random() * 45)	+ 1;
+		*/
+		
+		// 배열의 요소(Elements) 6개가 들어있음.
+		for (int i = 0; i > 6; i++) {
+			lottoNumbers[i] = (int)(Math.random() * 45)	+ 1;
+		}
+		
+		// Arrays.toString(배열식별자) : 메소드로 인자값 받아옴
+		System.out.println(Arrays.toString(lottoNumbers));
+		
+		
+	}
 	
+	public void methodB() {
+		// 5개의 요소를 담을 수 있는 String 형 배열을 선언 및 할당하시오.
+		
+	}
 }
