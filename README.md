@@ -46,6 +46,8 @@
     - 정수 중 짝수의 합계 구하기
     - 랜덤 합계 구하기(Math.random())
   - Do ~ While문
+- Escape
+  - Break
 
 🛠 개발 환경
 AWS JDK 2021
