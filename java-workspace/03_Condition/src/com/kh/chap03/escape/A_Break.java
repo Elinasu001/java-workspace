@@ -53,4 +53,22 @@ public class A_Break {
 		
 		}
 	}
+	
+	// 매 번 사용자로부터 정수값을 입력받고
+	// 만약 입력한 숫자가 0보다 작다면 "프로그램을 종료합니다" 라는 문구를 출력하고 종료하시오!
+	
+	public void method21() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			System.out.print("숫자를 입력해주세요 >");
+			int num = sc.nextInt();
+			if(num < 0) {
+				System.out.println("프로그램을 종료합니다~");
+				break;
+			}
+		}
+	}
+
 }
