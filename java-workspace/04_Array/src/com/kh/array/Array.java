@@ -152,6 +152,7 @@ public class Array {
 		 */
 		
 		// 인포, A강의장, B강의장, C강의장, 사무실
+		/*
 		String[] KH정보교육원종로지원;
 		
 		KH정보교육원종로지원 =  new String[5];
@@ -165,8 +166,16 @@ public class Array {
 		KH정보교육원종로지원[3] = "C강의장";
 		KH정보교육원종로지원[4] = "사무실";
 		
-		System.out.println(KH정보교육원종로지원[3]);
+		System.out.println("======== [3] index =========");
 		
+		System.out.println(KH정보교육원종로지원[3]);// 1. 남대문로 120 찾아 변수로 가기.
+		
+		System.out.println("======== 반복문 =========");
+		
+		for(int index = 0; index < 5; index++) {
+			System.out.println(KH정보교육원종로지원[index]);// 인포 A강의장 B강의장 C강의장 사무실
+		}
+		*/
 	}
 	
 	
