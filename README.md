@@ -56,7 +56,7 @@
   - hasCode()
   - 로또번호_Arrays.toString()
   - Scanner_중복 변수 처리_최소값 출력
- 
+  - G.C (Garbage Collector)
 ---
 🛠 개발 환경
 AWS JDK 2021
