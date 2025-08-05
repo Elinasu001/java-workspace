@@ -109,5 +109,20 @@ public class A_Break {
 			}
 		}
 	}
+	
+	public void method41() {
+		Scanner sc = new Scanner(System.in);
+		// 잘 쓰이지는 않지만 알고만 있기.
+		int num = 0;
+		
+		do {
+			System.out.print("1이상의 숫자를 입력하세요 . > ");
+			num = sc.nextInt();
+			if(num < 1) System.out.println("1이상의 숫자를 입력해주세요.");
+		}while(num < 1);
+		for(; num > 0; num--) {
+			System.out.print(num + " ");
+		}
+	}
 
 }
