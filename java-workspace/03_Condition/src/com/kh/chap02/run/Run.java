@@ -20,6 +20,6 @@ public class Run {
 		//b.method3();
 		//b.method4();
 		//b.lotto();
-		b.method5();
+		//b.method5();
 	}
 }
