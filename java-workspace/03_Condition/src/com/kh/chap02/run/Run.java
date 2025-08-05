@@ -18,6 +18,8 @@ public class Run {
 		//b.method1();
 		//b.method2();
 		//b.method3();
-		b.method4();
+		//b.method4();
+		//b.lotto();
+		b.method5();
 	}
 }
