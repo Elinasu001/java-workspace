@@ -49,6 +49,7 @@
 - Escape
   - Break
     - Break(Math.random())
+    - Break(Scanner)
 
 🛠 개발 환경
 AWS JDK 2021
