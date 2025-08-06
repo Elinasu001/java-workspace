@@ -64,7 +64,9 @@
       - System.arraycopy()
       - Arrays.copyOf()
       - clone()
+--- 객체 지향 프로그래밍 --
 - Object
+  - Abstraction(추상화)
 ---
 🛠 개발 환경
 AWS JDK 2021
