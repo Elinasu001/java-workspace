@@ -11,6 +11,8 @@ public class Run {
 		//a.methodB();
 		//a.methodC();
 		//a.methodD();
-		a.methodE();
+		//a.methodE();
+		//a.methodF();
+		a.methodG();
 	}
 }

@@ -435,6 +435,60 @@ public class Array {
 		System.out.println(Arrays.toString(arr));
 	}
 	
+	/*
+	 * 배열 복사
+	 * 
+	 * 1. 얕은 복사 ★★★★
+	 * 
+	 * 2. 깊은 복사
+	 * 
+	 */
+	public void methodF() {
+		// 얘가 중요함
+		int[] origin = {1, 2, 3, 4, 5};
+		// new int[5];
+		// origin[0] = 1; origin[1] = 2; ...
+		System.out.println(Arrays.toString(origin));	//[1, 2, 3, 4, 5]
+		
+		// 얕은 복사로 배열을 복사
+		int[] copy = origin;
+		System.out.println(Arrays.toString(copy));		//[1, 2, 3, 4, 5]
+		
+		origin[2] = 33;
+		System.out.println(Arrays.toString(origin));	//[1, 2, 33, 4, 5]
+		System.out.println(Arrays.toString(copy));		//[1, 2, 33, 4, 5] : 왜 영향을 받는가?
+		
+		//얕은 복사 ⇒ 주소값을 대입하는 것 이기 때문에 가리키고 있는 대상이 같다.
+		
+		System.out.println(origin.hashCode());
+		System.out.println(copy.hashCode());
+	}
+	
+	// 2. 깊은 복사
+	public void methodG() {
+		
+		int[] origin = {1, 2, 3, 4, 5};
+		
+		int[] copy = new int[6];
+		/*
+		copy[0] = origin[0];
+		copy[1] = origin[1];
+		copy[2] = origin[2];
+		copy[3] = origin[3];
+		copy[4] = origin[4];
+		*/
+		// 중복 제거
+		for(int i = 0; i < origin.length; i++) {
+			copy[i] = origin[i];
+		}
+		
+		// 배열의 깊은 복사의 경우 기존 배열의 크기보다 큰 배열로 복사하는 경우가 많음
+		
+		// alt + ↑, ↓( 행이동)
+		// ctrl + alt + ↑, ↓ (행 복사)
+		System.out.println(Arrays.toString(origin));
+		System.out.println(Arrays.toString(copy));
+	}
 	
 	
 }
