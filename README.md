@@ -61,7 +61,8 @@
   - 배열 복사
     - 얕은 복사
     - 깊은 복사
-      - arraycopy()
+      - System.arraycopy()
+      - Arrays.copyOf()
 ---
 🛠 개발 환경
 AWS JDK 2021
