@@ -431,6 +431,7 @@ public class Array {
 		int[] origin = { 1, 2, 3, 4, 5 };
 
 		int[] copy = new int[6];
+		System.out.println(Arrays.toString(origin)); // [1, 2, 3, 4, 5]
 		/*
 		 * copy[0] = origin[0]; copy[1] = origin[1]; copy[2] = origin[2]; copy[3] =
 		 * origin[3]; copy[4] = origin[4];
@@ -442,8 +443,24 @@ public class Array {
 
 		// 배열의 깊은 복사의 경우 기존 배열의 크기보다 큰 배열로 복사하는 경우가 많음
 
+		System.out.println(Arrays.toString(copy)); //[1, 2, 3, 4, 5, 0]
+		
+		int[] copy2 = new int[10];
+		
+		// 배열 복사하는 메서드 : arraycopy
+		System.arraycopy(origin, 0, copy2, 4, 5); // 1번째 인자로는 원본 배열, 2번째 인자로는 내가 복사하려는 시작 배열, 3번째 넣으려는 배열, 4번째 3번째 배열의 시작, 5번째 몇개 인자를 복사하는지 
+		//[0, 0, 0, 0, 1, 2, 3, 4, 5, 0]
+		System.out.println(Arrays.toString(copy2));
+		/*
+		 * 네이밍컨벤션 == 첫 글자가 대문자 == 클래스 / 인터페이스
+		 * arraycopy() ==> System(참조)클래스
+		 * 
+		 * System.arraycopy(원본 배열 식별자, 원본배열에서 복사를 시작할 인덱스,
+		 * 					복사본 배열 식별자, 복사본 배열에서 복사가 시작될 인덱스,
+		 * 					복사할 개수);
+		 */
+		
 		System.out.println(Arrays.toString(origin));
-		System.out.println(Arrays.toString(copy));
 	}
 
 }
