@@ -55,6 +55,9 @@
 - Array
   - hasCode()
   - 로또번호_Arrays.toString()
+  - Exception
+    - ArrayIndexOutOfBounds
+    - NullPointerException
   - Scanner_중복 변수 처리_최소값 출력
   - G.C (Garbage Collector)
   - 일반적인 사용 방식
