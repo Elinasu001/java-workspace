@@ -12,34 +12,40 @@ public class LectureRun {
 		 
 		 System.out.println("==== 강의 등록을 시작합니다 ====");
 		 
+		 // 1. 이름 입력받기
 		 System.out.print("이름을 입력하세요 > ");
 		 lecture.setUserName(sc.nextLine());
-
+		 
+		 // 2. 강의 이름 입력받기
 		 System.out.print("강의 이름을 입력하세요 > ");
 		 lecture.setLectureTitle(sc.nextLine());
-
+		 
+		 // 3. 강의 시작 날짜 입력받기
 		 System.out.print("강의 시작 날짜를 입력하세요 (예: 2025-08-10) > ");
 		 lecture.setStartDate(sc.nextLine());
 
+		 // 4. 강의 종료 날짜 입력받기
 		 System.out.print("강의 종료 날짜를 입력하세요 (예: 2025-08-10) > ");
 		 lecture.setEndDate(sc.nextLine());
-
+		 
+		 // 5. 현재 강의 진도율 입력받기
 		 System.out.print("현재 강의 진도율을 입력하세요 (0~100) > ");
 		 int progress = sc.nextInt();
 		 sc.nextLine();
 		 lecture.setProgressPercent(progress);
 		 
-		 // 강의 진도율이 20 미만이면 출력하기
+		 // 6. 강의 진도율이 20 미만이면 출력하기
 		 lecture.checkLowProgressMessage();
 		 
-		 // 강의 진도율 채우기
+		 // 7. 강의 진도율 채우기
 		 boolean exit = false;
 	        while (!exit) {
-	            System.out.println("==== 메뉴 ====");
+	            System.out.println("======== 메뉴 ========");
 	            System.out.println("1. 현재 강의 진도율 보기");
 	            System.out.println("2. 강의 듣기 (4% 증가)");
 	            System.out.println("3. 종료하기");
-	            System.out.print("선택 > ");
+	            System.out.print("선택해주세요. > ");
+	            
 	            int choice = sc.nextInt();
 	            sc.nextLine();
 

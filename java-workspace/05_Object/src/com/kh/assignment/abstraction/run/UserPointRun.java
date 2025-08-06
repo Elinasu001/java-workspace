@@ -9,19 +9,21 @@ public class UserPointRun {
 		Scanner sc = new Scanner(System.in);
 		
 		UserPoint point = new UserPoint();
-
+		
+		// 사용자 포인트 정보 매개변수 입력
 		point.setUserName("박수현");
 		point.setTotalEarnedPoints(100200);
 		point.setWithdrawal(0);
 		point.setCashConverted(10000);
 		point.setCurrentBalance(90200);
 		
-		// 1. 출금할 금액 입력하기
+		// 출금할 금액 입력하기
 		System.out.println("💰 출금 가능한 금액: " + 10000 + "원");
 		System.out.println("출금할 금액을 입력해주세요. > ");
 		int withdrawAmount = sc.nextInt();
 		point.withdrawCash(withdrawAmount);
 		
+		// 사용자 포인트 정보
 		point.printRewardInfo();
 	}
 }

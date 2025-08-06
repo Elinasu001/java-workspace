@@ -9,22 +9,23 @@ public class LectureProgress {
 	public  int progressPercent;	// 현재 강의 진도율 (0~100%)
 	
 	//[메소드]
+	// 사용자 이름
 	public void setUserName(String userName) {
         this.userName = userName;
     }
-
+	// 강의 이름
     public void setLectureTitle(String lectureTitle) {
         this.lectureTitle = lectureTitle;
     }
-
+    // 강의 시작 날짜
     public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
-
+    // 강의 종료 날짜
     public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
-
+    // 현재 강의 진도율 (0~100%)
     public void setProgressPercent(int progressPercent) {
         this.progressPercent = progressPercent;
     }

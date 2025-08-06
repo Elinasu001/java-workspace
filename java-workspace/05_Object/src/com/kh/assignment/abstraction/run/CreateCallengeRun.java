@@ -11,6 +11,7 @@ public class CreateCallengeRun {
 		CreateChallenge challenge = new CreateChallenge();
 		
 		System.out.println("===== 챌린지 개설을 시작합니다. =====");
+		
 		// 1. 사용자 이름 입력하기
 		System.out.println("1. 사용자 이름을 입력하세요. > ");
 		String name = sc.nextLine();
@@ -46,7 +47,7 @@ public class CreateCallengeRun {
 				System.out.println("잘못된 번호입니다. '1) 매일'로 설정합니다.");
 				selectedFrequency = "1) 매일";
 		}
-
+		
 		challenge.setCheckInFrequency(selectedFrequency);
 		
 		// 4. 챌린지 기간 선택하기
@@ -74,13 +75,12 @@ public class CreateCallengeRun {
 
 		challenge.setChallengeDuration(selectedDuration);
 		
-		//5. 챌린지 시작일
+		// 5. 챌린지 시작일
 		System.out.print("6. 챌린지 시작일을 입력하세요 (예: 2025-08-10) > ");
 		String startDate = sc.nextLine();
 		challenge.setStartDate(startDate);
 		
 		// 7. 인증 방식 선택 (배열 사용)
-		
 		System.out.println("7. 인증 방식을 선택하세요 > ");
 		String[] methodOptions = {
 			"",
@@ -102,7 +102,7 @@ public class CreateCallengeRun {
 			challenge.setCheckInMethod(methodOptions[1]);
 		}
 		
-		// 제목 수정
+		// 8. 제목 수정
 		System.out.print("챌린지 제목을 수정하시겠습니까? (Y / N) > ");
 		String ans = sc.nextLine();
 		if (ans.equals("Y") || ans.equals("y")) {
@@ -110,7 +110,7 @@ public class CreateCallengeRun {
 		    String newTitle = sc.nextLine();
 		    challenge.updateChallengeTitle(newTitle);
 		} else {
-			// 8. 결과 출력하기
+			// 9. 결과 출력하기
 			challenge.printChallengeInfo();
 		}
 		

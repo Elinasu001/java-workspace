@@ -38,10 +38,10 @@ public class GymRun {
 		int extend = sc.nextInt();
 		user.setExtensionDays(extend);
 		
-		// 7일 남았으면 연장 안내 메시지 출력
+		// 6. 7일 남았으면 연장 안내 메시지 출력
 		user.printExtensionNotice();
 		
-		// 전체 결과 출력
+		// 7. 전체 결과 출력
 		System.out.println("=========== 결과 ===========");
 		user.printAllDates(90);
 		

@@ -33,6 +33,7 @@ public class UserPoint {
 		currentBalance = balance;
 	}
 	
+	// 사용자 정보
 	public void printRewardInfo() {
 		System.out.println("================================");
 		System.out.println("사용자 이름 : " + userName);
