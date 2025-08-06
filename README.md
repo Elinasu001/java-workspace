@@ -58,7 +58,7 @@
   - Exception
     - 배열범위문제(ArrayIndexOutOfBounds)
     - null 배열처리(NullPointerException)
-    - 타입호환성(AraayStoreException)_하->상
+    - 타입호환성(AraayStoreException)
   - Scanner_중복 변수 처리_최소값 출력
   - G.C (Garbage Collector)
   - 일반적인 사용 방식
