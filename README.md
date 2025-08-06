@@ -79,7 +79,7 @@
   - Scanner
     - 강아지 케어
     - 과제
-- Encapsulation(캠슐화)
+- Encapsulation(캡슐화)
 ---
 🛠 개발 환경
 AWS JDK 2021
