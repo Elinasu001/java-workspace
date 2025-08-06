@@ -13,7 +13,7 @@ package com.kh.chap01.abstraction.vo;
  * }
  */
 public class Puppy {
-	
+	// 캡슐화_데이터 추상화
 	// [필드부]_속성_값을 저장하기 위한 공간 필요
 	// 접근제한자 자료형 필드식별자;
 	
