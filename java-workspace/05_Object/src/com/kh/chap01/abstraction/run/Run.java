@@ -72,6 +72,14 @@ public class Run {
 		// 기능 누가 냄새를 맡는 건지 같이 출력하고 싶다면?
 		smart.sniff();
 		solider.sniff();
+		
+		System.out.println("짖기전 상근이 몸무게 : ");
+		System.out.println(solider.weight);
+		
+		solider.bark();
+		
+		System.out.println("짖고 난 후 몸무게 : ");
+		System.out.println(solider.weight);
 	}
 
 }

@@ -36,8 +36,20 @@ public class Puppy {
 	
 	// [메소드부]
 	public void sniff() {
-		System.out.println("킁킁거리며 냄새를 맡습니다.");
+		System.out.println(name + " 킁킁거리며 냄새를 맡습니다.");
 	}
+	
+	public void bark() {
+		
+		if(weight > 15) {
+			System.out.println(name + " 가 멍하고 짖습니다.");
+			weight = weight - 5;
+		} else {
+			System.out.println("너나 짖어라");
+		}
+		
+	}
+	
 	
 	
 	
