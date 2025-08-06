@@ -79,7 +79,8 @@
   - Scanner
     - 강아지 케어
     - 과제
-- Encapsulation(캡슐화)
+  - Encapsulation(캡슐화)
+  - Information Hiding(정보 은닉)
 ---
 🛠 개발 환경
 AWS JDK 2021
