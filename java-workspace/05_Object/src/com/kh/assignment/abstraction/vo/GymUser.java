@@ -12,6 +12,15 @@ public class GymUser{
 	private int extensionDays;		// 연장 일수
 	
 	// [메소드부]
+	// 회원 아이디
+	public void setUserId(String memberId) {
+		userId = memberId;
+	}
+	// 회원 이름
+	public void setUserName(String userName) {
+		name = userName;
+	}
+	
 	// 시작일자
 	public void setStartDate(LocalDate date) {
 		startDate = date;
@@ -39,7 +48,8 @@ public class GymUser{
 		LocalDate endDate = startDate.plusDays(usageDays);				// 종료일자 = 사용일자.더한(이용일자)
 		LocalDate extendedEndDate = endDate.plusDays(extensionDays);	// 연장일자 = 종료일자.더한(연장일자)
 		
-		
+		System.out.println("회원 아이디 : " + userId);
+		System.out.println("회원 이름 : " + name);
 		System.out.println("시작일 : " + startDate);
 		System.out.println("이용일수 : " + usageDays + "일");
 		System.out.println("종료일 : " + endDate);
