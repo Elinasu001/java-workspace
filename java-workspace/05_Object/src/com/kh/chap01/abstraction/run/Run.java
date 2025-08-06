@@ -53,7 +53,25 @@ public class Run {
 							+ smart.gender + "에 " 
 							+ smart.weight + "kg입니다.");
 		
+		// 상근이 생성
+		Puppy solider = new Puppy();
+		solider.name = "상근이";
+		solider.age = 22;
+		solider.species = "그레이트 피레니즈";
+		solider.gender = "수컷";
+		solider.color = "흰색";
+		solider.weight = 60;
+		System.out.println(solider.name + "는 " 
+							+ solider.color + " "
+							+ solider.species + "입니다.");
+		System.out.println(solider.age + "살 " 
+							+ solider.gender + "에 "
+							+ solider.weight + "kg입니다.");
 		
+		System.out.println("=======================");
+		// 기능 누가 냄새를 맡는 건지 같이 출력하고 싶다면?
+		smart.sniff();
+		solider.sniff();
 	}
 
 }
