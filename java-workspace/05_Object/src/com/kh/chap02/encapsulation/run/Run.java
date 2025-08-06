@@ -42,13 +42,15 @@ public class Run {
 		cafe.windowCleaning();
 		 */
 		
-		cafe.open(); // private (만약, Cafe.java의 dishWash(); 를 주석 처리 할 경우 빨간 줄이 그어지지 않음. == 유지보수에 좋음.)
+		//cafe.open(); // private (만약, Cafe.java의 dishWash(); 를 주석 처리 할 경우 빨간 줄이 그어지지 않음. == 유지보수에 좋음.)
 		/*
 	 	깨끗하게 빡빡!
 		청소도 빡빡!
 		유리도 빡빡!
 	 	*/
-		
+		// 5000을 넘길려면
+		// 메소드 호출 부에서는 오로지 값만 넘길 수 있음.
+		cafe.setSignatureMenuPrice(5000);
 	}
 
 }
