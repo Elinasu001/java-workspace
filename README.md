@@ -72,12 +72,14 @@
 
 **객체 지향 프로그래밍**
 - 역사
-- Object
+- Object(객체)
   - Abstraction(추상화)
   - 객체 생성
   - 설계도
   - Scanner
     - 강아지 케어
+    - 과제
+- Encapsulation(캠슐화)
 ---
 🛠 개발 환경
 AWS JDK 2021
