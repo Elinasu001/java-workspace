@@ -42,15 +42,24 @@ public class UserPoint {
 	}
 	
 	
-	// 출금 메서드
+	// 출금 메서드 (포인트 전환액이 1,000원 이상이어야 하며, 출금 금액은 전환액보다 작거나 같아야 합니다.)
 	public void withdrawCash(int amount) {
-		if(cashConverted >= 1000 && amount <= cashConverted) {
+		if(cashConverted >= 1000 && amount >= 1000 && amount <= cashConverted) {
 			cashConverted -= amount;
 			withdrawal += amount;
 			System.out.println("========== 출금이 완료되었습니다. ==========");
 			System.out.println("출금 금액 : " + amount + "원");
 		} else {
-			System.out.println("출금 불가 : 포인트 전환액이 1,000원 이상이어야 합니다.");
+			System.out.println("출금 불가합니다.");
+			if(cashConverted < 1000) {
+				System.out.println("포인트 전환액이 1,000원 이상이어야 합니다.");
+			}
+			if(amount < 1000) {
+				System.out.println("출금 금액이 1,000원 이상이어야 합니다.");
+			}
+			if (amount > cashConverted) {
+				System.out.println("출금 금액이 전환액보다 작습니다.");
+			}
 		}
 	}
 	

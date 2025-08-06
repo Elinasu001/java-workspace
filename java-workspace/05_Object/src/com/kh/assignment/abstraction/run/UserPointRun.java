@@ -12,7 +12,7 @@ public class UserPointRun {
 
 		point.setUserName("박수현");
 		point.setTotalEarnedPoints(100200);
-		point.setWithdrawal(10000);
+		point.setWithdrawal(0);
 		point.setCashConverted(10000);
 		point.setCurrentBalance(90200);
 		
