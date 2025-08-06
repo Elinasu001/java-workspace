@@ -448,7 +448,7 @@ public class Array {
 		int[] copy2 = new int[10];
 		
 		// 배열 복사하는 메서드 : arraycopy
-		System.arraycopy(origin, 0, copy2, 4, 5); // 1번째 인자로는 원본 배열, 2번째 인자로는 내가 복사하려는 시작 배열, 3번째 넣으려는 배열, 4번째 3번째 배열의 시작, 5번째 몇개 인자를 복사하는지 
+		System.arraycopy(origin, 0, copy2, 1, 5); // 1번째 인자로는 원본 배열, 2번째 인자로는 내가 복사하려는 시작 배열, 3번째 넣으려는 배열, 4번째 3번째 배열의 시작, 5번째 몇개 인자를 복사하는지 
 		//[0, 0, 0, 0, 1, 2, 3, 4, 5, 0]
 		System.out.println(Arrays.toString(copy2));
 		/*
@@ -461,6 +461,15 @@ public class Array {
 		 */
 		
 		System.out.println(Arrays.toString(origin));
+		
+		//Arrays클래스에서 제공하는 copyOf()
+		
+		int[] copy3 = Arrays.copyOf(origin, 15);
+		System.out.println(Arrays.toString(copy3)); //[1, 2, 3, 4, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		
+		int[] copy4 = origin.clone();
+		System.out.println(Arrays.toString(copy4)); //[1, 2, 3, 4, 5]
+		
 	}
 
 }

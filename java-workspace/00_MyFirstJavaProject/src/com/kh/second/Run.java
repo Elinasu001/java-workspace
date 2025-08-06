@@ -17,7 +17,7 @@ public class Run {
 		 * 
 		 */
 		
-		PrintController pc = new PrintController();
+		PrintController pc = new PrintController(); // 변수 선언 : 자료형 변수명 = 객체 생성
 		
 		//printMyName();
 		pc.printMyName();
