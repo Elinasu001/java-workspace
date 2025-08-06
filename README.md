@@ -82,7 +82,7 @@
   - Encapsulation(캡슐화)
   - Information Hiding(정보 은닉)
     - 객체의 내부적 관점 / 외부적 관점
-  - Setter()_DTO 전
+  - Setter()_DTO 전 VO로 진행
 ---
 🛠 개발 환경
 AWS JDK 2021
