@@ -30,8 +30,6 @@ public class Puppy {
 	public int weight;
 	
 	
-	
-	
 	// [생성자부]
 	
 	

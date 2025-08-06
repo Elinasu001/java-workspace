@@ -35,6 +35,23 @@ public class Run {
 					  // Memory의 heap영역에 데이터를 생성
 		smart.sniff();
 		//System.out.println(smart); //com.kh.chap01.abstraction.vo.Puppy@48cf768c
+		// smart 속성값을 보고 싶을 경우는?
+		//System.out.println(smart.name);
+		//값대입 > 공간(heap > naeme) = "똘똘이";
+		smart.name = "똘똘이";
+		//System.out.println(smart.name);
+		smart.species = "포메라니안";
+		smart.age = 4;
+		smart.gender = "암컷";
+		smart.color = "갈색";
+		smart.weight = 3;
+		
+		System.out.println(smart.name + "는 " 
+							+ smart.color + " "
+							+ smart.species + "입니다.");
+		System.out.println(smart.age + "살 "
+							+ smart.gender + "에 " 
+							+ smart.weight + "kg입니다.");
 		
 		
 	}
