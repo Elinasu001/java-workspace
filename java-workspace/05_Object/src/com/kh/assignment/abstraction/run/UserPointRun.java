@@ -16,7 +16,7 @@ public class UserPointRun {
 		point.setCashConverted(10000);
 		point.setCurrentBalance(90200);
 		
-		
+		// 1. 출금할 금액 입력하기
 		System.out.println("💰 출금 가능한 금액: " + 10000 + "원");
 		System.out.println("출금할 금액을 입력해주세요. > ");
 		int withdrawAmount = sc.nextInt();

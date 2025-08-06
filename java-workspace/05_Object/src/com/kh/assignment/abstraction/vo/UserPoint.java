@@ -34,6 +34,7 @@ public class UserPoint {
 	}
 	
 	public void printRewardInfo() {
+		System.out.println("================================");
 		System.out.println("사용자 이름 : " + userName);
 		System.out.println("총 획득 상금 포인트 : " + totalEarnedPoints + "원");
 		System.out.println("촐금 : " + "-" + withdrawal + "원");
@@ -50,7 +51,7 @@ public class UserPoint {
 			System.out.println("========== 출금이 완료되었습니다. ==========");
 			System.out.println("출금 금액 : " + amount + "원");
 		} else {
-			System.out.println("출금 불가합니다.");
+			System.out.println("출금이 불가합니다.");
 			if(cashConverted < 1000) {
 				System.out.println("포인트 전환액이 1,000원 이상이어야 합니다.");
 			}
