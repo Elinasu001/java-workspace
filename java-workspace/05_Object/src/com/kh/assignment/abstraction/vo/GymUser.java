@@ -59,17 +59,17 @@ public class GymUser{
 		this.extensionDays = days;
 	}
 	
-	// 이용일수가 7일 미만남았으면 연장 메세지 보여주기
+	// 연장 메세지 호출 메소드
 	public void printExtensionNotice() {
 		if(usageDays > 7) {
 			System.out.println("※ 헬스장 이용기간이 끝나가니 더 이용하시려면 연장해주세요.");
 		}
 	}
 	
-	// 기간 연장 메서드
+	// 기간 연장된 정보 메소드
 	public String dateInfo(int addDays) {
-		LocalDate endDate = startDate.plusDays(usageDays);				// 종료일자 = 사용일자.더한(이용일자)
-		LocalDate extendedEndDate = endDate.plusDays(extensionDays);	// 연장일자 = 종료일자.더한(연장일자)
+		LocalDate endDate = startDate.plusDays(usageDays);				
+		LocalDate extendedEndDate = endDate.plusDays(extensionDays);	
 		
 		String info = "[회원 아이디 : " + userId 
 					+ ", 회원 이름 : " + name 

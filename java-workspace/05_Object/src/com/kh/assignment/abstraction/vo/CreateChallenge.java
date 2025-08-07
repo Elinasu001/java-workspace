@@ -25,22 +25,22 @@ public class CreateChallenge {
 	
 	//[메소드부]
 	// getter()
-	public String name() {
+	public String getName() {
 		return name;
 	}
-	public String title() {
+	public String getTitle() {
 		return title;
 	}
-	public String frequency() {
+	public String getFrequency() {
 		return frequency;
 	}
-	public String duration() {
+	public String getDuration() {
 		return duration;
 	}
-	public String startDate() {
+	public String getStartDate() {
 		return startDate;
 	}
-	public String checkInMethod() {
+	public String getCheckInMethod() {
 		return checkInMethod;
 	}
 	
@@ -64,7 +64,59 @@ public class CreateChallenge {
 		this.checkInMethod = checkInMethod;
 	}
 	
-	// 제목 수정하기 (newTitle 문자열이 null 이 아니고, 공백이 아닌 실제 값이 들어있을 경우)
+	// 인증 빈도 선택 메소드
+	public void setFrequencyByChoice(int choice) {
+	    String selectedFrequency = "";
+
+	    switch(choice) {
+	        case 1: selectedFrequency = "1) 매일"; break;
+	        case 2: selectedFrequency = "2) 평일 매일"; break;
+	        case 3: selectedFrequency = "3) 주말 매일"; break;
+	        case 4: selectedFrequency = "4) 주 1일"; break;
+	        case 5: selectedFrequency = "5) 주 2일"; break;
+	        case 6: selectedFrequency = "6) 주 3일"; break;
+	        default:
+	            System.out.println("잘못된 번호입니다. '1) 매일'로 설정합니다.");
+	            selectedFrequency = "1) 매일";
+	    }
+
+	    this.frequency = selectedFrequency;
+	}
+
+	
+	// 인증 기간 선택 메소드
+	public void setDurationByChoice(int choice) {
+		switch(choice) {
+		case 1 : this.duration = "1) 1주"; break;
+		case 2 : this.duration = "2) 2주"; break;
+		case 3 : this.duration = "3) 3주"; break;
+		case 4 : this.duration = "4) 4주"; break;
+		case 5 : this.duration = "5) 5주"; break;
+		default:
+				System.out.println("잘못된 번호입니다. 기본값 '1) 1주'로 설정됩니다.");
+				this.duration = "1) 1주";
+		}
+	}
+	
+	// 인증 방법 선택 메소드
+	public void setCheckInMethodByChoice(int choice) {
+	    switch (choice) {
+	        case 1:
+	            this.checkInMethod = "1) 하루에 한 번 인증";
+	            break;
+	        case 2:
+	            this.checkInMethod = "2) 하루에 여러 번 인증";
+	            break;
+	        case 3:
+	            this.checkInMethod = "3) 시작과 마무리 인증샷 (하루에 2번)";
+	            break;
+	        default:
+	            System.out.println("잘못된 번호입니다. 기본값 '1) 하루에 한 번 인증'으로 설정됩니다.");
+	            this.checkInMethod = "1) 하루에 한 번 인증";
+	    }
+	}
+	
+	// 제목 수정 메소드 (newTitle 문자열이 null 이 아니고, 공백이 아닌 실제 값이 들어있을 경우)
 	public void updateChallengeTitle(String newTitle) {
 	    if (newTitle != null && !newTitle.trim().isEmpty()) {
 	        this.title = newTitle;

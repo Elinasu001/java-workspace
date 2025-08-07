@@ -55,14 +55,14 @@ public class LectureProgress {
 		this.progressPercent = progressPercent;
 	}
 
-	// 강의 진도율이 20 미만이면 출력하기
+	// 강의 진도율이 20 미만이면 출력 메소드
 	public void lowProgressMessage() {
 		if (progressPercent < 20) {
 			System.out.println("!! 현재 강의 진도율은 " + progressPercent + "% 입니다. 더 듣는 것을 추천해요.");
 		}
 	}
 
-	// 강의 수강으로 진도 증가
+	// 강의 수강으로 진도 증가 메소드
 	public void plusProgress() {
 		if (progressPercent < 100) {
 			progressPercent += 4;
@@ -76,7 +76,7 @@ public class LectureProgress {
 		}
 	}
 	
-	// info()
+	// 사용자정보 메소드
 	public String info() {
 		String info = "[사용자 이름 : " + userName 
 						+ ", 강의 이름 : " + title 

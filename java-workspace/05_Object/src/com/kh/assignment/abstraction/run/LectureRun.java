@@ -34,7 +34,7 @@ public class LectureRun {
 		sc.nextLine();
 		lecture.setProgressPercent(progress);
 
-		// 6. 강의 진도율이 20 미만이면 출력하기
+		// 6. 강의 진도율이 20 미만이면 출력하는 메소드 호출
 		lecture.lowProgressMessage();
 
 		// 7. 강의 진도율 채우기
@@ -52,9 +52,11 @@ public class LectureRun {
 
 			switch (choice) {
 			case 1:
+				//사용자정보 메소드 호출
 				System.out.println(lecture.info());
 				break;
 			case 2:
+				// 강의 수강 진도 증가 메소드 호출
 				lecture.plusProgress();
 				break;
 			case 3:

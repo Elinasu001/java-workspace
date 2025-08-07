@@ -55,7 +55,7 @@ public class UserPoint {
 		this.currentBalance = currentBalance;
 	}
 	
-	// 출금 메서드 (포인트 전환액이 1,000원 이상이어야 하며, 출금 금액은 전환액보다 작거나 같아야 합니다.)
+	// 출금 메소드 (포인트 전환액이 1,000원 이상이어야 하며, 출금 금액은 전환액보다 작거나 같아야 합니다.)
 	public void withdrawCash(int withdrawal) {
 		if(cashConverted >= 1000 && withdrawal >= 1000 && withdrawal <= cashConverted) {
 			cashConverted -= withdrawal;
@@ -77,7 +77,7 @@ public class UserPoint {
 	}
 	
 	
-	// 사용자 정보
+	// 사용자 정보 메소드
 	public String info() {
 		String info = "[사용자 이름 : " + name 
 						+ ", 총 획득 상금 포인트 : " + totalPoints + "원" 
