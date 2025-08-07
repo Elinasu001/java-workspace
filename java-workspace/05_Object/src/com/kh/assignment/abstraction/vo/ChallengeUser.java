@@ -13,27 +13,42 @@ public class ChallengeUser {
 	private int points;			// 포인트
 	
 	//[메소드부]
-	// 사용자이름
+	//getter()
+	public String getName() {
+		return name;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public String getPeriod() {
+		return period;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public int getCount() {
+		return count;
+	}
+	public int setPoints() {
+		return points;
+	}
+	
+	//setter()
 	public void setName(String name) {
 		this.name = name;
 	}
-	// 챌린지이름
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	// 챌린지기간
 	public void setPeriod(String period) {
 		this.period = period;
 	}
-	// 챌린지 상태 : 대기중 or 참여중
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	// 하루인증횟수
 	public void setCount(int count) {
 		this.count = count;
 	}
-	// 포인트
 	public void setPoints(int points) {
 		this.points = points;
 	}

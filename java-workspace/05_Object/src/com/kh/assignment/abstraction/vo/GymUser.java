@@ -12,27 +12,21 @@ public class GymUser{
 	private int extensionDays;		// 연장 일수
 	
 	// [메소드부]
-	// 회원 아이디
-	public void setUserId(String memberId) {
-		userId = memberId;
-	}
+	//getter()
 	
-	// 회원 이름
-	public void setUserName(String userName) {
-		name = userName;
+	//setter()
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
-	
-	// 시작일자
-	public void setStartDate(LocalDate date) {
-		startDate = date;
+	public void setUserName(String name) {
+		this.name = name;
 	}
-	
-	// 이용일수
-	public void setUsageDays(int days) {
-		usageDays = days;
+	public void setStartDate(LocalDate startDate) {
+		this.startDate = startDate;
 	}
-	
-	// 연장일수
+	public void setUsageDays(int usageDays) {
+		this.usageDays = usageDays;
+	}
 	public void setExtensionDays(int days) {
 		extensionDays = days;
 	}
