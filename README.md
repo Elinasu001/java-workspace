@@ -81,17 +81,17 @@
   - Encapsulation(캡슐화)
     - Information Hiding(정보 은닉)
       - 객체의 내부적 관점 / 외부적 관점
-  - Setter()_DTO 전 VO로 진행
-     - 개인 과제
-      - CreateChallenge
-      - ChallengeUser
-      - UserPoint
-      - GymUser
-      - LectureProgress
-    - this()
-    - 매개변수를 이용한 제어
-    - 이름 및 주소 수정하기
-  - Getter()
+    - Setter()_DTO 전 VO로 진행
+       - 개인 과제
+        - CreateChallenge
+        - ChallengeUser
+        - UserPoint
+        - GymUser
+        - LectureProgress
+      - this()
+      - 매개변수를 이용한 제어
+      - 이름 및 주소 수정하기
+    - Getter()
 ---
 🛠 개발 환경
 AWS JDK 2021
