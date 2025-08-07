@@ -78,7 +78,7 @@
   - 설계도
   - Scanner
     - 강아지 케어
-    - 과제
+    - 개인 과제
       - CreateChallenge
       - ChallengeUser
       - UserPoint
