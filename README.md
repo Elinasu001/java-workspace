@@ -105,6 +105,8 @@
       - (#)protected
       - (~)default
       - **(-)private**
+  - Constructor(생성자)
+    - 
       
 ---
 🛠 개발 환경
