@@ -88,6 +88,9 @@
       - UserPoint
       - GymUser
       - LectureProgress
+    - this()
+    - 매개변수를 이용한 제어
+    - 이름 수정하기
 ---
 🛠 개발 환경
 AWS JDK 2021
