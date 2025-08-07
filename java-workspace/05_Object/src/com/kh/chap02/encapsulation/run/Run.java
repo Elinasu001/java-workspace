@@ -1,5 +1,7 @@
 package com.kh.chap02.encapsulation.run;
 
+import java.util.Scanner;
+
 import com.kh.chap02.encapsulation.model.vo.Cafe;
 
 public class Run {
@@ -19,7 +21,7 @@ public class Run {
 		// 단, 객체 간의 정보는 서로 모를 수록 좋다.
 		// 1. Cafe.java 접근제한자 : public -> private 변경
 		/*
-		===	public ===
+		===	public (캡슐화 전) ===
 		cafe.name = "KH카페";
 		System.out.println(cafe.name);
 		cafe.sinatureMenu = "KH커피";
@@ -29,7 +31,7 @@ public class Run {
 		*/
 		
 		// 필드가 보이지 않아서(외부에서 접근이 불가능해서)오류 발생!
-		// 접근제한자를 public에서 private으로 변경했기 때문에 직접 접근이 불가능
+		// 접근제한자를 public 에서 private 으로 변경했기 때문에 직접 접근이 불가능
 		// 직접 접근이 불가능하기 때문에 간접적으로 접근할 수 있는 방법을 만들어주어야 함
 		// Cafe 라는 클래스에 getter / setter 라는 메소드를 만들기
 		// cafe.signatureMenuPrice = -500;
@@ -48,9 +50,24 @@ public class Run {
 		청소도 빡빡!
 		유리도 빡빡!
 	 	*/
+		
+		// setter()
 		// 5000을 넘길려면
-		// 메소드 호출 부에서는 오로지 값만 넘길 수 있음.
+		// 메소드 호출 부에서는 오로지 "값"만 넘길 수 있음.
+		// 작업을 요구하는 것.
 		cafe.setSignatureMenuPrice(5000);
+		cafe.setName("KH카페");
+		cafe.setAddress("서울시 중구 남대문로 120 2층");
+		
+		// getter()
+		//System.out.prtinln(cafe.name);// 직접 값을 가져올 수 없다.
+		String cafeName = cafe.getName(); // getter 메소드에서 반환명을 아니 String 을 사용해서 값을 대입해준다.
+		System.out.println(cafeName);//KH카페
+		String cafeAddress = cafe.getAddress();
+		System.out.println(cafeAddress);
+		int cafeSignaturePriceMenu = cafe.getSignaturePriceMenu();
+		System.out.println(cafeSignaturePriceMenu);
+		
 	}
 
 }
