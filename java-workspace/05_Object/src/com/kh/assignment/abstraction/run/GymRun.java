@@ -17,7 +17,7 @@ public class GymRun {
 		String memberId = sc.nextLine();
 		user.setUserId(memberId);
 		
-		// 2..회원 이름 입력받기
+		// 2.회원 이름 입력받기
 		System.out.println("회원 이름을 입력해주세요. > ");
 		String userName = sc.nextLine();
 		user.setUserName(userName);
@@ -43,7 +43,7 @@ public class GymRun {
 		
 		// 7. 전체 결과 출력
 		System.out.println("=========== 결과 ===========");
-		user.printAllDates(90);
+		user.dateInfo(90);
 		
 	}
 

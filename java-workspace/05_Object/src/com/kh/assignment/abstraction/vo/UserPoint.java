@@ -34,7 +34,7 @@ public class UserPoint {
 	}
 	
 	// 사용자 정보
-	public void printRewardInfo() {
+	public void info() {
 		System.out.println("================================");
 		System.out.println("사용자 이름 : " + userName);
 		System.out.println("총 획득 상금 포인트 : " + totalEarnedPoints + "원");

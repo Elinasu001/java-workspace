@@ -51,7 +51,7 @@ public class LectureRun {
 
 	            switch (choice) {
 	                case 1:
-	                    lecture.printLectureInfo();
+	                    lecture.info();
 	                    break;
 	                case 2:
 	                    lecture.listenLecture();

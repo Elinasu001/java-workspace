@@ -24,6 +24,6 @@ public class UserPointRun {
 		point.withdrawCash(withdrawAmount);
 		
 		// 사용자 포인트 정보
-		point.printRewardInfo();
+		point.info();
 	}
 }

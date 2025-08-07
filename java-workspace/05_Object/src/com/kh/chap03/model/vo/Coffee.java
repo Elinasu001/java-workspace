@@ -46,7 +46,7 @@ public class Coffee {
 		String info = "[상품명 : " + name 
 						+ ", 원두 : " + bean 
 						+ ", 사이즈 : " + size 
-						+ ", 가격 : " + size 
+						+ ", 가격 : " + price 
 						+ "]";
 		return info;
 	}

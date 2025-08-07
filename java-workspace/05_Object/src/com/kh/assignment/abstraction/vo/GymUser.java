@@ -45,7 +45,7 @@ public class GymUser{
 	}
 	
 	// 기간 연장 메서드
-	public void printAllDates(int addDays) {
+	public void dateInfo(int addDays) {
 		LocalDate endDate = startDate.plusDays(usageDays);				// 종료일자 = 사용일자.더한(이용일자)
 		LocalDate extendedEndDate = endDate.plusDays(extensionDays);	// 연장일자 = 종료일자.더한(연장일자)
 		
@@ -57,5 +57,4 @@ public class GymUser{
 		System.out.println("연장된 종료일 : " + extendedEndDate);
 	}
 	
-
 }

@@ -31,7 +31,7 @@ public class LectureProgress {
     }
     
     // 강의 진도 출력
-    public void printLectureInfo() {
+    public void info() {
         System.out.println("========= 강의 정보 ==========");
         System.out.println("사용자 이름 : " + userName);
         System.out.println("강의 이름 : " + lectureTitle);
