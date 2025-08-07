@@ -111,12 +111,12 @@
     - 매개변수가 존재하는 생성자
       - 한 개
       - 두 개
-   - 개인 과제_ver2
-      - CreateChallenge
-      - ChallengeUser
-      - UserPoint
-      - GymUser
-      - LectureProgress
+     - 개인 과제_ver2
+        - CreateChallenge
+        - ChallengeUser
+        - UserPoint
+        - GymUser
+        - LectureProgress
 
 
       
