@@ -78,16 +78,16 @@
   - 설계도
   - Scanner
     - 강아지 케어
-    - 개인 과제
+  - Encapsulation(캡슐화)
+    - Information Hiding(정보 은닉)
+      - 객체의 내부적 관점 / 외부적 관점
+  - Setter()_DTO 전 VO로 진행
+     - 개인 과제
       - CreateChallenge
       - ChallengeUser
       - UserPoint
       - GymUser
       - LectureProgress
-  - Encapsulation(캡슐화)
-    - Information Hiding(정보 은닉)
-      - 객체의 내부적 관점 / 외부적 관점
-  - Setter()_DTO 전 VO로 진행
 ---
 🛠 개발 환경
 AWS JDK 2021
