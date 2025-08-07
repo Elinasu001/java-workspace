@@ -112,11 +112,11 @@
       - 한 개
       - 두 개
    - 개인 과제_ver2
-    - CreateChallenge
-    - ChallengeUser
-    - UserPoint
-    - GymUser
-    - LectureProgress
+      - CreateChallenge
+      - ChallengeUser
+      - UserPoint
+      - GymUser
+      - LectureProgress
 
 
       
