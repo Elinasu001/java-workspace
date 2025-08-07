@@ -74,7 +74,7 @@
 - 역사
 - Object(객체)
   - Abstraction(추상화)
-  - 객체 생성
+  - 객체 생성 (Object(이론적의미) / instance화(기술적의미))
   - 설계도
   - Scanner
     - 강아지 케어
