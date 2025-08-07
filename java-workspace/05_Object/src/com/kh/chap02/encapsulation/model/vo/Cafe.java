@@ -96,7 +96,7 @@ public class Cafe {
 	
 	// name 필드를 기록 및 수정할 수 있는 메소드
 	public void setName(String name) {
-		System.out.println(name);
+		this.name = name;
 	}
 	
 	public void setAddress(String address) {
@@ -136,7 +136,7 @@ public class Cafe {
 		// 메소드의 반환형과 반환하고자 하는 값의 자료형이 일치하는가를 꼭 잘 확인해야함.
 	}
 	
-	public int getSignaturePriceMenu() {
+	public int getSignatureMenuPrice() {
 		return signatureMenuPrice;
 	}
 	
@@ -146,7 +146,21 @@ public class Cafe {
 	 * 2. 메소드를 통해 필드에 접근할 수 있도록 만들어준다 => getter() / setter() 구현
 	 * 
 	 * 데이터를 숨김 => 객체간의 결합도를 낮춤 => 책임을 분리시킨다.
-	 * 
 	 */
+	
+	
+	// 모든 필드 값을 확인할 수 있도록 반환해주는 메소드 (필드 하나하나 다 받아오면 출력하기 힘듦)
+	
+	public String info() {
+		
+		// name, address, signatureMenuPrice
+		
+		// return name, address, - x
+		// ** return 할 떄 반환할 수 있는 값은 단 한계다 !
+		String info = "[name 필드값 : " + name + ", addrss 필드값 : " + address
+					+ ", signatureMenuPrice : " + signatureMenuPrice + "]";
+		
+		return info;
+	}
 	
 }
