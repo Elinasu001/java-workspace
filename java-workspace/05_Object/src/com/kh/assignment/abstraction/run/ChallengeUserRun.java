@@ -35,14 +35,6 @@ public class ChallengeUserRun {
 		int points = sc.nextInt();
 		challenge.setPoints(points);
 		
-		
-//		challenge.setName("박수현");
-//		challenge.setTitle("다이어트 챌린지");
-//		challenge.setPeriod("2025-08-01 ~ 2025-08-31");
-//		challenge.setStatus("참여중");
-//		challenge.setCount(2); // 현재 인증 2회
-//		challenge.setPoints(1500);
-		
 		// 2. 인증 체크 및 사용자 응답 호출
 		challenge.checkAndAskForAuth();
 		
