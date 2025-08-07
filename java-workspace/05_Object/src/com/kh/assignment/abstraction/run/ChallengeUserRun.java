@@ -10,7 +10,7 @@ public class ChallengeUserRun {
 		
 		ChallengeUser challenge = new ChallengeUser();
 
-		// 1. 기본 정보 입력
+		// 1. 기본 정보 입력받기
 		System.out.println("이름이 뭔가요?  > ");
 		String name = sc.nextLine();
 		challenge.setName(name);
@@ -35,11 +35,11 @@ public class ChallengeUserRun {
 		int points = sc.nextInt();
 		challenge.setPoints(points);
 		
-		// 2. 인증 체크 및 사용자 응답 호출
+		// 2. 인증 체크 및 사용자 응답 메소드 호출
 		challenge.checkAndAskForAuth();
 		
 		System.out.println("========= 챌린지 정보 =========");
-		// 사용자정보 메소드 호출
+		// 사용자정보 메소드 출력
 		System.out.println(challenge.info());
 		
 	}

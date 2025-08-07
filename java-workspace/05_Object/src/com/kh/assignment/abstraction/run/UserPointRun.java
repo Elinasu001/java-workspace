@@ -24,7 +24,7 @@ public class UserPointRun {
 		// 출금 메소드 호출
 		point.withdrawCash(withdrawAmount);
 		
-		// 사용자 포인트 정보
+		// 사용자 포인트 정보 출력
 		System.out.println(point.info());
 	}
 }

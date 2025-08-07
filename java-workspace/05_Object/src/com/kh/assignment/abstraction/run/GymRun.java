@@ -35,15 +35,15 @@ public class GymRun {
 		
 		// 5. 사용자에게 연장일수 입력받기
 		System.out.println("연장할 일수를 입력하세요. (예: 30 / 90 / 180 / 360) >");
-		int extend = sc.nextInt();
-		user.setExtensionDays(extend);
+		int extension = sc.nextInt();
+		user.setExtensionDays(extension);
 		
-		// 6. 7일 남았으면 연장 안내 메시지 출력
+		// 6. 7일 남았으면 연장 안내 메시지 메소드 호출
 		user.printExtensionNotice();
 		
-		// 7. 전체 결과 출력
+		// 7. 사용자 정보 출력
 		System.out.println("=========== 결과 ===========");
-		user.dateInfo(90);
+		System.out.println(user.dateInfo(extension));
 		
 	}
 

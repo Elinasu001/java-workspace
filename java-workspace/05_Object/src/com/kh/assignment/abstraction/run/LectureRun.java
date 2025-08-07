@@ -52,7 +52,7 @@ public class LectureRun {
 
 			switch (choice) {
 			case 1:
-				//사용자정보 메소드 호출
+				//사용자정보 메소드 출력
 				System.out.println(lecture.info());
 				break;
 			case 2:

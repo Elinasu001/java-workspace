@@ -68,14 +68,14 @@ public class GymUser{
 	
 	// 기간 연장된 정보 메소드
 	public String dateInfo(int addDays) {
-		LocalDate endDate = startDate.plusDays(usageDays);				
-		LocalDate extendedEndDate = endDate.plusDays(extensionDays);	
+		LocalDate extension = startDate.plusDays(usageDays);				
+		LocalDate extendedEndDate = extension.plusDays(extensionDays);	
 		
 		String info = "[회원 아이디 : " + userId 
 					+ ", 회원 이름 : " + name 
 					+ ", 시작일 : " + startDate
 					+ ", 이용일수 : " + usageDays + "일"
-					+ ", 종료일 : " + endDate 
+					+ ", 종료일 : " + extension 
 					+ ", 연장된 종료일 : " + extendedEndDate+ "]";
 					
 		return info;
