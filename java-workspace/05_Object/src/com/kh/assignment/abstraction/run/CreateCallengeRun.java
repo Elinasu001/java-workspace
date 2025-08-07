@@ -37,7 +37,7 @@ public class CreateCallengeRun {
 		sc.nextLine();
 		challenge.setFrequencyByChoice(frequencyChoice);
 		
-		// 4. 챌린지 기간 선택하기
+		// 4. 챌린지 기간 선택받기
 		System.out.println("챌린지 기간을 선택하세요:");
 		System.out.println("   1) 1주일");
 		System.out.println("   2) 2주");
