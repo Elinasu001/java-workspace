@@ -106,7 +106,7 @@
       - (~)default
       - **(-)private
   - Constructor(생성자)
-    - 기본 생성자
+    - 기본 생성자(매개 변수 없음)
 
 
 
