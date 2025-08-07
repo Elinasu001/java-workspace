@@ -67,8 +67,7 @@ public class Run {
 		System.out.println(cafeAddress);
 		int cafeSignaturePriceMenu = cafe.getSignatureMenuPrice();
 		System.out.println(cafeSignaturePriceMenu);
-		String cafeInfo = cafe.info();
-		System.out.println(cafeInfo);
+		System.out.println(cafe.info());
 		
 	}
 
