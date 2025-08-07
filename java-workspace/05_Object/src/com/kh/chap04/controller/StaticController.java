@@ -40,15 +40,15 @@ public class StaticController {
 	/*
 	 * AccessModifier(접근제어자 / 접근제한자)
 	 * 
-	 * public => 어디서든 (같은 패키지, 다른 패키지, 클래스 내/외부 포함 전부) 접근 가능
+	 * (+)public => 어디서든 (같은 패키지, 다른 패키지, 클래스 내/외부 포함 전부) 접근 가능
 	 * 
-	 * protected => 같은 패키지라면 무조건 접근이 가능!
+	 * (#)protected => 같은 패키지라면 무조건 접근이 가능!
 	 * 			 => 다른 패키지라면 상속구조인 클래스에서만 접근 가능
 	 * 			 => 상속이라는 개념은 05_object /06_objectArray 끝나고 07번에서 배울 것
 	 * 
-	 * default(package friendly) => 오로지 같은 패키지에서만 접근 가능
+	 * (~)default(package friendly) => 오로지 같은 패키지에서만 접근 가능
 	 * 
-	 * private => 오직 클래스 내부에서만 접근 가능
+	 * (-)private => 오직 클래스 내부에서만 접근 가능
 	 * 
 	 */
 }
