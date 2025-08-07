@@ -9,6 +9,20 @@ public class CreateChallenge {
 	private String startDate;		// 시작일
 	private String checkInMethod;	// 인증방식
 	
+	//[생성자부]
+	// 기본생성자
+	public CreateChallenge() {}
+	// 모든 필드를 매개변수로 가지고 있는 생성자
+	public CreateChallenge(String name, String title, String frequency, String duration, String startDate, String  checkInMethod) {
+		this.name = name;
+		this.title = title;
+		this.frequency = frequency;
+		this.duration = duration;
+		this.startDate = startDate;
+		this.checkInMethod = checkInMethod;
+	}
+	
+	
 	//[메소드부]
 	// getter()
 	public String name() {

@@ -3,66 +3,88 @@ package com.kh.assignment.abstraction.vo;
 public class UserPoint {
 	
 	// [필드부]
-	private String userName;		// 사용자 이름
-	private int totalEarnedPoints;	// 총 획득 상금 포인트
+	private String name;		// 사용자 이름
+	private int totalPoints;	// 총 획득 상금 포인트
 	private int withdrawal;			// 출금
 	private int cashConverted;		// 포인트 현금 전환
 	private int currentBalance;		// 현재 보유 상금 포인트
 	
+	//[생성자부]
+	//기본생성자
+	public UserPoint() {}
+	//모든 필드를 매개변수로 가지고 있는 생성자
+	public UserPoint(String name, int totalPoints, int withdrawal, int cashConverted, int currentBalance) {
+		this.name = name;
+		this.totalPoints = totalPoints;
+		this.withdrawal = withdrawal;
+		this.cashConverted = cashConverted;
+		this.currentBalance = currentBalance;
+	}
+	
 	//[메소드부]
-	// 사용자이름
+	//getter()
+	public String getName() {
+		return name;
+	}
+	public int getTotalPoints() {
+		return totalPoints;
+	}
+	public int getWithdrawal() {
+		return withdrawal;
+	}
+	public int getCurrentBalance() {
+		return withdrawal;
+	}
+	
+	
+	//setter()
 	public void setUserName(String name) {
-		userName = name;
+		this.name = name;
 	}
-	// 총 획득 상금 포인트
-	public void setTotalEarnedPoints(int points) {
-		totalEarnedPoints = points;
+	public void SetTotalPoints(int totalPoints) {
+		this.totalPoints = totalPoints;
 	}
-	// 출금
-	public void setWithdrawal(int amount) {
-		withdrawal = amount;
+	public void setWithdrawal(int withdrawal) {
+		this.withdrawal = withdrawal;
 	}
 	
-	// 포인트 현금 전환
-	public void setCashConverted(int amount) {
-		cashConverted = amount;
+	public void setCashConverted(int cashConverted) {
+		this.cashConverted = cashConverted;
 	}
-	
-	// 현재 보유 상금 포인트
-	public void setCurrentBalance(int balance) {
-		currentBalance = balance;
+	public void setCurrentBalance(int currentBalance) {
+		this.currentBalance = currentBalance;
 	}
-	
-	// 사용자 정보
-	public void info() {
-		System.out.println("================================");
-		System.out.println("사용자 이름 : " + userName);
-		System.out.println("총 획득 상금 포인트 : " + totalEarnedPoints + "원");
-		System.out.println("촐금 : " + "-" + withdrawal + "원");
-		System.out.println("포인트 현금 전환 : " + cashConverted + "원");
-		System.out.println("현재 보유 상금 포인트 : " + currentBalance + "원");
-	}
-	
 	
 	// 출금 메서드 (포인트 전환액이 1,000원 이상이어야 하며, 출금 금액은 전환액보다 작거나 같아야 합니다.)
-	public void withdrawCash(int amount) {
-		if(cashConverted >= 1000 && amount >= 1000 && amount <= cashConverted) {
-			cashConverted -= amount;
-			withdrawal += amount;
+	public void withdrawCash(int withdrawal) {
+		if(cashConverted >= 1000 && withdrawal >= 1000 && withdrawal <= cashConverted) {
+			cashConverted -= withdrawal;
+			withdrawal += withdrawal;
 			System.out.println("========== 출금이 완료되었습니다. ==========");
-			System.out.println("출금 금액 : " + amount + "원");
+			System.out.println("출금 금액 : " + withdrawal + "원");
 		} else {
 			System.out.println("출금이 불가합니다.");
 			if(cashConverted < 1000) {
 				System.out.println("포인트 전환액이 1,000원 이상이어야 합니다.");
 			}
-			if(amount < 1000) {
+			if(withdrawal < 1000) {
 				System.out.println("출금 금액이 1,000원 이상이어야 합니다.");
 			}
-			if (amount > cashConverted) {
+			if (withdrawal > cashConverted) {
 				System.out.println("출금 금액이 전환액보다 작습니다.");
 			}
 		}
+	}
+	
+	
+	// 사용자 정보
+	public String info() {
+		String info = "[사용자 이름 : " + name 
+						+ ", 총 획득 상금 포인트 : " + totalPoints + "원" 
+						+ ", 출금 : " + "-" + withdrawal + "원" 
+						+ ", 포인트 현금 전환 " + cashConverted 
+						+ "현재 보유 상금 포인트 : " + currentBalance + "원" +"]";
+		return info;
 	}
 	
 	

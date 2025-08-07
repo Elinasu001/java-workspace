@@ -3,26 +3,38 @@ package com.kh.assignment.abstraction.vo;
 public class LectureProgress {
 	// [필드]
 	private String userName; // 사용자 이름
-	private String lectureTitle; // 강의 이름
+	private String title; // 강의 이름
 	private String startDate; // 강의 시작 날짜
 	private String endDate; // 강의 종료 날짜
 	public int progressPercent; // 현재 강의 진도율 (0~100%)
 
+	// [생성자부]
+	//기본생성자
+	public LectureProgress() {}
+	//모든 필드를 매개변수로 가지고 있는 생성자
+	public LectureProgress(String userName, String title, String startDate, String endDate, int progressPercent) {
+		this.userName = userName;
+		this.title = title;
+		this.startDate = startDate;
+		this.endDate = endDate;
+		this.progressPercent = progressPercent;
+	}
+	
 	// [메소드]
 	// getter()
-	public String userName() {
+	public String getUserName() {
 		return userName;
 	}
-	public String lectureTitle() {
-		return lectureTitle;
+	public String getTitle() {
+		return title;
 	}
-	public String startDate() {
+	public String getStartDate() {
 		return startDate;
 	}
-	public String endDate() {
+	public String getEndDate() {
 		return endDate;
 	}
-	public int progressPercent() {
+	public int getProgressPercent() {
 		return progressPercent;
 	}
 	
@@ -30,8 +42,8 @@ public class LectureProgress {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	public void setLectureTitle(String lectureTitle) {
-		this.lectureTitle = lectureTitle;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	public void setStartDate(String startDate) {
 		this.startDate = startDate;
@@ -42,18 +54,6 @@ public class LectureProgress {
 	public void setProgressPercent(int progressPercent) {
 		this.progressPercent = progressPercent;
 	}
-
-	// info()
-	public String info() {
-		String info = "[사용자 이름 : " + userName 
-						+ ", 강의 이름 : " + lectureTitle 
-						+ ", 강의 날짜 : " + startDate 
-						+ ", 강의 과목 : " + endDate 
-						+ ", 현재 강의 진도율 : " + progressPercent
-						+ "]";
-		return info;
-	}
-	
 
 	// 강의 진도율이 20 미만이면 출력하기
 	public void lowProgressMessage() {
@@ -75,5 +75,17 @@ public class LectureProgress {
 			System.out.println("** 모든 강의를 완료했습니다! **");
 		}
 	}
+	
+	// info()
+	public String info() {
+		String info = "[사용자 이름 : " + userName 
+						+ ", 강의 이름 : " + title 
+						+ ", 강의 날짜 : " + startDate 
+						+ ", 강의 과목 : " + endDate 
+						+ ", 현재 강의 진도율 : " + progressPercent
+						+ "]";
+		return info;
+	}
+	
 
 }

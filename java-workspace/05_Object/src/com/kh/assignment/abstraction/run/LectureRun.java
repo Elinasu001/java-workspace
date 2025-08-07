@@ -18,7 +18,7 @@ public class LectureRun {
 
 		// 2. 강의 이름 입력받기
 		System.out.print("강의 이름을 입력하세요 > ");
-		lecture.setLectureTitle(sc.nextLine());
+		lecture.setTitle(sc.nextLine());
 
 		// 3. 강의 시작 날짜 입력받기
 		System.out.print("강의 시작 날짜를 입력하세요 (예: 2025-08-10) > ");
@@ -39,6 +39,7 @@ public class LectureRun {
 
 		// 7. 강의 진도율 채우기
 		boolean exit = false;
+		
 		while (!exit) {
 			System.out.println("======== 메뉴 ========");
 			System.out.println("1. 현재 강의 진도율 보기");
@@ -51,7 +52,7 @@ public class LectureRun {
 
 			switch (choice) {
 			case 1:
-				lecture.info();
+				System.out.println(lecture.info());
 				break;
 			case 2:
 				lecture.plusProgress();

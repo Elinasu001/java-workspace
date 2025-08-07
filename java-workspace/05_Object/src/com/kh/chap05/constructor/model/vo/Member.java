@@ -49,9 +49,42 @@ public class Member {
 	
 	public Member(String userId, String userPwd) {
 		System.out.println("매개변수가 두 개인 생성자");
-		System.out.println("전달받은 아이디 값 : " + userId);
-		System.out.println("전달받은 비밀번호 값 : " + userPwd);
+		// System.out.println("전달받은 아이디 값 : " + userId);
+		// System.out.println("전달받은 비밀번호 값 : " + userPwd);
+		//setter ()에서 하는 걸 생성자에서 처리해주자 ! : 유효한 객체를 만들기 위함. (초기화)
+		this.userId = userId;
+		this.userPwd = userPwd;
 	}
+	
+	public Member(String userId, String userPwd, String nickName) {
+		System.out.println("매개변수가 세 개인 생성자");
+		this.userId = userId;
+		this.userPwd = userPwd;
+		this.nickName = nickName;
+	}
+	
+	/*
+	 * 1. 반드시 생성자의 이름을 클래스의 이름과 동일하게 작성해야함(대/소문자 주의)\
+	 * 2. 반환형이 존재해서는 안됨!(메소드로 판단)
+	 * 3. 매개변수 생성자를 명시적으로 작성하면 기본생성자를 만들어주지 않는다!!
+	 * => 그래서 우리는 꼭 기본 생성자를 억지로 열심히 작성하는 습관을 들여야 함!!!
+	 * 4. 생성자는 동일한 이름으로 여러 개 생성이 가능하지만 매개변수가 중복되어선 안됨!!! => 생성자 오버로딩
+	 * 
+	 */
+	
+	/*
+	 * 과제
+	 * 
+	 * 기존에 만들어 두었던 다섯 개의 vo클래스 및 실행 클래스를
+	 * 오늘 배운 캡슐화 및 생성자를 적용하여 변경하시오.
+	 * 
+	 * 1) 모든 필드의 접근제한자를 private으로 변경
+	 * 2) 필드에 간접적으로 접근할 수 있도록 getter() / setter() 생성
+	 * 3) 모든 필드의 정보를 합쳐서 문자열의 형태로 반환해주는 info() 생서
+	 * 4) 기본생성자 및 모든 필드를 매개변수로 가지고 있는 생성자 생성
+	 * 5) 직접접근으로 사용하고 있던 실행크래스의 코드들을 전부 다 getter / setter 대체
+	 * 
+	 */
 	
 	//[메소드부]
 	//getter()

@@ -47,7 +47,7 @@ public class ChallengeUserRun {
 		challenge.checkAndAskForAuth();
 		
 		System.out.println("========= 챌린지 정보 =========");
-		challenge.info();
+		System.out.println(challenge.info());
 		
 	}
 }

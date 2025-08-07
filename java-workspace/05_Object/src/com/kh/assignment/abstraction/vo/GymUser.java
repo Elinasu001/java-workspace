@@ -11,8 +11,36 @@ public class GymUser{
 	private int usageDays;			// 이용 일수
 	private int extensionDays;		// 연장 일수
 	
+	// [생성자부]
+	// 기본생성자
+	public GymUser(){}
+	// 모든 필드를 매개변수로 가지고 있는 생성자
+	public GymUser(String userId, String name, LocalDate startDate, int usageDays, int extensionDays){
+		this.userId = userId;
+		this.name = name;
+		this.startDate = startDate;
+		this.usageDays = usageDays;
+		this.extensionDays = extensionDays;
+	}
+	
+	
 	// [메소드부]
 	//getter()
+	public String getUserId() {
+		return userId;
+	}
+	public String getName() {
+		return name;
+	}
+	public LocalDate getStartDate() {
+		return startDate;
+	}
+	public int getUsageDays() {
+		return usageDays;
+	}
+	public int getExtensionDays() {
+		return extensionDays;
+	}
 	
 	//setter()
 	public void setUserId(String userId) {
@@ -28,7 +56,7 @@ public class GymUser{
 		this.usageDays = usageDays;
 	}
 	public void setExtensionDays(int days) {
-		extensionDays = days;
+		this.extensionDays = days;
 	}
 	
 	// 이용일수가 7일 미만남았으면 연장 메세지 보여주기
@@ -39,16 +67,19 @@ public class GymUser{
 	}
 	
 	// 기간 연장 메서드
-	public void dateInfo(int addDays) {
+	public String dateInfo(int addDays) {
 		LocalDate endDate = startDate.plusDays(usageDays);				// 종료일자 = 사용일자.더한(이용일자)
 		LocalDate extendedEndDate = endDate.plusDays(extensionDays);	// 연장일자 = 종료일자.더한(연장일자)
 		
-		System.out.println("회원 아이디 : " + userId);
-		System.out.println("회원 이름 : " + name);
-		System.out.println("시작일 : " + startDate);
-		System.out.println("이용일수 : " + usageDays + "일");
-		System.out.println("종료일 : " + endDate);
-		System.out.println("연장된 종료일 : " + extendedEndDate);
+		String info = "[회원 아이디 : " + userId 
+					+ ", 회원 이름 : " + name 
+					+ ", 시작일 : " + startDate
+					+ ", 이용일수 : " + usageDays + "일"
+					+ ", 종료일 : " + endDate 
+					+ ", 연장된 종료일 : " + extendedEndDate+ "]";
+					
+		return info;
+		
 	}
 	
 }

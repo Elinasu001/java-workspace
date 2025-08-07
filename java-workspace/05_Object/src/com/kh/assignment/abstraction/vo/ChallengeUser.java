@@ -12,6 +12,19 @@ public class ChallengeUser {
 	private int count;			// 하루인증횟수
 	private int points;			// 포인트
 	
+	//[생성자부]
+	// 기본 생성자
+	public ChallengeUser() {}
+	// 모든 필드 매개변수로 갖는 생성자
+	public ChallengeUser(String name, String title, String period, String status, int count, int points){
+		this.name = name;
+		this.title = title;
+		this.period = period;
+		this.status = status;
+		this.count = count;
+		this.points = points;
+	}
+	
 	//[메소드부]
 	//getter()
 	public String getName() {
