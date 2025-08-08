@@ -41,4 +41,8 @@ public class RemoteController {
 		channelNo = 0;
 		return channel[0];
 	}
+	
+	public int getChannelNo() {
+		return channelNo;
+	}
 }
