@@ -8,7 +8,7 @@ import com.kh.chap07.remote.controller.RemoteController;
 public class RemoteView {
 	//*2
 	private Scanner sc = new Scanner(System.in); // 필드
-	RemoteController rc = new RemoteController(); // : 프로그램 실행과 동시에 생성 (이 필드로 있어야 주소값이 안날라가고 잘 연결됨.)
+	RemoteController rc = new RemoteController(); // : 프로그램 실행과 동시에 생성되고 프로그램 종료 해야 삭제됨. (이 필드로 있어야 주소값이 안날라가고 잘 연결됨.)
 	
 	// 프로그램 시작 시 보여질 메인메뉴를 출력해주는 메소드
 	public void mainMenu() {
