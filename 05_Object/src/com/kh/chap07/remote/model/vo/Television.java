@@ -10,13 +10,13 @@ public class Television {
 	 */
 	
 	// [필드]
-	private boolean on;		// getter() setter()
+	private boolean on;			// getter() setter() // false //*7
 	private String[] channel; 	// getter()
 	
 	// [생성자]
 	// 내가 가지고 있는 필드 초기화
 	public Television() {
-		channel = new String[5];
+		channel = new String[5]; // 배열 할당
 		channel[0] = "대한민국 24 뉴스채널";
 		channel[1] = "시니어토크쇼";
 		channel[2] = "스튜디오K";
@@ -28,12 +28,15 @@ public class Television {
 		return channel;
 	}
 	
+	//*7
 	// getter() 은 get 대신에 is 를 붙인다.
 	public boolean isOn() {
 		return on;
 	}
+	//*6
 	public void setOn(boolean on) {
-		this.on = on;
+		this.on = on; // 필드에 있는 on 에 true 대입
+		System.out.println("나 켜져있음");
 	}
 	
 	
