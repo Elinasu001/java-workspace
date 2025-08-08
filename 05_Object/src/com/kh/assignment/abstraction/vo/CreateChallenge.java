@@ -1,0 +1,140 @@
+package com.kh.assignment.abstraction.vo;
+
+public class CreateChallenge {
+	//[필드부]
+	private String name;			// 사용자 이름
+	private String title;			// 챌린지 제목
+	private String frequency;		// 인증 빈도
+	private String duration;		// 챌린지 기간
+	private String startDate;		// 시작일
+	private String checkInMethod;	// 인증방식
+	
+	//[생성자부]
+	// 기본생성자
+	public CreateChallenge() {}
+	// 모든 필드를 매개변수로 가지고 있는 생성자
+	public CreateChallenge(String name, String title, String frequency, String duration, String startDate, String  checkInMethod) {
+		this.name = name;
+		this.title = title;
+		this.frequency = frequency;
+		this.duration = duration;
+		this.startDate = startDate;
+		this.checkInMethod = checkInMethod;
+	}
+	
+	
+	//[메소드부]
+	// getter()
+	public String getName() {
+		return name;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public String getFrequency() {
+		return frequency;
+	}
+	public String getDuration() {
+		return duration;
+	}
+	public String getStartDate() {
+		return startDate;
+	}
+	public String getCheckInMethod() {
+		return checkInMethod;
+	}
+	
+	// setter()
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public void setFrequency(String frequency) {
+		this.frequency = frequency;
+	}
+	public void setDuration(String duration) {
+		this.duration = duration;
+	}
+	public void setStartDate(String startDate) {
+		this.startDate = startDate;
+	}
+	public void setCheckInMethod(String checkInMethod) {
+		this.checkInMethod = checkInMethod;
+	}
+	
+	// 인증 빈도 선택 메소드
+	public void setFrequencyByChoice(int choice) {
+	    String selectedFrequency = "";
+
+	    switch(choice) {
+	        case 1: selectedFrequency = "1) 매일"; break;
+	        case 2: selectedFrequency = "2) 평일 매일"; break;
+	        case 3: selectedFrequency = "3) 주말 매일"; break;
+	        case 4: selectedFrequency = "4) 주 1일"; break;
+	        case 5: selectedFrequency = "5) 주 2일"; break;
+	        case 6: selectedFrequency = "6) 주 3일"; break;
+	        default:
+	            System.out.println("잘못된 번호입니다. '1) 매일'로 설정합니다.");
+	            selectedFrequency = "1) 매일";
+	    }
+
+	    this.frequency = selectedFrequency;
+	}
+
+	
+	// 인증 기간 선택 메소드
+	public void setDurationByChoice(int choice) {
+		switch(choice) {
+		case 1 : this.duration = "1) 1주"; break;
+		case 2 : this.duration = "2) 2주"; break;
+		case 3 : this.duration = "3) 3주"; break;
+		case 4 : this.duration = "4) 4주"; break;
+		case 5 : this.duration = "5) 5주"; break;
+		default:
+				System.out.println("잘못된 번호입니다. 기본값 '1) 1주'로 설정됩니다.");
+				this.duration = "1) 1주";
+		}
+	}
+	
+	// 인증 방법 선택 메소드
+	public void setCheckInMethodByChoice(int choice) {
+	    switch (choice) {
+	        case 1:
+	            this.checkInMethod = "1) 하루에 한 번 인증";
+	            break;
+	        case 2:
+	            this.checkInMethod = "2) 하루에 여러 번 인증";
+	            break;
+	        case 3:
+	            this.checkInMethod = "3) 시작과 마무리 인증샷 (하루에 2번)";
+	            break;
+	        default:
+	            System.out.println("잘못된 번호입니다. 기본값 '1) 하루에 한 번 인증'으로 설정됩니다.");
+	            this.checkInMethod = "1) 하루에 한 번 인증";
+	    }
+	}
+	
+	// 제목 수정 메소드 (newTitle 문자열이 null 이 아니고, 공백이 아닌 실제 값이 들어있을 경우)
+	public void updateChallengeTitle(String newTitle) {
+	    if (newTitle != null && !newTitle.trim().isEmpty()) {
+	        this.title = newTitle;
+	        System.out.println("챌린지 제목이 '" + newTitle + "'(으)로 수정되었습니다.");
+	    } else {
+	        System.out.println("유효하지 않은 제목입니다. 수정이 취소되었습니다.");
+	    }
+	}
+	
+	// 챌린지 정보
+	public String info() {
+		String info = "[사용자 이름 : " + name 
+						+ ", 챌린지 제목 : " + title 
+						+ ", 인증 빈도 : " + frequency 
+						+ ", 챌린지 기간 : " + duration 
+						+ " 시작일" + startDate
+						+ "인증 방식 : " + checkInMethod
+						+ "]";
+		return info;
+	}
+}
