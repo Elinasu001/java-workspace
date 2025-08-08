@@ -15,7 +15,7 @@ public class RemoteController {
 	
 	//*5
 	// 보통 반환해줄때는 true/false int 자료형을 사용
-	// tv를 true 로 변경 : setOn 메소드를 불러서 true 로 변경해주기
+	// tv 를 true 로 변경 : setOn 메소드를 불러서 true 로 변경해주기
 	public int powerOn() {
 		
 		// 티비가 꺼져 있을 경우에만 사용
@@ -32,9 +32,9 @@ public class RemoteController {
 	public String channelUp() {
 		
 		// getter 메소드를 호출해서 받아오기 > 문자열 배열 주소값 저장
-		String[] channel = tv.getChannel();
-		if(channelNo < (channel.length -1)) {
-			return channel[++channelNo];// channel[1] : 무조건 1번 돌리고 싶을 경우
+		String[] channel = tv.getChannel(); // channel 지역변수
+		if(channelNo < (channel.length -1)) { // 5 -1
+			return channel[++channelNo];// channel[1] : 무조건 1번 돌리고 싶을 경우 // channel 인덱스 접근, 주소값 반환(string)
 		}
 		
 		// 0번 인덱스로 돌려줄 거면 channelNo = 0로 바꿔줘야 됨.
