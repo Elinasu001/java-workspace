@@ -25,7 +25,7 @@ public class Student {
 	public String getName() {
 		return name;
 	}
-	public double isHeight() {
+	public double getHeight() {
 		return height;
 	}
 	public char getGender() {
