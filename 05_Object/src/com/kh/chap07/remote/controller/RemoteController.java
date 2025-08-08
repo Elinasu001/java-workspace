@@ -31,15 +31,20 @@ public class RemoteController {
 	// view == television > channel type > String
 	public String channelUp() {
 		
-		// getter 메소드를 호출해서 받아오기 > 문자열 배열 주소값 저장
-		String[] channel = tv.getChannel(); // channel 지역변수
-		if(channelNo < (channel.length -1)) { // 5 -1
-			return channel[++channelNo];// channel[1] : 무조건 1번 돌리고 싶을 경우 // channel 인덱스 접근, 주소값 반환(string)
+		// 꺼져 있을 경우 채널업 하면 안되니깐 켜져 있을 떄만 채널업 하겠다.
+		if(!tv.isOn()) {
+			// getter 메소드를 호출해서 받아오기 > 문자열 배열 주소값 저장
+			String[] channel = tv.getChannel(); // channel 지역변수
+			if(channelNo < (channel.length -1)) { // 5 -1
+				return channel[++channelNo];// channel[1] : 무조건 1번 돌리고 싶을 경우 // channel 인덱스 접근, 주소값 반환(string)
+			}
+			
+			// 0번 인덱스로 돌려줄 거면 channelNo = 0로 바꿔줘야 됨.
+			channelNo = 0;
+			return channel[0];
 		}
+		return null;
 		
-		// 0번 인덱스로 돌려줄 거면 channelNo = 0로 바꿔줘야 됨.
-		channelNo = 0;
-		return channel[0];
 	}
 	
 	public int getChannelNo() {
