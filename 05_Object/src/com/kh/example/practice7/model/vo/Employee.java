@@ -17,6 +17,9 @@ public class Employee {
 	
 	public Employee(int empNo, String empName) {
 		
+		this.empNo = empNo;
+		this.empName = empName;
+		
 	}
 	
 	public Employee(int empNo, 
@@ -29,6 +32,18 @@ public class Employee {
 					double bonusPoint,
 					String phone,
 					String address) {
+		
+		this.empNo = empNo;
+		this.empName = empName;
+		this.dept = dept;
+		this.job = job;
+		this.age = age;
+		this.gender = gender;
+		this.salary = salary;
+		this.bonusPoint = bonusPoint;
+		this.phone = phone;
+		this.address = address;
+		
 	}
 	
 	public int getEmpNo() {
@@ -36,6 +51,9 @@ public class Employee {
 	}
 	public String getEmpName() {
 		return empName;
+	}
+	public String getDept() {
+		return dept;
 	}
 	public String getJob() {
 		return job;
@@ -55,7 +73,7 @@ public class Employee {
 	public String getPhone() {
 		return phone;
 	}
-	public String address() {
+	public String getAddress() {
 		return address;
 	}
 	
