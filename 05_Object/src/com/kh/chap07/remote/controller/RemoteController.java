@@ -19,7 +19,7 @@ public class RemoteController {
 	public int powerOn() {
 		
 		// 티비가 꺼져 있을 경우에만 사용
-		if(!tv.isOn()) { // !tv.isOn() >> tv.isOn() == false
+		if(!tv.isOn()) { // !tv.isOn() >> tv.isOn() == false :: TV가 꺼져 있는가? 
 			tv.setOn(true);
 			return 1;
 			
