@@ -8,12 +8,6 @@ public class Product {
 	
 	public Product() {}
 	
-	public Product(String pName, int price, String brand) {
-		this.pName = pName;
-		this.price = price;
-		this.brand = brand;
-	}
-	
 	public String getPname() {
 		return pName;
 	}
@@ -35,7 +29,10 @@ public class Product {
 	}
 	
 	public String information() {
-		String information = "[ 이름: " + pName + ", 가격: " + price + "만원" + ", 상품명: " + brand + "]";
+		String information = "[ 이름: " + pName 
+							+ ", 가격: " + price + "만원" 
+							+ ", 상품명: " + brand 
+							+ "]";
 		return information;
 	}
 	
