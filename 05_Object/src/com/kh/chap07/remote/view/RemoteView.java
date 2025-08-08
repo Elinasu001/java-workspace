@@ -32,7 +32,7 @@ public class RemoteView {
 			case 1 : powerOn(); break; //*3
 			case 2 : channelUp(); break;
 			case 3 : break;
-			case 4 : break;
+			case 4 : powerDown();
 			case 5 : System.out.println("리모콘 조작하기는 즐거우셨나요? 안녕히가세요:) "); return;
 			default: System.out.println("없는 메뉴를 선택하셨습니다. 다시 입력해주세요.");
 			}
@@ -60,6 +60,18 @@ public class RemoteView {
 		System.out.println();
 	}
 	
+	// 전원 끄기 
+	private void powerDown() {
+		System.out.println("======================");
+		
+		int result = rc.powerDown();
+		if(result == 0) {
+			System.out.println("\n전원이 꺼졌습니다 ~~");
+		} else {
+			System.out.println("\n이미 전원이 꺼져있습니다.");
+		}
+	}
+	
 	private void channelUp() {
 		
 		//0번 채널
@@ -67,7 +79,7 @@ public class RemoteView {
 		// 컨트롤러야 채널 올려줘 그리고 뭐하는지 알려줘
 		// 객체간의 상호작용 == 메소드 호출 필요
 		String channel = rc.channelUp(); // return channel[++channelNo]; 주소를 변수에 대입 // 지역변수에 대입
-		// 채널이 돌아갔을 때만 채널업
+		// 채널이 켜져있을 때만 채널업
 		if(channel != null) {
 			// 몇 번 채널인지 알기위해서는 controller 에서 번호 get 해오기
 			int channelNo = rc.getChannelNo();

@@ -28,6 +28,19 @@ public class RemoteController {
 		}
 	}
 	
+	public int powerDown() {
+		
+		// 티비가 켜져 있을 경우에만 사용
+		if(tv.isOn()) { 
+			tv.setOn(false);
+			return 0;
+			
+		} else {
+			return 1;
+		}
+	}
+	
+	
 	// view == television > channel type > String
 	public String channelUp() {
 		
