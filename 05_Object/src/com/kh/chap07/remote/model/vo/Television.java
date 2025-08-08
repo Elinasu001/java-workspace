@@ -36,8 +36,6 @@ public class Television {
 	//*6
 	public void setOn(boolean on) {
 		this.on = on; // 필드에 있는 on 에 true 대입
-		System.out.println("나 켜져있음");
 	}
-	
 	
 }
