@@ -42,15 +42,22 @@ public class RemoteView {
 	
 	// 전원켜기 //*4
 	private void powerOn() {
-		
 		//RemoteController rc = new RemoteController();
 		System.out.println("===========================");
 		System.out.println("전원 켜기 메뉴이니다.");
 		System.out.println("===========================");
-		rc.powerOn();
-		System.out.println("\n전원이 켜졌습니다 축하드립니다~~~:)\n");
-	
 		
+		int result = rc.powerOn(); // remoteController에서 int 로 받아왔음.
+		if(result > 0) { //on/off 알려면 remoteController에서 반환값을 받아와야됨.
+			//꺼져있었을 경우
+			System.out.println("\n전원이 켜졌습니다 축하드립니다~~~:)\n");
+		} else {
+			//켜져있었을 경우
+			System.out.println("\n이미 전원이 켜져있습니다.");
+		}
+		System.out.println();
+		System.out.println();
+		System.out.println();
 	}
 	
 }
