@@ -28,7 +28,7 @@ public class RemoteController {
 		}
 	}
 	
-	public int powerDown() {
+	public int powerOff() {
 		
 		// 티비가 켜져 있을 경우에만 사용
 		if(tv.isOn()) { 
@@ -45,7 +45,7 @@ public class RemoteController {
 	public String channelUp() {
 		
 		// 꺼져 있을 경우 채널업 하면 안되니깐 켜져 있을 떄만 채널업 하겠다.
-		if(!tv.isOn()) {
+		if(tv.isOn()) {
 			// getter 메소드를 호출해서 받아오기 > 문자열 배열 주소값 저장
 			String[] channel = tv.getChannel(); // channel 지역변수
 			if(channelNo < (channel.length -1)) { // 5 -1
@@ -59,6 +59,24 @@ public class RemoteController {
 		return null;
 		
 	}
+	
+	
+		public String channelDown() {
+			// 티비가 켜져 있을 때만 채널 내리기
+			if(tv.isOn()) {
+				
+				String[] channel = tv.getChannel(); 
+				if(channelNo < 0) {
+					return channel[--channelNo];
+				}
+				
+				channelNo = channel.length -1; // 가장 끝 채널로
+				return channel[channelNo];
+			}
+			return null;
+			
+		}
+	
 	
 	public int getChannelNo() {
 		return channelNo;
