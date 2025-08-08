@@ -126,7 +126,8 @@
     - Static Binding(정적 바인딩)
     - 동적 바인딩
   - 실습 : MVC(모델)_Model View Controller
-    
+    - 리모컨 동작
+  - 과제 : 클래스다이어그램
 
 
       
