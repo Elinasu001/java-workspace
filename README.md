@@ -63,7 +63,7 @@
   - G.C (Garbage Collector)
   - 일반적인 사용 방식
   - 배열 복사
-    - 얕은 복사
+    - **얕은 복사**
     - 깊은 복사
       - System.arraycopy()
       - Arrays.copyOf()
@@ -117,7 +117,8 @@
         - UserPoint
         - GymUser
         - LectureProgress
-  - Method Controller 
+  - Method Controller
+    - **얕은 복사**
 
 
       
