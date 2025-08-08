@@ -24,7 +24,7 @@ public class OverloadingController {
 	
 	/*
 	public void test(int a) {
-		같은 int로 안됨.
+		같은 int로 안됨. 위에서 사용 중
 	}
 	 */
  
@@ -35,7 +35,7 @@ public class OverloadingController {
 	/*
 	public void test(inf c, int d) {
 		매개변수 식별자와는 상관없이
-		자려횽의 개수, 순서가 동일하기 때문에 구현이 불가능
+		자료형의 개수, 순서가 동일하기 때문에 구현이 불가능
 	}
 	*/
 	/*
@@ -51,6 +51,10 @@ public class OverloadingController {
 	}
 	*/
 	
-	public void test(int a, String b) {}
-	public void test(String b, int a) {}
+	public void test(int a, String b) {
+		System.out.println("메소드 오버로딩 테스트 5");
+	}
+	public void test(String b, int a) {
+		System.out.println("메소드 오버로딩 테스트 6");
+	}
 }
