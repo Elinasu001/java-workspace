@@ -28,12 +28,10 @@ public class Product {
 		this.brand = brand;
 	}
 	
-	public String information() {
-		String information = "[ 이름: " + pName 
+	public void information() {
+		System.out.println("[ 이름: " + pName 
 							+ ", 가격: " + price + "만원" 
-							+ ", 상품명: " + brand 
-							+ "]";
-		return information;
+							+ ", 상품명: " + brand + "]");
 	}
 	
 }

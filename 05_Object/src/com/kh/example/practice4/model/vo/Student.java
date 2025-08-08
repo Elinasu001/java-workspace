@@ -48,16 +48,12 @@ public class Student {
 		this.gender = gender;
 	}
 	
-	public String information() {
-		
-		String information = "[ 학년: " + grade 
+	public void information() {
+		System.out.println("[ 학년: " + grade 
 							+ ", 반: " + classroom 
 							+ ", 이름: " + name 
 							+ ", 키: " + height
-							+ ", 성별: " + gender
-							+"]";
-		
-		return information;
+							+ ", 성별: " + gender+"]");
 	}
 	
 }

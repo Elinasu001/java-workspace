@@ -12,7 +12,7 @@ public class Run {
 		pr.setPrice(100);
 		pr.setBrand("애플");
 		
-		System.out.println(pr.information());
+		pr.information();
 	}
 
 }
