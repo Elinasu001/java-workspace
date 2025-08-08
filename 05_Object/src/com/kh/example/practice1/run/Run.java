@@ -1,5 +1,5 @@
-package com.kh.example.pratice1.run;
-import com.kh.example.pratice1.model.vo.Member;
+package com.kh.example.practice1.run;
+import com.kh.example.practice1.model.vo.Member;
 public class Run {
 
 	public static void main(String[] args) {

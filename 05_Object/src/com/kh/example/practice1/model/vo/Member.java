@@ -1,4 +1,4 @@
-package com.kh.example.pratice1.model.vo;
+package com.kh.example.practice1.model.vo;
 
 public class Member {
 	
