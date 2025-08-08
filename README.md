@@ -7,6 +7,9 @@
 
 ## 📘 학습 내용 요약
 - 변수
+  - **Type Casting(자료형 변환)**
+    - Promotion(자동형 변환)
+    - Type Casting(강제형 변환)
 - 상수
 - 스캐너
 - 자료형 변환
