@@ -117,6 +117,7 @@
         - UserPoint
         - GymUser
         - LectureProgress
+  - Mehod Controller 
 
 
       
