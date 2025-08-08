@@ -67,12 +67,19 @@ public class RemoteView {
 		// 컨트롤러야 채널 올려줘 그리고 뭐하는지 알려줘
 		// 객체간의 상호작용 == 메소드 호출 필요
 		String channel = rc.channelUp(); // return channel[++channelNo]; 주소를 변수에 대입 // 지역변수에 대입
-		// 몇 번 채널인지 알기위해서는 controller 에서 번호 get 해오기
-		int channelNo = rc.getChannelNo();
-		System.out.println(channelNo + "번 채널입니다.");
-		System.out.println("===================================");
-		System.out.println("현재 상용중인 프로그램입니다. : ☆ " + channel + " ☆"); // [++channelNo];에 있는 주소 들어옴.
-		System.out.println("===================================");
+		// 채널이 돌아갔을 때만 채널업
+		if(channel != null) {
+			// 몇 번 채널인지 알기위해서는 controller 에서 번호 get 해오기
+			int channelNo = rc.getChannelNo();
+			System.out.println(channelNo + "번 채널입니다.");
+			System.out.println("===================================");
+			System.out.println("현재 상용중인 프로그램입니다. : ☆ " + channel + " ☆"); // [++channelNo];에 있는 주소 들어옴.
+			System.out.println("===================================");
+		} else {
+			System.out.println("먼저 전원을 켜주시기 바랍니다.");
+		}
+		System.out.println();
+		
 	}
 	
 }
