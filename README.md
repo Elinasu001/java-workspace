@@ -125,7 +125,7 @@
   - **Method Overloading(메소드 오버로딩)**
     - Static Binding(정적 바인딩)
     - 동적 바인딩
-  - 실습 : 실행/입출력/값저장/제어 분리
+  - 실습 : MVC
 
       
 ---
