@@ -1,0 +1,17 @@
+package com.kh.hw.member.view;
+
+import java.util.Scanner;
+
+import com.kh.hw.member.controller.MemberController;
+
+public class MemberMenu {
+	
+	private Scanner sc = new Scanner(System.in);
+	MemberController mc = new MemberController();
+	
+	public void MemberMenu() {
+		
+	}
+	
+}
+
