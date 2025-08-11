@@ -10,10 +10,15 @@ package com.kh.chap02.model.vo;
  * 
  */
 
+
+// extends 가 안 붙은 클래스에는 ?
+// 기본적으로 모든 클래스에는 : public class Food extends Object{} 가 붙어있다.
+// 즉, 모든 객체는 object 클래스를 가지고 있는 멤버를 사용할 수 있다.
 public class Food {
 	
 	// 공통적으로 가지고 있던 필드
 	// 필드부 : foodName, material, cookingTime
+	//상속 한다고 protected 사용하지 말기,,, 캡슐화 깨짐.
 	private String foodName;
 	private String material;
 	private int cookingTime;
