@@ -128,6 +128,7 @@
   - 실습 : MVC(모델)_Model View Controller
     - 리모컨 동작
   - 과제 : 클래스다이어그램
+- ObjectArray(객체배열)
 
 
       
