@@ -42,6 +42,6 @@ public class ItalianFood {
 	}
 	
 	public String information() {
-		return "음식정보 [음식명 : " + foodName + "재료 : " + material + "조리시간 : " + cookingTime + "오일 : " + oil + "]"; 
+		return "음식정보 [음식명 : " + foodName + ", 재료 : " + material + ", 조리시간 : " + cookingTime + ", 오일 : " + oil + "]"; 
 	}
 }

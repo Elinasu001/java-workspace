@@ -42,7 +42,7 @@ public class JapanessFood {
 	}
 	
 	public String information() {
-		return "음식정보 [음식명 : " + foodName + "재료 : " + material + "조리시간 : " + cookingTime + "신선도 : " + fresh + "]"; 
+		return "음식정보 [음식명 : " + foodName + ", 재료 : " + material + ", 조리시간 : " + cookingTime + ", 신선도 : " + fresh + "]"; 
 	}
 	
 }
