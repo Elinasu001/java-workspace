@@ -23,7 +23,11 @@ public class ElectronicBook extends Book {
 		this.platform = platform;
 	}
 	
-	public String information() {
+//	public String information() {
+//		return super.information() + ", 플랫폼 : " + platform + "]";
+//	}
+	
+	public String toString() {
 		return super.information() + ", 플랫폼 : " + platform + "]";
 	}
 	

@@ -17,7 +17,11 @@ public class PaperBook extends Book {
 		this.lostPage = lostPage;
 	}
 	// 1. 자식 2. 부모
-	public String information() {
+//	public String information() {
+//		return super.information() + ", 잃어버린 페이지 : " + lostPage + "]";
+//	}
+	
+	public String toString() {
 		return super.information() + ", 잃어버린 페이지 : " + lostPage + "]";
 	}
 	
