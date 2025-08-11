@@ -1,0 +1,62 @@
+package com.kh.run;
+
+import java.util.Scanner;
+
+import com.kh.model.vo.Restaurant;
+
+public class Run {
+
+	public static void main(String[] args) {
+		
+		// 1절
+		// 사용자에게 식당의 정보를 입력받아서
+		// 입력받은 시당의 정보를 출력해주는 프로그램
+		// 3개의 식당정보를 입력받겠다고 가정
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("식당의 상호를 입력해주세 > ");
+		String storeName = sc.nextLine();
+		
+		System.out.println("식당의 주소를 입력해주세요 > ");
+		String address = sc.nextLine();
+		
+		System.out.println("식당의 주력메뉴를 입력해주세요 > ");
+		String mainMenu = sc.nextLine();
+
+		Restaurant r = new Restaurant(storeName, address, mainMenu);
+		// 1번 setter 호출
+		// 2번 생성자 매개변수로 인자값을 전달
+		
+		System.out.print("식당의 상호를 입력해주세요 > ");
+		String storeName2 = sc.nextLine();
+		
+		System.out.print("식당의 주소를 입력해주세요 > ");
+		String address2 = sc.nextLine();
+		
+		System.out.print("식당의 주력메뉴를 입력해주세요 > ");
+		String mainMenu2 = sc.nextLine();
+		
+		Restaurant r2 = new Restaurant(storeName2, address2, mainMenu2);
+		
+		System.out.print("식당의 상호를 입력해주세요 > ");
+		String storeName3 = sc.nextLine();
+		
+		System.out.print("식당의 주소를 입력해주세요 > ");
+		String address3 = sc.nextLine();
+		
+		System.out.print("식당의 주력메뉴를 입력해주세요 > ");
+		String mainMenu3 = sc.nextLine();
+		
+		Restaurant r3 = new Restaurant(storeName3, address3, mainMenu3);
+
+		System.out.println(r.information());
+		System.out.println(r2.information());
+		System.out.println(r3.information());
+		
+		// 2절
+		// 사용자에게 상호명을 입력받아서
+		// 입력받은 상호와 일치하는 식당을 검색해서 출력해주는 프로그램
+		
+	}
+
+}
