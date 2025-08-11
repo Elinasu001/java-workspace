@@ -131,7 +131,8 @@
 - ObjectArray(객체배열)
   - 중복제거 및 확장성
 - Inheritance(상속) ( == Heredity )
-
+  - 부모/자식 클래스
+    
 
       
 ---
