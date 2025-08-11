@@ -63,7 +63,13 @@ public class Member {
 	}
 	
 	public String inform() {
-		return null;
+		return "[ 아이디 : " + id 
+						+ ", 이름 : " +  name 
+						+ ", 비밀버호 : " + password 
+						+ ", 이메일 : " + email 
+						+ ", 성별 : " + gender 
+						+ ", 나이 : " + age 
+						+ "]";
 	}
 	
 }

@@ -41,7 +41,7 @@ public class UserPoint {
 	public void setUserName(String name) {
 		this.name = name;
 	}
-	public void SetTotalPoints(int totalPoints) {
+	public void setTotalPoints(int totalPoints) {
 		this.totalPoints = totalPoints;
 	}
 	public void setWithdrawal(int withdrawal) {

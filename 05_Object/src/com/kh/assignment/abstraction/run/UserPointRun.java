@@ -12,7 +12,7 @@ public class UserPointRun {
 		
 		// 사용자 포인트 정보 매개변수 입력
 		point.setUserName("박수현");
-		point.SetTotalPoints(100200);
+		point.setTotalPoints(100200);
 		point.setWithdrawal(0);
 		point.setCashConverted(10000);
 		point.setCurrentBalance(90200);
