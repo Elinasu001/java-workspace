@@ -97,6 +97,8 @@ public class Run {
 			System.out.println("대표 메뉴 : " + r2.getMainMenu());
 		}
 		
+		
+		
 	}
 
 }
