@@ -10,11 +10,11 @@ public class Run {
 		
 		// 1절
 		// 사용자에게 식당의 정보를 입력받아서
-		// 입력받은 시당의 정보를 출력해주는 프로그램
+		// 입력받은 식당의 정보를 출력해주는 프로그램
 		// 3개의 식당정보를 입력받겠다고 가정
 		Scanner sc = new Scanner(System.in);
 		
-		// 참조자료형은 초기화식 null 값만 대입할 수 있다.
+		// 참조자료형은 초기화시 null 값만 대입할 수 있다.
 		Restaurant r0 = null;
 		Restaurant r1 = null;
 		Restaurant r2 = null;
@@ -79,11 +79,23 @@ public class Run {
 		
 		
 		
-		
-		
 		// 2절
 		// 사용자에게 상호명을 입력받아서
-		// 입력받은 상호와 일치하는 식당을 검색해서 출력해주는 프로그램
+		// 만약에 입력받은 상호와 일치하는 식당이 존재한다면 메인메뉴룰 검색해서 출력해주는 프로그램
+		System.out.print("가게명을 입력해주세요 > ");
+		String searched = sc.nextLine();
+		
+		if(searched.equals(r0.getStoreName())) {
+			System.out.println("대표 메뉴 : " + r0.getMainMenu());
+		}
+		
+		if(searched.equals(r1.getStoreName())) {
+			System.out.println("대표 메뉴 : " + r1.getMainMenu());
+		}
+		
+		if(searched.equals(r2.getStoreName())) {
+			System.out.println("대표 메뉴 : " + r2.getMainMenu());
+		}
 		
 	}
 
