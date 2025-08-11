@@ -130,7 +130,7 @@
   - 과제 : 클래스다이어그램
 - ObjectArray(객체배열)
   - 중복제거 및 확장성
-- Inheritance(상속)
+- Inheritance(상속) (== Heredity)
 
 
       
