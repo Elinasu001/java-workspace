@@ -14,19 +14,42 @@ public class Run {
 		// 3개의 식당정보를 입력받겠다고 가정
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("식당의 상호를 입력해주세 > ");
-		String storeName = sc.nextLine();
+		// 참조자료형은 초기화식 null 값만 대입할 수 있다.
+		Restaurant r0 = null;
+		Restaurant r1 = null;
+		Restaurant r2 = null;
 		
-		System.out.println("식당의 주소를 입력해주세요 > ");
-		String address = sc.nextLine();
+		for(int i = 0; i < 3; i++ ) {
+			
+			System.out.println("식당의 상호를 입력해주세 > ");
+			String storeName = sc.nextLine();
+			
+			System.out.println("식당의 주소를 입력해주세요 > ");
+			String address = sc.nextLine();
+			
+			System.out.println("식당의 주력메뉴를 입력해주세요 > ");
+			String mainMenu = sc.nextLine();
+	
+			r0 = new Restaurant(storeName, address, mainMenu);
+			
+			if(i == 0) {
+				r0 = new Restaurant(storeName, address, mainMenu);
+			} else if(i == 1) {
+				r1 = new Restaurant(storeName, address, mainMenu);
+			} else {
+				r2 = new Restaurant(storeName, address, mainMenu);
+			}
+			
+		}
 		
-		System.out.println("식당의 주력메뉴를 입력해주세요 > ");
-		String mainMenu = sc.nextLine();
-
-		Restaurant r = new Restaurant(storeName, address, mainMenu);
+		System.out.println(r0.information());
+		System.out.println(r1.information());
+		System.out.println(r2.information());
+		
 		// 1번 setter 호출
-		// 2번 생성자 매개변수로 인자값을 전달
+		// 2번 생성자 매개변수로 인자값을 전달 (v)
 		
+		/*
 		System.out.print("식당의 상호를 입력해주세요 > ");
 		String storeName2 = sc.nextLine();
 		
@@ -52,6 +75,11 @@ public class Run {
 		System.out.println(r.information());
 		System.out.println(r2.information());
 		System.out.println(r3.information());
+		*/
+		
+		
+		
+		
 		
 		// 2절
 		// 사용자에게 상호명을 입력받아서
