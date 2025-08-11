@@ -50,7 +50,7 @@ public class Food {
 	}
 	
 	public String information() {
-		return "[음식명 : " + foodName + "주재료 : " + material + "조리시간 : " + cookingTime + "]";
+		return "[음식명 : " + foodName + ", 주재료 : " + material + ", 조리시간 : " + cookingTime + "]";
 	}
 	
 }

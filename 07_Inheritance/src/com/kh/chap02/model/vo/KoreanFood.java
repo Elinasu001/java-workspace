@@ -14,7 +14,7 @@ public class KoreanFood extends Food {
 	
 	// 생성자부
 	public KoreanFood() {
-		super();
+		super(); // super : 부모객체의 주소값을 의미하는 키워드 (생략가능)
 		System.out.println("응애 나 자식");
 	}
 	
@@ -22,7 +22,6 @@ public class KoreanFood extends Food {
 	public int getSpicy() {
 		return spicy;
 	}
-	
 	public void setSpicy(int spicy) {
 		this.spicy = spicy;
 	}
