@@ -106,7 +106,20 @@ public class MemberController {
 	
 	// 비밀번호 변경 메소드
 	public boolean updatePassword(String id, String password) {
-		return false;
+		if(id != null && !id.trim().isEmpty()) {
+			return false;
+		}
+		
+		if(password != null && !password.trim().isEmpty()) {
+			return false;
+		}
+		for(int i = 0; i < m.length; i++) {
+			if(m[i] != null && id.equals(m[i].getId())) {
+				m[i].setPassword(password); // real update
+				return true;
+			}
+		}
+		return false; // id x
 	}
 	
 	// 이름 변경 메소드

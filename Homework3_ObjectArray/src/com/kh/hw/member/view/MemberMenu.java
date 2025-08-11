@@ -263,6 +263,15 @@ public class MemberMenu {
 		// 메뉴 번호를 잘못 입력했을 경우 “잘못 입력하셨습니다.” 출력 후
 		// mainMenu()로 돌아감
 		
+		
+	}
+	
+	public void updatePassword(){
+		// 수정할 회원 id와 비밀번호를 사용자에게 입력 받고 입력 받은 데이터를
+		// mc의 updatePassword() 메소드의 매개변수로 넘김, 반환 값에 따라
+		// 검색결과 없으면 “존재하지 않는 아이디입니다.” 출력, mainMenu()로 감
+		// 검색 결과가 있으면 “수정이 성공적으로 되었습니다.” 출력 후
+		// mainMenu()로 돌아감
 	}
 	
 	
