@@ -41,7 +41,7 @@ public class KoreanFood {
 		this.spicy = spicy;
 	}
 	public String information() {
-		return "음식정보 [음식명 : " + foodName + "재료 : " + material + "조리시간 : " + cookingTime + "매움 : " + spicy + "]"; 
+		return "음식정보 [음식명 : " + foodName + "재료 : " + material + "조리시간 : " + cookingTime + "맵기 : " + spicy + "]"; 
 	}
 	
 }

@@ -13,7 +13,6 @@ public class JapanessFood {
 		this.material = material;
 		this.cookingTime = cookingTime;
 		this.fresh = fresh;
-		
 	}
 	
 	public String getFoodName() {

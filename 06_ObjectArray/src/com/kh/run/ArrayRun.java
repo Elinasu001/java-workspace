@@ -56,7 +56,6 @@ public class ArrayRun {
 			System.out.println(restaurants[i].information());
 		}
 		
-		
 		System.out.print("상호명을 입력해주세요 > ");
 		String searched = sc.nextLine();
 		

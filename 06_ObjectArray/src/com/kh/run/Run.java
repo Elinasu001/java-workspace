@@ -21,7 +21,7 @@ public class Run {
 		
 		for(int i = 0; i < 3; i++ ) {
 			
-			System.out.println("식당의 상호를 입력해주세 > ");
+			System.out.println("식당의 상호를 입력해주세요 > ");
 			String storeName = sc.nextLine();
 			
 			System.out.println("식당의 주소를 입력해주세요 > ");
