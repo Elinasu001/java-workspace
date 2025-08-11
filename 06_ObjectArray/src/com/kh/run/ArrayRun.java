@@ -43,6 +43,7 @@ public class ArrayRun {
 
 			restaurants[i] = new Restaurant(storeName, address, mainMenu);
 		}
+		
 		// System.out.println(restaurants[0]);
 		// 주소값을 확인하고 싶었던 것은 아님.
 		/*
@@ -51,9 +52,18 @@ public class ArrayRun {
 		System.out.println(restaurants[1].information()); // 필드 정보
 		System.out.println(restaurants[2].information()); // 필드 정보
 		*/
-		
 		for (int i = 0; i < restaurants.length; i++) {
 			System.out.println(restaurants[i].information());
+		}
+		
+		
+		System.out.print("상호명을 입력해주세요 > ");
+		String searched = sc.nextLine();
+		
+		for(int i = 0; i < restaurants.length; i++) {
+			if(searched.equals(restaurants[i].getStoreName())) {
+				System.out.println("대표 메뉴 : " + restaurants[i].getStoreName());
+			}
 		}
 	}
 
