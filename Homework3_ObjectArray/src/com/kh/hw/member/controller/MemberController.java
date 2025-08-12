@@ -156,16 +156,12 @@ public class MemberController {
 	
 	// 한 회원만 삭제하는 메소드
 	public boolean delete(String id) {
-		if(id != null && !id.trim().isEmpty()) {
-			return false;
-		}
-		for(int i = 0; i < m.length; i++) {
-			if(m[i] != null && id.trim().isEmpty()) {
-				m[i].setId(id);
-				return true;
-			}
-		}
 		
+//		for(int i = 0; i < m.length; i++) {
+//			if(m[i] != null && id.equals(m[i].getId())) {
+//				m.remove();
+//			}
+//		}
 		return false;
 	}
 	
