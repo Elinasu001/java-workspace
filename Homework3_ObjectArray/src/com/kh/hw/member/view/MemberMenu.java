@@ -364,6 +364,23 @@ public class MemberMenu {
 		// “메인으로 돌아갑니다.” 출력 후 mainMenu()로 돌아감
 		// 메뉴 번호를 잘못 입력했을 경우 “잘못 입력하셨습니다.” 출력 후
 		// mainMenu()로 돌아감
+		
+		while(true) {
+			System.out.println("1. 특정 회원 삭제하기");
+			System.out.println("2. 모든 회원 삭제하기");
+			System.out.println("9. 메인으로 돌아가기");
+			
+			int menuNo = sc.nextInt();
+			sc.nextLine();
+			
+			switch(menuNo) {
+			case 1 : deleteOne(); return;
+			case 2 : deleteAll(); return;
+			case 9 : System.out.println("메인으로 돌가갑니다."); return;
+			default : System.out.println("잘못 입력하셨습니다."); return;
+			}
+		}
+		
 	}
 	
 	public void deleteOne() {
@@ -373,12 +390,32 @@ public class MemberMenu {
 		// 검색결과 없으면 “존재하지 않는 아이디입니다.” 출력, mainMenu()로 감
 		// 검색 결과가 있으면 “성공적으로 삭제하였습니다.” 출력 후
 		// mainMenu()로 돌아감
+		System.out.println("삭제할 아이디를 입력해주세요 ");
+		System.out.println("아이디를 삭제하시겠습니까? (Y / N) > ");
+		String id = sc.nextLine();
+		
+		if(id.equals("Y") || id.equals("y")) {
+			
+			System.out.println("성공적으로 삭제하였습니다.");
+		}
+		
+		
 	}
 	
 	public void deleteAll() {
 		// 정말 삭제할 것인지 사용자에게 물어본 뒤, Y나 y를 사용자가 입력할 경우
 		// mc의 delete() 메소드 호출, “성공적으로 삭제하였습니다.” 출력 후
 		// mainMenu()로 돌아감
+		
+		System.out.println("정말 삭제하시겠습니까? (Y / N) > ");
+		String id = sc.nextLine();
+		if(id.equals("Y") || id.equals("y")) {
+			System.out.println("성공적으로 삭제하였습니다.");
+			return;
+		} else {
+			System.out.println("다시 선택해주세요");
+			return;
+		}
 	}
 	
 	public void printAll() {
