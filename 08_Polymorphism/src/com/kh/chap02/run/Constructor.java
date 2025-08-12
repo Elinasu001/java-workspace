@@ -15,21 +15,21 @@ public class Constructor {
 		BeerDrinker b2 = new BeerDrinker(true);
 		RiceWineDrinker r1 = new RiceWineDrinker(40);
 		RiceWineDrinker r2 = new RiceWineDrinker(50);
-		
+
 		s1.drink();
 		s2.drink();
 		b1.drink();
 		b2.drink();
 		r1.drink();
 		r2.drink();
-		
+
 		s1.eat();
 		s2.eat();
 		b1.eat();
 		b2.eat();
 		r1.eat();
 		r2.eat();
-		
+
 		System.out.println("=============================================");
 		// 배열
 		SojuDrinker[] sojuArr = new SojuDrinker[2];
@@ -42,22 +42,22 @@ public class Constructor {
 		beerArr[1] = b2;
 		rwArr[0] = r1;
 		rwArr[1] = r2;
-		
-		for(int i = 0; i < sojuArr.length; i++) {
+
+		for (int i = 0; i < sojuArr.length; i++) {
 			sojuArr[i].drink();
 			sojuArr[i].eat();
 		}
-		for(int i = 0; i < beerArr.length; i++) {
+		for (int i = 0; i < beerArr.length; i++) {
 			beerArr[i].drink();
 			beerArr[i].eat();
 		}
-		for(int i = 0; i < rwArr.length; i++) {
+		for (int i = 0; i < rwArr.length; i++) {
 			rwArr[i].drink();
 			rwArr[i].eat();
 		}
-		
+
 		System.out.println("=============================================");
-		// 다형성
+		// 다형성 : 부모의 "자료형"을 이용하여 자식 클래스를 재정의한다.★
 		Drinker[] drinkArr = new Drinker[6];
 		drinkArr[0] = s1;
 		drinkArr[1] = s2;
@@ -65,8 +65,8 @@ public class Constructor {
 		drinkArr[3] = b2;
 		drinkArr[4] = r1;
 		drinkArr[5] = r2;
-		
-		for(int i = 0; i < drinkArr.length; i++) {
+
+		for (int i = 0; i < drinkArr.length; i++) {
 			drinkArr[i].drink();
 			drinkArr[i].eat();
 		}
