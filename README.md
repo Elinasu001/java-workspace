@@ -151,7 +151,13 @@
       - abstract(추상메소드) vs Interface(인터페이스)
 ---
 - Excepiton(예외 처리)
-
+  - RuntimeException
+    - NullPointerException
+    - ArrayIndexOutOfBoundsException
+    - ClassCastException
+    - AritmeticException
+    - NegativeArraySizeException
+      ...
       
 ---
 🛠 개발 환경
