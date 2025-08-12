@@ -132,13 +132,16 @@
   - 중복제거 및 확장성
 - Inheritance(상속) ( == Heredity )
   - 부모/자식 클래스
-  - Overriding(정적 오버라이딩)
+  - Overriding(오버라이딩)_**정적**바인딩
     - @Override
   - toString()
   - 과제
-- **Polymorphism(다형성)**
-  - 메모리
-  - 다형성의 활용
+  -  **Polymorphism(다형성)**
+    - 메모리
+    - 클래스 형 변환
+      - 배열 사용
+    - **동적**바인딩
+    - 다형성의 활용
     
 
       
