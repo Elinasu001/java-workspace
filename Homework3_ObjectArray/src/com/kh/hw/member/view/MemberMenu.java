@@ -43,8 +43,8 @@ public class MemberMenu {
 		// “잘못 입력하셨습니다. 다시 입력해주세요.” 출력 후 메뉴 반복
 		
 		while(true) {
-			int max = mc.printAll().length; // m 의 길이
-			int cnt  = mc.existMemberNum();	//현재 등록 인원
+			int max = mc.printAll().length; //현재 등록 가능한 회원 수
+			int cnt  = mc.existMemberNum();	//현재 등록 회원 수
 			
 			System.out.println("현재 등록 가능한 회원 수는 " + max + "명 입니다.");
 			System.out.println("현재 등록된 회원 수는 " + cnt + "명 입니다.");
@@ -92,6 +92,7 @@ public class MemberMenu {
 		// 있으면 “중복된 아이디입니다. 다시 입력해주세요.”라는 문구를 출력 후
 		// 다시 아이디를 받도록 함
 		String id;
+		
 		while(true) {
 			System.out.print("아이디 : ");
 			id = sc.nextLine();
@@ -119,11 +120,10 @@ public class MemberMenu {
 		
 		// 성별의 경우 M이나 m, F나 f가 아니면 “성별을 다시 입력하세요.”를
 		// 출력 후 다시 성별을 입력하도록 함
-	    
 	    char gender;
 	    while (true) {
 	        System.out.print("성별 (M/F) : ");
-	        char g = sc.nextLine().charAt(0);   // 라인 전체 입력
+	        char g = sc.nextLine().charAt(0);
 
             if (g == 'M' || g == 'm' || g == 'F' || g == 'f') {
                 gender = g;                 // 변환 없이 그대로 저장
@@ -149,12 +149,19 @@ public class MemberMenu {
 		
 	    // 아이디부터 나이까지 모든 데이터를 받았으면
 	    // mc의 insertMember메소드의 매개변수로 넘김
-	    mc.insertMember(id, name, password, email, gender, age);
-	    System.out.println("회원 등록이 완료되었습니다.");
+    	mc.insertMember(id, name, password, email, gender, age);
+    	System.out.println("회원 등록이 완료되었습니다.");
+    	
+    	// 회원 등록된 정보 출력
+    	String info = mc.searchId(id);
+	    if(info != null) {
+	    	System.out.println("등록된 회원 정보 : " + info);
+	    }
 
 	}
 	
 	public void searchMember() {
+		
 		//1. 아이디로 검색하기 ➔ searchId()
 		//2. 이름으로 검색하기 ➔ searchName()
 		//3. 이메일로 검색하기 ➔ searchEmail)_
@@ -179,8 +186,8 @@ public class MemberMenu {
 	        case 1 : searchId(); break;
 	        case 2 : searchName(); break;
 	        case 3 : searchEmail(); break;
-	        case 9 : System.out.println("메인으로 돌아갑니다."); return; // mainMenu() 반환
-	        default : System.out.println("잘못 입력하셨습니다."); return; // mainMenu() 반환
+	        case 9 : System.out.println("메인으로 돌아갑니다."); return;
+	        default : System.out.println("잘못 입력하셨습니다."); return;
 	        }
 	        
 	        
@@ -289,19 +296,34 @@ public class MemberMenu {
 		// 검색 결과가 있으면 “수정이 성공적으로 되었습니다.” 출력 후
 		// mainMenu()로 돌아감
 		
+		// 아이디 입력
 		System.out.println("아이디를 입력해주세요 :  ");
 		String id = sc.nextLine();
 		
-		System.out.println("비밀번호를 입력해주세요 :  ");
+		// 아이디 존재 확인
+		String bfId = mc.searchId(id);
+		if(bfId == null) {
+			System.out.println("존재하지 않는 아이디입니다.");
+			return;
+		}
+		
+		// 변경 비밀번호 입력
+		System.out.println("바꿀 비밀번호를 입력해주세요 :  ");
 		String pwd = sc.nextLine();
 		
+		// 업데이트
 		boolean ok = mc.updatePassword(id, pwd);
 		
-		if(!ok) {
+		if(ok) {
 			System.out.println("수정이 성공적으로 되었습니다.");
-			return;
+			
+			// 결과 확인
+			String afId = mc.searchId(id);
+			if(afId != null) {
+				System.out.println(afId);
+			}
 		}else {
-			System.out.println("존재하지 않는 아이디입니다.");
+			System.out.println("수정 실패!");
 			return;
 		}
 	
@@ -315,18 +337,34 @@ public class MemberMenu {
 		// 검색 결과가 있으면 “수정이 성공적으로 되었습니다.” 출력 후
 		// mainMenu()로 돌아감
 		
+		// 아이디 입력
 		System.out.println("아이디를 입력해주세요 : ");
 		String id = sc.nextLine();
 		
-		System.out.println("이름을 입력해주세요 : ");
+		// 아이디 존재 확인
+		String bfId = mc.searchId(id);
+		if(bfId == null) {
+			System.out.println("존재하지 않는 아이디입니다.");
+			return;
+		}
+		
+		// 변경 이름 입력
+		System.out.println("바꿀 이름을 입력해주세요 : ");
 		String name = sc.nextLine();
 		
+		// 업데이트
 		boolean ok = mc.updateName(id, name);
-		if(!ok) {
+		if(ok) {
 			System.out.println("수정이 성공적으로 되었습니다.");
-			return;
+			
+			// 결과 확인
+			String afId = mc.searchId(id);
+			if(afId != null) {
+				System.out.println(afId);
+			}
+			
 		}else {
-			System.out.println("존재하지 않는 아이디입니다.");
+			System.out.println("수정 실패!");
 			return;
 		}
 
@@ -338,19 +376,35 @@ public class MemberMenu {
 		// 검색결과 없으면 “존재하지 않는 아이디입니다.” 출력, mainMenu()로 감
 		// 검색 결과가 있으면 “수정이 성공적으로 되었습니다.” 출력 후
 		// mainMenu()로 돌아감
+		
+		
+		// 아이디 입력
 		System.out.println("아이디를 입력해주세요 : ");
 		String id = sc.nextLine();
 		
-		System.out.println("이메일을 입력해주세요 : ");
+		// 아이디 존재 확인
+		String bfId = mc.searchId(id);
+		if(bfId == null) {
+			System.out.println("존재하지 않는 아이디입니다.");
+		}
+		
+		// 변경 이메일 입력
+		System.out.println("바꿀 이메일을 입력해주세요 : ");
 		String email = sc.nextLine();
 		
 		boolean ok = mc.updateEmail(id, email);
 		
-		if(!ok) {
+		if(ok) {
 			System.out.println("수정이 성공적으로 되었습니다.");
-			return;
+			
+			// 결과 확인
+			String afId = mc.searchId(id);
+			if(afId != null) {
+				System.out.println(afId);
+			}
+			
 		} else {
-			System.out.println("존재하지 않는 아이디입니다.");
+			System.out.println("수정 실패!");
 			return;
 		}
 		
