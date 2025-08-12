@@ -158,6 +158,7 @@
     - AritmeticException
     - NegativeArraySizeException
       ...
+  - try~catch
       
 ---
 🛠 개발 환경
