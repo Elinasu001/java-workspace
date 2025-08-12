@@ -287,6 +287,18 @@ public class MemberMenu {
 		// 검색결과 없으면 “존재하지 않는 아이디입니다.” 출력, mainMenu()로 감
 		// 검색 결과가 있으면 “수정이 성공적으로 되었습니다.” 출력 후
 		// mainMenu()로 돌아감
+		
+		System.out.println("아이디를 입력해주세요 :  ");
+		String id = sc.nextLine();
+		
+		if(!mc.checkId(id)) {
+			System.out.println("존재하지 않는 아이디입니다.");
+		}
+		
+		
+		
+		
+	
 	}
 	
 	
