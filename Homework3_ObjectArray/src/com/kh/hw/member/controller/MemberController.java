@@ -185,28 +185,24 @@ public class MemberController {
 
 	// 한 회원만 삭제하는 메소드
 	public boolean delete(String id) {
-
-		if (id == null || id.trim().isEmpty()) {
+		
+		if (id == null && id.trim().isEmpty()) {
 			return false;
 		}
-
+		
+		
 		int idx = indexOfId(id);
-		if (idx == -1) {
-			return false;
-		}
-		// id x
+		
+	    if (idx == -1) return false;
 
-		m[idx] = null; // id 삭제
+	    for (int i = idx; i < m.length - 1; i++) {
+	        m[i] = m[i + 1];
+	    }
+	    
+	    m[m.length - 1] = null;
 
-		// 앞으로앞으로~
-		for (int i = idx; i < m.length - 1; i++) {
-			m[i] = m[i + 1];
-		}
+	    return true;
 
-		// 빈칸
-		m[m.length - 1] = null;
-
-		return true;
 	}
 
 	// 전체 회원을 삭제하는 메소드

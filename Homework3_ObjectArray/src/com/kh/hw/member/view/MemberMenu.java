@@ -503,21 +503,33 @@ public class MemberMenu {
 		// 검색 결과가 있으면 “성공적으로 삭제하였습니다.” 출력 후
 		// mainMenu()로 돌아감
 		
-		
-		System.out.println("아이디를 삭제하시겠습니까? (Y / N) > ");
+		// 아이디 입력
+		System.out.println("삭제할 아이디를 입력해주세요. : ");
 		String id = sc.nextLine();
 
-		boolean ok = mc.delete(id);
+		// 아이디 존재 확인
+		String bfId = mc.searchId(id);
+		if (bfId == null) {
+			System.out.println("존재하지 않는 아이디입니다.");
+			return;
+		}
+		
+		System.out.println(id + " 아이디를 정말 삭제하시겠습니까? (Y / N) > ");
+		String ans = sc.nextLine();
 
-		if (id.equals("Y") || id.equals("y")) {
-			if (!ok) {
+
+		if (ans.equals("Y") || ans.equals("y")) {
+			
+			boolean ok = mc.delete(id);
+			
+			if (ok) {
 				System.out.println("성공적으로 삭제하였습니다.");
-				return;
+				printAll();
 			} else {
-				System.out.println("성공적으로 삭제하였습니다.");
-				return;
+				 System.out.println("삭제에 실패했습니다.");
 			}
-
+		} else {
+			 System.out.println("삭제를 취소했습니다.");
 		}
 
 	}
@@ -528,20 +540,20 @@ public class MemberMenu {
 		// mc의 delete() 메소드 호출, “성공적으로 삭제하였습니다.” 출력 후
 		// mainMenu()로 돌아감
 		
-		
 		System.out.println("정말 삭제하시겠습니까? (Y / N) > ");
-		String id = sc.nextLine();
+		String ans = sc.nextLine();
 
-		boolean ok = mc.delete(id);
-
-		if (id.equals("Y") || id.equals("y")) {
-			if (!ok) {
-				System.out.println("성공적으로 삭제하였습니다.");
-				return;
-			}
-		} else {
-			System.out.println("다시 선택해주세요");
+		if (ans.equals("Y") || ans.equals("y")) {
+			
+			mc.delete();
+			System.out.println("성공적으로 삭제하였습니다.");
+			
+			// 전체 목록 출력
+			printAll();
 			return;
+			
+		} else {
+			System.out.println("삭제를 취소했습니다.");
 		}
 	}
 	
