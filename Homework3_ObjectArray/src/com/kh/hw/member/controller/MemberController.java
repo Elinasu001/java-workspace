@@ -171,7 +171,7 @@ public class MemberController {
 	
 	// 전체 회원을 삭제하는 메소드
 	public void delete() {
-		return;
+		
 	}
 	
 	// Member 객체 반환 메소드

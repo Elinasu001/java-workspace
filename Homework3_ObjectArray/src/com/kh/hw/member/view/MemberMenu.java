@@ -390,13 +390,21 @@ public class MemberMenu {
 		// 검색결과 없으면 “존재하지 않는 아이디입니다.” 출력, mainMenu()로 감
 		// 검색 결과가 있으면 “성공적으로 삭제하였습니다.” 출력 후
 		// mainMenu()로 돌아감
-		System.out.println("삭제할 아이디를 입력해주세요 ");
+		
 		System.out.println("아이디를 삭제하시겠습니까? (Y / N) > ");
 		String id = sc.nextLine();
 		
+		boolean ok = mc.delete(id);
+		
 		if(id.equals("Y") || id.equals("y")) {
+			if(!ok) {
+				System.out.println("성공적으로 삭제하였습니다.");
+				return;
+			}else {
+				System.out.println("성공적으로 삭제하였습니다.");
+				return;
+			}
 			
-			System.out.println("성공적으로 삭제하였습니다.");
 		}
 		
 		
@@ -409,9 +417,14 @@ public class MemberMenu {
 		
 		System.out.println("정말 삭제하시겠습니까? (Y / N) > ");
 		String id = sc.nextLine();
+		
+		boolean ok = mc.delete(id);
+		
 		if(id.equals("Y") || id.equals("y")) {
-			System.out.println("성공적으로 삭제하였습니다.");
-			return;
+			if(!ok) {
+				System.out.println("성공적으로 삭제하였습니다.");
+				return;
+			}
 		} else {
 			System.out.println("다시 선택해주세요");
 			return;
