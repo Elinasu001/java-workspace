@@ -293,9 +293,25 @@ public class MemberMenu {
 		
 		if(!mc.checkId(id)) {
 			System.out.println("존재하지 않는 아이디입니다.");
+			return;
+		}
+		
+		System.out.println("새 비밀번호 : ");
+		String pwd = sc.nextLine();
+		
+		if(pwd.isEmpty()) {
+			System.out.println("이메일을 입력해주세요.");
+			return;
 		}
 		
 		
+		boolean ok = mc.updateEmail(id, pwd);
+		
+		if(ok) {
+			System.out.println("수정이 성공적으로 되었습니다.");
+		}else {
+			System.out.println("존재하지 않는 아이디입니다.");
+		}
 		
 		
 	
