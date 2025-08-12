@@ -125,6 +125,7 @@ public class MemberMenu {
 
 		System.out.println("이름 : ");
 		String name = sc.nextLine();
+		
 
 		System.out.print("비밀번호 : ");
 		String password = sc.nextLine();
