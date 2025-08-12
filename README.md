@@ -147,6 +147,7 @@
       - abstract(추상 메소드)
       - Interface(인터페이스(구현))
         - implements(구현)
+      - abstract(추상메소드) vs Interface(인터페이스)
     
 
       
