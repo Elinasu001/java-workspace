@@ -131,12 +131,12 @@
   - 과제 : 클래스다이어그램
 - ObjectArray(객체배열)
   - 중복제거 및 확장성
+  - 과제(mvc)
 - Inheritance(상속(확장)) ( == Heredity )
   - 부모/자식 클래스
   - Overriding(오버라이딩)_**정적**바인딩
     - @Override
   - toString()
-  - 과제
   -  **Polymorphism(다형성)**
     - 메모리
     - 클래스 형 변환
