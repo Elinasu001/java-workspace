@@ -1,5 +1,7 @@
 package com.kg.exception.run;
 
+import com.kg.exception.controller.UncheckedException;
+
 public class Run {
 
 	public static void main(String[] args) {
@@ -24,6 +26,9 @@ public class Run {
 		 * - 예외 : 시스템 에러를 제외한 나머지 컴파일, 런타임, 논리적 에러와 같이 비교적 덜 심각한 애들
 		 * 		  그 중에서도 주로 런타임 에러를 의미함
 		 */
+		
+		UncheckedException e = new UncheckedException();
+		e.method1();
 		
 	}
 
