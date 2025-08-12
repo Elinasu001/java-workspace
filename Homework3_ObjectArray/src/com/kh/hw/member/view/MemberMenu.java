@@ -262,8 +262,23 @@ public class MemberMenu {
 		// “메인으로 돌아갑니다.” 출력 후 mainMenu()로 돌아감
 		// 메뉴 번호를 잘못 입력했을 경우 “잘못 입력하셨습니다.” 출력 후
 		// mainMenu()로 돌아감
-		
-		
+		while(true) {
+			System.out.println("1. 비밀번호 수정하기");
+			System.out.println("2. 이름 수정하기");
+			System.out.println("3. 이메일 수정하기");
+			System.out.println("9. 메인으로 돌아가기");
+			
+			int menuNo = sc.nextInt();
+			sc.nextLine();
+			
+			switch(menuNo){
+			case 1 : updatePassword(); return;
+			case 2 : updateName(); return;
+			case 3 : updateEmail(); return;
+			case 9 : System.out.println("메인으로 돌아가기"); return;
+			default : System.out.println("잘못 입력하셨습니다."); return;
+			}
+		}
 	}
 	
 	public void updatePassword(){

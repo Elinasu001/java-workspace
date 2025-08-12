@@ -124,12 +124,33 @@ public class MemberController {
 	
 	// 이름 변경 메소드
 	public boolean updateName(String id, String name) {
+		
+		if(id != null && !name.trim().isEmpty()) {
+			return false;
+		}
+		for(int i = 0; i < m.length; i++) {
+			if(m[i] != null && name.equals(m[i].getName())) {
+				m[i].setName(name);
+				return true;
+			}
+		}
 		return false;
 	}
 	
 	// 이메일 변경 메소드
 	public boolean updateEmail(String id, String email) {
+		
+		if(id != null && !email.trim().isEmpty()) {
+			return false;
+		}
+		for(int i = 0; i < m.length; i++) {
+			if(m[i] != null && email.trim().isEmpty()) {
+				m[i].setEmail(email);
+				return true;
+			}
+		}
 		return false;
+		
 	}
 	
 	// 한 회원만 삭제하는 메소드
