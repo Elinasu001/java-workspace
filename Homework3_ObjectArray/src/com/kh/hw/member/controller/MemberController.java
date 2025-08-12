@@ -6,6 +6,7 @@ public class MemberController {
 	
 	private Member[] m = new Member[10];
 	
+	//id, name, password, email, gender, age
 	public MemberController() {
         m[0] = new Member("aaaaa","박신우","aa","aaa@aaa.aaa",'F',33);
         m[1] = new Member("bbbbb","강고결","bb","bbb@bbb.bbb",'M',34);

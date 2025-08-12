@@ -199,6 +199,7 @@ public class MemberMenu {
 		String id = sc.nextLine();
 		
 		String res = mc.searchId(id);
+		
 		if(res == null) {
 			System.out.println("검색 결과가 없습니다."); 
 			return;
@@ -291,29 +292,18 @@ public class MemberMenu {
 		System.out.println("아이디를 입력해주세요 :  ");
 		String id = sc.nextLine();
 		
-		if(!mc.checkId(id)) {
-			System.out.println("존재하지 않는 아이디입니다.");
-			return;
-		}
-		
-		System.out.println("새 비밀번호 : ");
+		System.out.println("비밀번호를 입력해주세요 :  ");
 		String pwd = sc.nextLine();
 		
-		if(pwd.isEmpty()) {
-			System.out.println("이메일을 입력해주세요.");
-			return;
-		}
+		boolean ok = mc.updatePassword(id, pwd);
 		
-		
-		boolean ok = mc.updateEmail(id, pwd);
-		
-		if(ok) {
+		if(!ok) {
 			System.out.println("수정이 성공적으로 되었습니다.");
+			return;
 		}else {
 			System.out.println("존재하지 않는 아이디입니다.");
+			return;
 		}
-		
-		
 	
 	}
 	
@@ -324,6 +314,21 @@ public class MemberMenu {
 		// 검색결과 없으면 “존재하지 않는 아이디입니다.” 출력, mainMenu()로 감
 		// 검색 결과가 있으면 “수정이 성공적으로 되었습니다.” 출력 후
 		// mainMenu()로 돌아감
+		
+		System.out.println("아이디를 입력해주세요 : ");
+		String id = sc.nextLine();
+		
+		System.out.println("이름을 입력해주세요 : ");
+		String name = sc.nextLine();
+		
+		boolean ok = mc.updateName(id, name);
+		if(!ok) {
+			System.out.println("수정이 성공적으로 되었습니다.");
+			return;
+		}else {
+			System.out.println("존재하지 않는 아이디입니다.");
+			return;
+		}
 
 	}
 	
@@ -333,6 +338,22 @@ public class MemberMenu {
 		// 검색결과 없으면 “존재하지 않는 아이디입니다.” 출력, mainMenu()로 감
 		// 검색 결과가 있으면 “수정이 성공적으로 되었습니다.” 출력 후
 		// mainMenu()로 돌아감
+		System.out.println("아이디를 입력해주세요 : ");
+		String id = sc.nextLine();
+		
+		System.out.println("이메일을 입력해주세요 : ");
+		String email = sc.nextLine();
+		
+		boolean ok = mc.updateEmail(id, email);
+		
+		if(!ok) {
+			System.out.println("수정이 성공적으로 되었습니다.");
+			return;
+		} else {
+			System.out.println("존재하지 않는 아이디입니다.");
+			return;
+		}
+		
 	}
 	
 	public void deleteMember() {
