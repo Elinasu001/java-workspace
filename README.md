@@ -160,10 +160,12 @@
     - AritmeticException
     - NegativeArraySizeException
       ...
-  - try~catch
+  - 
   - CheckedException
     - BufferedReader
     - IOException
+    - try~catch
+    - throws
       
 ---
 🛠 개발 환경
