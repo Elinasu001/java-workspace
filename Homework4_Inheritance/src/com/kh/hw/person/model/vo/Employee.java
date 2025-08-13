@@ -29,7 +29,8 @@ public class Employee extends Person {
 	public void setDept(String dept) {
 		this.dept = dept;
 	}
-
+	
+	@Override
 	public String toString() {
 		return super.inform() + ", 급여 : " + salary + ", 부서 : " + dept + "]";
 	}

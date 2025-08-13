@@ -21,6 +21,7 @@ public class PaperBook extends Book {
 //		return super.information() + ", 잃어버린 페이지 : " + lostPage + "]";
 //	}
 	
+	@Override
 	public String toString() {
 		return super.information() + ", 잃어버린 페이지 : " + lostPage + "]";
 	}

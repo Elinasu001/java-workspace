@@ -28,7 +28,8 @@ public class Student extends Person {
 	public void setMajor(String major) {
 		this.major = major;
 	}
-
+	
+	@Override
 	public String toString() {
 		return super.inform() + ", 학년 : " + grade + ", 전공 : " + major + "]";
 	}
