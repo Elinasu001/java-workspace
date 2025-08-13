@@ -61,7 +61,7 @@ public class PersonMenu {
 	}
 
 	// 학생 메뉴를 출력하는 메소드
-	public void studentMenu() {
+	private void studentMenu() {
 		// 1. 학생 추가 ➔ insertStudent()
 		// 2. 학생 보기 ➔ printStudent()
 		// 9. 메인으로 ➔ “메인으로 돌아갑니다.” 출력 후 메인으로
@@ -110,7 +110,7 @@ public class PersonMenu {
 	}
 
 	// 사원 메뉴를 출력하는 메소드
-	public void employeeMenu() {
+	private void employeeMenu() {
 		// 1. 사원 추가 ➔ insertEmployee()
 		// 2. 사원 보기 ➔ printEmployee()
 		// 9. 메인으로 ➔ “메인으로 돌아갑니다.” 출력 후 메인으로
@@ -159,7 +159,7 @@ public class PersonMenu {
 	}
 
 	// 사용자에게 객체배열에 저장할 학생 데이터를 받는 메소드
-	public void insertStudent() {
+	private void insertStudent() {
 		// 학생 이름 :
 		// 학생 나이 :
 		// 학생 키 :
@@ -274,7 +274,7 @@ public class PersonMenu {
 	}
 
 	// 객체배열에 저장된 학생 데이터를 출력하는 메소드
-	public void printStudent() {
+	private void printStudent() {
 		// pc의 printStudent() 메소드의 반환 값을 이용하여 학생 객체 배열에 저장된
 		// 모든 데이터 출력
 
@@ -297,7 +297,7 @@ public class PersonMenu {
 	}
 
 	// 사용자에게 객체배열에 저장할 사원 데이터를 받는 메소드
-	public void insertEmployee() {
+	private void insertEmployee() {
 		// 사원 이름 :
 		// 사원 나이 :
 		// 사원 키 :
@@ -412,7 +412,7 @@ public class PersonMenu {
 	}
 
 	// 객체배열에 저장된 사원 데이터를 출력하는 메소드
-	public void printEmployee() {
+	private void printEmployee() {
 		// pc의 printEmployee() 메소드의 반환 값을 이용하여 사원 객체 배열에 저장된
 		// 모든 데이터 출력
 
