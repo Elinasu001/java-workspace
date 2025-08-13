@@ -1,5 +1,6 @@
 package com.kg.exception.run;
 
+import com.kg.exception.controller.CheckedException;
 import com.kg.exception.controller.UncheckedException;
 
 public class Run {
@@ -30,7 +31,17 @@ public class Run {
 		UncheckedException e = new UncheckedException();
 		//e.method1();
 		//e.homeWork();
-		e.method2();
+		//e.method2();
+		//e.method3();
+		
+		CheckedException c = new CheckedException();
+		try {
+			c.method1();
+		} catch(Exception e1) {
+			e1.printStackTrace();
+		}
+		
+		
 	}
 
 }

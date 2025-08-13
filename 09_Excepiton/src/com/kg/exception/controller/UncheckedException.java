@@ -127,4 +127,43 @@ public class UncheckedException {
 		System.out.println("프로그램 종료");
 	}
 	
+	public void method3() {
+		// 배열
+		
+		// 사용자에게 정수값을 입력받아서
+		// 입력받은 만큼의 크기를 가진 배열을 생성 및 할당하고
+		// 100번째 인덱스 값을 출력
+		
+		
+		// InputMismatchException : 스캐너 메소드의 자료형과 일치하지 않으면 파업
+		// NegativeArraySizeException : 배열의 크기를 음수로 지정하면 파업
+		// ArrayIndexOutOfBoundsException : 배열의 크기보다 큰 인덱스에 접근하면 파업
+		Scanner sc = new Scanner(System.in);
+		System.out.println("정수를 입력해주세요 > ");
+		
+		try {
+			int size = sc.nextInt();
+			int[] arr = new int [size];
+			System.out.println(arr[100]);
+			System.out.println("정수를 입력해주세요.");
+		} catch (RuntimeException e) {
+			e.printStackTrace(); // stack 추적 어디서 에러가 났는 지 알 수 있는데 얘는 개발단계에서만 넣고 개발이 끝나면 삭제 필요
+			System.out.println("아마도 음수를 입력했거나...? 100보다 크지 않아서...?");
+		}
+		
+		/*
+		catch (InputMismatchException e) {
+			System.out.println("정수를 입력해주세요.");
+		} catch (NegativeArraySizeException e) {
+			System.out.println("0 이상으로 입력해주세요.");
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("100보다 큰수 노노");
+		}
+		
+		==> RuntimeException e 통일 가능하다 ( 단, 자식 예외클래스가 맨 위로 배칙 해야되고 넓은 의미의 예외처리가 맨 아래로 들어가야된다.)
+		*/
+		
+		
+	}
+	
 }
