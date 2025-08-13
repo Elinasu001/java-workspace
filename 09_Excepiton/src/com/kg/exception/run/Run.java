@@ -28,8 +28,9 @@ public class Run {
 		 */
 		
 		UncheckedException e = new UncheckedException();
-		e.method1();
-		
+		//e.method1();
+		//e.homeWork();
+		e.method2();
 	}
 
 }

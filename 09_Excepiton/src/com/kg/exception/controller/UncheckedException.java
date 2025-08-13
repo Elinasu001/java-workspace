@@ -1,5 +1,6 @@
 package com.kg.exception.controller;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class UncheckedException {
@@ -63,7 +64,6 @@ public class UncheckedException {
 		 */
 		
 		try {
-			
 			System.out.println(num1 / num2); // 막고 
 			System.out.println("올바른 정수 입력!"); // 예외 일어나지 않을 경우
 		
@@ -74,9 +74,57 @@ public class UncheckedException {
 		
 		System.out.println("프로그램 종료");
 		
+	}
+	
+	public void homeWork() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			
+			System.out.println("메뉴를 선택해주세요");
+			System.out.println("메뉴를 선택해주세요");
+			System.out.println("1. 추가하기");
+			System.out.println("2. 검색하기");
+			
+			int menuNo = 0;
+			
+			try {
+				menuNo = sc.nextInt();
+			} catch(InputMismatchException e) {
+				System.out.println("숫자만 넣어이눔아");
+				// 예외처리 시 catch 문에 적어야하는 내용이 출력문은 아님
+			}
+			sc.nextLine();
+			
+			System.out.println(menuNo + "번 메뉴를 선택하셨습니다.");
+			
+		}
+		
+	}
+	
+	public void method2() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수를 입력해주세요 (0은 제외) > ");
+		
+		try {
+			int num = sc.nextInt(); // 예외발생 : InputMismatchException
+			
+			System.out.println("100을 입력값으로 나눈 결과" + (100/ num)); //예외발생 : ArithmeticException
+		
+		} catch(InputMismatchException e) {// 1. 먼저 입력받은 값이 정수인지 판단
+			
+			System.out.println("숫자로 된 정수값이 아닙니다.");
+			
+		} catch(ArithmeticException e) {// 2. 정수가 맞다면 0인지 판별
+			
+			System.out.println("0은 안돼요!!");
+		}
 		
 		
 		
+		System.out.println("프로그램 종료");
 	}
 	
 }
