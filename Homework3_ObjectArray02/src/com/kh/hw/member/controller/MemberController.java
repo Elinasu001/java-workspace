@@ -175,8 +175,8 @@ public class MemberController {
 	public void delete() {
 	}
 
-	// Member 객체 반환 메소드
-	public Member[] printAll() {
+	// Member 객체 반환 메소드 (필드값 반환)
+	public Member[] getM() {
 		return null;
 	}
 }

@@ -398,7 +398,9 @@ public class MemberMenu {
 		// mc의 printAll() 메소드의 반환 값을 가지고 저장된 회원을 출력하는데
 		// 저장된 회원의 수가 0명이면 “저장된 회원이 없습니다.” 출력,
 		// 0명이 아니면 저장된 모든 회원의 정보 출력
-
-
+		System.out.println();
+		System.out.println("모든 회원의 정보 서비스입니다.");
+		
+		
 	}
 }
