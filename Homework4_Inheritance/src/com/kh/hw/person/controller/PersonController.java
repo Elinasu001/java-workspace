@@ -4,60 +4,44 @@ import com.kh.hw.person.model.vo.Employee;
 import com.kh.hw.person.model.vo.Person;
 import com.kh.hw.person.model.vo.Student;
 
-public class PersonController extends Person {
+public class PersonController {
 	
 	private Student[] s = new Student[SIZE1];
 	public static final int SIZE1 = 3; 
 	private Employee[] e = new Employee[SIZE2];
 	public static final int SIZE2 = 10;
 	
+	{	//학생
+		s[0] = new Student("admin", 22, 169, 50, 4, "컴퓨터과학과");
+		//사원
+		e[0] = new Employee("admin", 22, 169, 50, 700, "개발부서");
+	}
 	
 	
 	// 각 객체배열에 저장된 객체의 수를 정수배열에 담아 반환하는 메소드
-	
-	public int sudentCount() {
+	public int[] personCount() {
 		
-		int count = 0;
-		for(int i = 0; i < s.length; i++) {
+		int studentCount = 0;
+		int employeeCount = 0;
+		
+		for(int i = 0; i < SIZE1; i++) {
 			if(s[i] != null) {
-				count++;
+				studentCount++;
 			}
 		}
 		
-		return count;
-		
-	}
-	
-	public int employeeCount() {
-		
-		int count = 0;
-		for(int i = 0; i < e.length; i++) {
+		for(int i = 0; i < SIZE2; i++) {
 			if(e[i] != null) {
-				count++;
+				employeeCount++;
 			}
 		}
-		
-		return count;
-		
+		return new int[]{studentCount, employeeCount};
 	}
-	
-	
-//	public int[] personCount() {
-//		int[] sizes = {s.length, e.length};
-//		int[] count;
-//		
-//		for(int i = 0; i < sizes.length; i++) {
-//			if(count.[i] != null) {
-//				count++
-//			}
-//		}
-//		return sizes;
-//	}
 	
 	// 매개변수로 받아온 데이터를 학생 객체 배열 중 빈 곳에 저장하는 메소드
-	public void inserStudent(String name, int age, double height, double weight, int grade, String major) {
+	public void insertStudent(String name, int age, double height, double weight, int grade, String major) {
 		
-		for(int i = 0; i < s.length; i++) {
+		for(int i = 0; i < SIZE1; i++) {
 			if(s[i] == null) {
 				s[i] = new Student(name, age, height, weight, grade, major);
 				break;
@@ -67,17 +51,23 @@ public class PersonController extends Person {
 	
 	// 학생 객체 배열의 주소를 반환하는 메소드
 	public Student[] printStudent() {
-		
-		return null;
+		return s;
 	}
 	
 	// 매개변수로 받아온 데이터를 사원 객체 배열 중 빈 곳에 저장되는 메소드
 	public void insertEmployee(String name, int age, double height, double weight, int salary, String dept) {
 		
+		for(int i = 0; i < SIZE2; i++) {
+			if(e[i] != null) {
+				e[i] = new Employee(name, age, height, weight, salary, dept);
+				break;
+			}
+		}
+		
 	}
 	
 	// 사원 객체 배열의 주소를 반환하는 매소드
 	public Employee[] printEmployee() {
-		return null;
+		return e;
 	}
 }
