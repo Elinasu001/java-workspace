@@ -86,7 +86,7 @@
     - Information Hiding(정보 은닉)
       - 객체의 내부적 관점 / 외부적 관점
     - Setter()_DTO 전 VO로 진행
-       - 개인 과제
+       - 개인 실습과제
         - CreateChallenge
         - ChallengeUser
         - UserPoint
@@ -131,7 +131,7 @@
   - 과제 : 클래스다이어그램
 - ObjectArray(객체배열)
   - 중복제거 및 확장성
-  - 과제(mvc)
+  - 객체배열실습과제(mvc)
 - Inheritance(상속(확장)) ( == Heredity )
   - 부모/자식 클래스
   - Overriding(오버라이딩)_**정적**바인딩
@@ -149,6 +149,7 @@
       - Interface(인터페이스(구현))
         - implements(구현)
       - abstract(추상메소드) vs Interface(인터페이스)
+  - 상속실습과제
 ---
 - Excepiton(예외 처리)
   - RuntimeException
