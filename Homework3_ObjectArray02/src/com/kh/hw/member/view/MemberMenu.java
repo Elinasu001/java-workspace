@@ -4,6 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.kh.hw.member.controller.MemberController;
+import com.kh.hw.member.model.vo.Member;
 
 public class MemberMenu {
 
@@ -117,24 +118,18 @@ public class MemberMenu {
 					System.out.print("나이 입력해주세요 >  ");
 					age = sc.nextInt();
 					sc.nextLine();
-					
 				} else {
 					break;
 				}
 				
 			} catch(InputMismatchException e){
-				System.out.println("\n잘못 입력하셨습니다. 정수로 입력해주세요.\n");
+				System.out.println("\n잘못 입력하셨습니다. 정수로 입력해주세요.");
 				sc.nextLine();
 				continue;
 			}
 			break;
 		}
 		
-		
-//		System.out.print("나이 입력해주세요 >  ");
-//		int age = sc.nextInt();
-//		sc.nextLine();
-	
 		mc.insertMember(id, name, password, email, gender, age);
 		System.out.println("회원 등록이 완료되었습니다.\n");
 		
@@ -175,35 +170,46 @@ public class MemberMenu {
 	
 	// 아이디 검색 메소드
 	private void searchId() {
-		// 검색할 아이디를 사용자에게 입력 받고 입력 받은 데이터를
-		// mc의 searchId() 메소드의 매개변수로 넘김, 반환 값에 따라
-		// 검색 결과 없으면 “검색 결과가 없습니다.” 출력 후 mainMenu()로 돌아감
-		// 검색 결과가 있으면 “찾으신 회원 조회 결과입니다.” 출력 후
-		// 회원 검색 결과 출력
 		
 		System.out.println("검색할 아이디를 입력해주세요 > ");
 		String id = sc.nextLine();
 		
-		String res = mc.searchId(id);
+		Member member = mc.searchId(id);
+		// 아디디가 존재했을 경우 => heap 영역에 생긴 Member 타입의 객체 주소값
+		// 아이디가 존재하지 않았을 경우 => null
 		
-		if(res == null) {
+		if(member != null) {
+			System.out.println("아이디 : " + id + "의 검색결과입니다.");
+			System.out.println("이름 : " + member.getName());
+			System.out.println("나이 : " + member.getAge());
+			System.out.println("이메일 : " + member.getEmail());
+		} else {
 			System.out.println("검색 결과가 없습니다.");
 			return;
-		} else {
-			System.out.println("찾으신 회원 조회 결과입니다.");
-			System.out.println(res);
 		}
 
 	}
 	
 	// 이름 검색 메소드
 	private void searchName() {
-		// 검색할 이름을 사용자에게 입력 받고 입력 받은 데이터를
-		// mc의 searchName() 메소드의 매개변수로 넘김, 반환 값에 따라
-		// 검색 결과 없으면 “검색 결과가 없습니다.” 출력 후 mainMenu()로 돌아감
-		// 검색 결과가 있으면 “찾으신 회원 조회 결과입니다.” 출력 후
-		// 회원 검색 결과 출력
-
+		
+		System.out.println("이름으로 검색하기 서비스 입니다.");
+		System.out.println("검색하실 이름을 입력해주세요 > ");
+		String name = sc.nextLine();
+		
+		Member[] members = mc.searchName(name);
+		
+		if(members[0] != null) {
+			for(int i = 0; i < members.length; i++) { // 요소의 개수 만큼 돌려돌려~~
+				System.out.println("=======================");
+				System.out.println("아이디 : " + members[i].getId());
+				System.out.println("이름 : " + members[i].getName());
+				System.out.println("이메일 : " + members[i].getEmail());
+				System.out.println("=======================");
+			}
+		} else {
+			System.out.println("검색 결과가 존재하지 않습니다.");
+		}
 	}
 	
 	// 이메일 검색 메소드
@@ -218,21 +224,16 @@ public class MemberMenu {
 	}
 
 	private void updateMember() {
-		//1. 비밀번호 수정하기 ➔ updatePassword()
-		//2. 이름 수정하기 ➔ updateName()
-		//3. 이메일 수정하기 ➔ updateEmail()
-		//9. 메인으로 돌아기기
-		// 메뉴 번호에 따라 각 메소드로 이동되며 9번을 입력했을 경우
-		// “메인으로 돌아갑니다.” 출력 후 mainMenu()로 돌아감
-		// 메뉴 번호를 잘못 입력했을 경우 “잘못 입력하셨습니다.” 출력 후
-		// mainMenu()로 돌아감
-
 		
 		while (true) {
+			System.out.println("");
+			System.out.println("회원 정보 수정 서비스입니다.");
 			System.out.println("1. 비밀번호 수정하기");
 			System.out.println("2. 이름 수정하기");
 			System.out.println("3. 이메일 수정하기");
 			System.out.println("9. 메인으로 돌아가기");
+			System.out.println("");
+			System.out.println("메뉴를 선택해주세요 > ");
 
 			int menuNo = sc.nextInt();
 			sc.nextLine();
@@ -240,13 +241,13 @@ public class MemberMenu {
 			switch (menuNo) {
 			case 1:
 				updatePassword();
-				return;
+				break;
 			case 2:
 				updateName();
-				return;
+				break;
 			case 3:
 				updateEmail();
-				return;
+				break;
 			case 9:
 				System.out.println("메인으로 돌아가기");
 				return;
@@ -265,8 +266,36 @@ public class MemberMenu {
 		// 검색 결과가 있으면 “수정이 성공적으로 되었습니다.” 출력 후
 		// mainMenu()로 돌아감
 		
+		// 아이디랑 기존 비밀번호랑 바꿀 비밀번호랑
+		// 3개의 값을 입력받아서
+		// 아이디와 비밀번호가 일치하다면 기존 비밀번호를 바꿀 비밀번호로 변경
+		// 아이디 또는 기존 비밀번호 둘 중 하나라도 일치하지 않다면 안 바꿔줌
 		
-
+		System.out.println("아이디를 입력하세요 > ");
+		String userId = sc.nextLine();
+		
+		System.out.println("기존 비밀번호를 입력하세요 > ");
+		String userPw = sc.nextLine();
+		
+		System.out.println("새 비밀번호를 입력하세요 > ");
+		String newPassword = sc.nextLine();
+		
+		boolean result = mc.updatePassword(userId, userPw, newPassword); // 실제로 내가 가지고 있는 필드를 이용해서 메소에 인자값으로 전달.
+		
+		if(result) {
+			
+			System.out.println("비밀번호 변경에 성공했습니다. 추차포카링");
+			System.out.println("=============================");
+			System.out.println("변경한 비밀번호 : " + newPassword);
+			System.out.println("=============================");
+			
+		} else {
+			
+			System.out.println("비밀번호 변경에 실패했습니다.");
+			System.out.println("입력값을 다시 확인해주세요.");
+			
+		}
+		
 	}
 
 	// 이름 수정 메소드
@@ -313,10 +342,10 @@ public class MemberMenu {
 			switch (menuNo) {
 			case 1:
 				deleteOne();
-				return;
+				break;
 			case 2:
 				deleteAll();
-				return;
+				break;
 			case 9:
 				System.out.println("메인으로 돌가갑니다.");
 				return;

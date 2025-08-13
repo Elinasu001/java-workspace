@@ -90,6 +90,7 @@ public class MemberController {
 		}
 
 		Member[] tmp = new Member[m.length];
+		
 		int idx = 0;
 
 		for (int i = 0; i < m.length; i++) {
