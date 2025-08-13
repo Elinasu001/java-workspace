@@ -162,6 +162,8 @@
       ...
   - try~catch
   - CheckedException
+    - BufferedReader
+    - IOException
       
 ---
 🛠 개발 환경
