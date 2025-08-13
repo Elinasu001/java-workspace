@@ -152,6 +152,8 @@
 ---
 - Excepiton(예외 처리)
   - RuntimeException
+    - e.printStackTrace();
+    - InputMismatchException
     - NullPointerException
     - ArrayIndexOutOfBoundsException
     - ClassCastException
