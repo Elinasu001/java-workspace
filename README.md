@@ -161,6 +161,7 @@
     - NegativeArraySizeException
       ...
   - try~catch
+  - CheckedException
       
 ---
 🛠 개발 환경
