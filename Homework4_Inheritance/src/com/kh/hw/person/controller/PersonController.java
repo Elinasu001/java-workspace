@@ -12,9 +12,9 @@ public class PersonController {
 	public static final int SIZE2 = 10;
 
 	{ 	// 학생
-		s[0] = new Student("admin", 22, 169, 50, 4, "컴퓨터과학과");
+		s[0] = new Student("난학생", 22, 169, 50, 4, "컴퓨터과학과");
 		// 사원
-		e[0] = new Employee("admin", 22, 169, 50, 700, "개발부서");
+		e[0] = new Employee("난사원", 22, 169, 50, 700, "개발부서");
 	}
 
 	// 각 객체배열에 저장된 객체의 수를 정수배열에 담아 반환하는 메소드

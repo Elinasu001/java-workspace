@@ -4,6 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.kh.hw.person.controller.PersonController;
+import com.kh.hw.person.model.vo.Employee;
 import com.kh.hw.person.model.vo.Student;
 
 public class PersonMenu {
@@ -417,7 +418,7 @@ public class PersonMenu {
 		// 모든 데이터 출력
 
 		System.out.println("모든 사원 정보 서비스입니다.");
-		Student[] members = pc.printStudent();
+		Employee[] members = pc.printEmployee();
 		int[] count = pc.personCount();
 
 		System.out.println("총 사원 수는 " + count[1] + "명 입니다.");
