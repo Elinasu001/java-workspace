@@ -161,7 +161,6 @@
     - AritmeticException
     - NegativeArraySizeException
       ...
-  - 
   - CheckedException
     - BufferedReader
     - IOException
