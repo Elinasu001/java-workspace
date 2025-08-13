@@ -167,8 +167,16 @@ public class MemberController {
 	}
 
 	// 한 회원만 삭제하는 메소드
-	public boolean delete(String id) {
-		return false;
+	public int delete(String userId, String userPwd) {
+	
+		for(int i = 0; i < m.length; i++) {
+			if(m[i] != null && m[i].getId().equals(userId) && m[i].getPassword().equals(userPwd)) {
+				m[i] = null;
+				return 1; // 지워짐
+			}
+		}
+		return 0;
+	
 	}
 
 	// 전체 회원을 삭제하는 메소드
@@ -177,6 +185,6 @@ public class MemberController {
 
 	// Member 객체 반환 메소드 (필드값 반환)
 	public Member[] getM() {
-		return null;
+		return m;
 	}
 }

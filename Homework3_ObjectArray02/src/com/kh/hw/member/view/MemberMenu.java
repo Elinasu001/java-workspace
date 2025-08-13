@@ -260,11 +260,6 @@ public class MemberMenu {
 	
 	// 비밀번호 수정 메소드
 	private void updatePassword() {
-		// 수정할 회원 id와 비밀번호를 사용자에게 입력 받고 입력 받은 데이터를
-		// mc의 updatePassword() 메소드의 매개변수로 넘김, 반환 값에 따라
-		// 검색결과 없으면 “존재하지 않는 아이디입니다.” 출력, mainMenu()로 감
-		// 검색 결과가 있으면 “수정이 성공적으로 되었습니다.” 출력 후
-		// mainMenu()로 돌아감
 		
 		// 아이디랑 기존 비밀번호랑 바꿀 비밀번호랑
 		// 3개의 값을 입력받아서
@@ -323,13 +318,6 @@ public class MemberMenu {
 	}
 	
 	private void deleteMember() {
-		//1. 특정 회원 삭제하기 ➔ deleteOne()
-		//2. 모든 회원 삭제하기 ➔ deleteAll()
-		//9. 메인으로 돌아기기
-		// 메뉴 번호에 따라 각 메소드로 이동되며 9번을 입력했을 경우
-		// “메인으로 돌아갑니다.” 출력 후 mainMenu()로 돌아감
-		// 메뉴 번호를 잘못 입력했을 경우 “잘못 입력하셨습니다.” 출력 후
-		// mainMenu()로 돌아감
 		
 		while (true) {
 			System.out.println("1. 특정 회원 삭제하기");
@@ -359,25 +347,38 @@ public class MemberMenu {
 	
 	// 특정 회원 삭제 메소드
 	private void deleteOne() {
-		// 삭제할 회원 id를 사용자에게 입력 받고 정말 삭제할 것인지 사용자에게
-		// 물어본 뒤, Y나 y를 사용자가 입력할 경우 입력 받은 id를
-		// mc의 delete() 메소드의 매개변수로 넘김, 반환 값에 따라
-		// 검색결과 없으면 “존재하지 않는 아이디입니다.” 출력, mainMenu()로 감
-		// 검색 결과가 있으면 “성공적으로 삭제하였습니다.” 출력 후
-		// mainMenu()로 돌아감
 		
-
+		System.out.println("회원 삭제 서비스입니다.");
+		System.out.println("삭제하실 회원의 아이디를 입력해주세요 > ");
+		String userId = sc.nextLine();
+		
+		System.out.println("삭제하실 회원의 비밀번호를 입력해주세요 > ");
+		String userPwd = sc.nextLine();
+		
+		int result = mc.delete(userId, userPwd);
+		
+		System.out.println("정말 삭제하시겠습니까? (Y / N) > ");
+		String yn = sc.nextLine();
+		if(yn.equals("y") || yn.equals("y")) {
+			if(result > 0) {
+				System.out.println("삭제를 성공 하셨습니다.");
+			} else {
+				System.out.println("그런 회원은 없어요!");
+			}
+		}else {
+			System.out.println("삭제를 취소하였습니다.");
+		}
+		
+		int count = mc.existMemberNum();
+		System.out.println("총" + count + "명의 회원이 존재합니다.");
 	}
 
 	// 모든 회원 삭제 메소드
 	private void deleteAll() {
-		// 정말 삭제할 것인지 사용자에게 물어본 뒤, Y나 y를 사용자가 입력할 경우
-		// mc의 delete() 메소드 호출, “성공적으로 삭제하였습니다.” 출력 후
-		// mainMenu()로 돌아감
 		
 		System.out.println("정말 삭제하시겠습니까? (Y / N) > ");
 		String ans = sc.nextLine();
-
+		
 		if (ans.equals("Y") || ans.equals("y")) {
 			
 			mc.delete();
@@ -395,12 +396,30 @@ public class MemberMenu {
 	
 	// 모든 회원 정보 메소드
 	private void printAll() {
-		// mc의 printAll() 메소드의 반환 값을 가지고 저장된 회원을 출력하는데
-		// 저장된 회원의 수가 0명이면 “저장된 회원이 없습니다.” 출력,
-		// 0명이 아니면 저장된 모든 회원의 정보 출력
+		
 		System.out.println();
 		System.out.println("모든 회원의 정보 서비스입니다.");
 		
+		Member[] members = mc.getM();
+		int count = mc.existMemberNum();
+		System.out.println("총" + count + "명의 회원이 존재합니다.");
+		
+		if(count > 0) {
+			for(int i = 0; i< members.length; i++) {
+				if(members[i] != null) {
+					System.out.println("====================================");
+					System.out.println("아이디 : " + members[i].getId());
+					System.out.println("비밀번호 : " + members[i].getPassword());
+					System.out.println("이름 : " + members[i].getName());
+					System.out.println("이메일 : " + members[i].getEmail());
+					System.out.println("====================================");
+					System.out.println();
+				}
+			}
+		} else {
+			System.out.println("회원이 존재하지 않습니다.");
+		}
+		System.out.println("총" + count + "명의 회원이 존재합니다.");
 		
 	}
 }
