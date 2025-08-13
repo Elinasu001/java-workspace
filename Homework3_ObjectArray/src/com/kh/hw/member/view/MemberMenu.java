@@ -1,5 +1,6 @@
 package com.kh.hw.member.view;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.kh.hw.member.controller.MemberController;
@@ -146,20 +147,31 @@ public class MemberMenu {
 			System.out.println("성별을 다시 입력하세요. (M 또는 F) : ");
 		}
 
-		int age;
+		int age = 0;
 
 		while (true) {
-			System.out.print("나이 : ");
-			int a = sc.nextInt();
-			sc.nextLine();
-
-			if (a < 0) {
-				System.out.println("숫자로 입력하세요.");
-				continue;
+			
+			try {
+				System.out.print("나이 : ");
+				int a = sc.nextInt();
+				sc.nextLine();
+				
+			} catch (InputMismatchException e){
+				
+				System.out.println("유효하지 않은 입력입니다. 숫자로 입력해주세요. ");
+				
 			}
-
-			age = a;
+			
 			break;
+			
+			
+			//InputMismatchException
+//			if (a < 0) {
+//				System.out.println("숫자로 입력하세요.");
+//				continue;
+//			}
+		
+		
 		}
 
 		mc.insertMember(id, name, password, email, gender, age);
