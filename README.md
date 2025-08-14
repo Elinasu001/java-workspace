@@ -191,6 +191,13 @@
           - 문자열.substring(int beginindex) : String (자르기)
             - beginindex/endindex
           - 문자열.indexOf(str) : int (몇번인덱스?)
+          - 문자열.toCharArray() : char[] (한행 씩 출력)
+          - char[] -> String
+            - System.out.println(String.valueOf(chArr));
+          - 문자열.replace(char old, char new) : String (치환)
+          - 문자열.trim() : (String 공백문자 날리기)
+          - 문자열.toUpperCase() : String (전부 대문자로 바꾸기)
+          - 문자열.toLowerCase() : String (전부 소문자로 바꾸기)
       
 ---
 🛠 개발 환경
