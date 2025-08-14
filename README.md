@@ -173,6 +173,7 @@
       - Object
       - Math 클래스(수학)
       - String 클래스(문자열 클래스) ⭐
+        - toString()
       
 ---
 🛠 개발 환경
