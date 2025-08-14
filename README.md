@@ -204,7 +204,13 @@
             -  java.util.StringTokenizer 클래스를 사용하는 방법
               - 보통 전체 토큰을 사용하고 싶을 경우 : hasMoreTokens 사용
       - Wrapper Class
+        - 기본자료형 -> 참조자료형
         - Boolean, Character, Byte, Short, Integer, Long, Float, Double
+        - Integer
+          - 정렬구조시 : compareTo()
+        - 파싱(parsing)
+          - parseInt, parseDouble ...
+          
         
 ---
 🛠 개발 환경
