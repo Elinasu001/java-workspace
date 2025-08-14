@@ -212,8 +212,9 @@
           - parseInt, parseDouble ...
     - java.io 패키지
       - I/O(Input/Output)
-        - createNewFile() (파일 생성 메소드)
-        - mkDir() (폴더 생성 메ㅗ드)
+        - createNewFile() (파일 생성 메소드), (경로지정)
+        - mkDir() (폴더 생성 메소드)
+          
           
         
 ---
