@@ -250,6 +250,43 @@ public class PersonMenu {
 					
 					System.out.println("전공을 입력해주세요 > ");
 					String major = sc.nextLine();
+					
+					/*
+					 * 1. 전공 > 선택할 수 있는 switch 문을 돌리기
+					 * 2. 입력 받은 값을 major 에 받아서 출력하기
+					 * 
+					 * => selectedMajor 
+					 * 인문학, 사회과학, 자연과학, 공학, 의학, 예체능, 교육학
+					 * 
+					 */
+//					System.out.println("전공을 선택해주세요 > ");
+//					System.out.println("1. 인문학");
+//					System.out.println("2. 사회과학");
+//					System.out.println("3. 자연과학");
+//					System.out.println("4. 공학");
+//					System.out.println("5. 의학");
+//					System.out.println("6. 예체능");
+//					System.out.println("7. 교육학");
+//					int majorNo = sc.nextInt();
+//					sc.nextLine();
+					
+					System.out.println("전공을 선택해주세요 > ");
+					
+					System.out.println("전공을 선택해주세요 > ");
+					System.out.println("1. 인문학");
+					System.out.println("2. 사회과학");
+					System.out.println("3. 자연과학");
+					System.out.println("4. 공학");
+					System.out.println("5. 의학");
+					System.out.println("6. 예체능");
+					System.out.println("7. 교육학");
+					
+//					String major = sc.nextLine();
+//					sc.nextLine();
+//					
+//					switch(major) {
+//					}
+					
 
 					pc.insertStudent(name, age, height, weight, grade, major);
 					System.out.println("==========================================");
