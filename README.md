@@ -186,6 +186,11 @@
         - StringBuilder (보편적 사용) :heavy_check_mark:
           - append
         - 문자열과 관련된 메소드들
+          - 문자열.length() : int (길이반환)
+          - 문자열 .charAt(int index) : char (추출)
+          - 문자열.substring(int beginindex) : String (자르기)
+            - beginindex/endindex
+          - 문자열.indexOf(str) : int (몇번인덱스?)
       
 ---
 🛠 개발 환경
