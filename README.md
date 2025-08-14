@@ -155,7 +155,7 @@
 ---
 - Excepiton(예외 처리)
   - RuntimeException
-    - e.printStackTrace();
+    - e.printStackTrace(); :  개발 및 디버깅 과정 o, 프로덕션 환경 x
     - InputMismatchException
     - NullPointerException
     - ArrayIndexOutOfBoundsException
