@@ -180,6 +180,7 @@
             - System.identityHashCode(참조형변수)
          2. 문자열 리터럴(**" "**) 대입 방식 :negative_squared_cross_mark:
         - String Constant Pool
+        - StringBuffer
       
 ---
 🛠 개발 환경
