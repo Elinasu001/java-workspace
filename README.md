@@ -129,6 +129,7 @@
     - Static Binding(정적 바인딩)
     - 동적 바인딩
   - 실습 : MVC(모델)_Model View Controller
+    - model은 데이터 다룰 경우 생성
     - 리모컨 동작
   - 과제 : 클래스다이어그램
 - ObjectArray(객체배열)
