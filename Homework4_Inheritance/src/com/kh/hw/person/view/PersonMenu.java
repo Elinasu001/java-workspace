@@ -8,7 +8,7 @@ import com.kh.hw.person.model.vo.Employee;
 import com.kh.hw.person.model.vo.Student;
 
 public class PersonMenu {
-	private Scanner sc = new Scanner(System.in);
+	private static final Scanner sc = new Scanner(System.in); // 앱 전역 1개만
 	PersonController pc = new PersonController();
 
 	// 메인 메뉴를 출력하는 메소드
@@ -39,23 +39,18 @@ public class PersonMenu {
 			System.out.println("2. 사원 메뉴");
 			System.out.println("9. 끝내기");
 			System.out.println("번호를 선택해주세요 > ");
-
+			
+			// 파싱
+//			String line = sc.nextLine().trim();
+			
 			int menuNo = sc.nextInt();
 			sc.nextLine();
 
 			switch (menuNo) {
-			case 1:
-				studentMenu();
-				break;
-			case 2:
-				employeeMenu();
-				break;
-			case 9:
-				System.out.println("종료합니다. ");
-				break;
-			default:
-				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
-				return;
+			case 1: studentMenu(); break;
+			case 2: employeeMenu(); break;
+			case 9: System.out.println("종료합니다. "); break;
+			default: System.out.println("잘못 입력하셨습니다. 다시 입력해주세요."); return;
 			}
 		}
 
@@ -248,44 +243,7 @@ public class PersonMenu {
 						}
 					}
 					
-					System.out.println("전공을 입력해주세요 > ");
-					String major = sc.nextLine();
-					
-					/*
-					 * 1. 전공 > 선택할 수 있는 switch 문을 돌리기
-					 * 2. 입력 받은 값을 major 에 받아서 출력하기
-					 * 
-					 * => selectedMajor 
-					 * 인문학, 사회과학, 자연과학, 공학, 의학, 예체능, 교육학
-					 * 
-					 */
-//					System.out.println("전공을 선택해주세요 > ");
-//					System.out.println("1. 인문학");
-//					System.out.println("2. 사회과학");
-//					System.out.println("3. 자연과학");
-//					System.out.println("4. 공학");
-//					System.out.println("5. 의학");
-//					System.out.println("6. 예체능");
-//					System.out.println("7. 교육학");
-//					int majorNo = sc.nextInt();
-//					sc.nextLine();
-					
-					System.out.println("전공을 선택해주세요 > ");
-					
-					System.out.println("전공을 선택해주세요 > ");
-					System.out.println("1. 인문학");
-					System.out.println("2. 사회과학");
-					System.out.println("3. 자연과학");
-					System.out.println("4. 공학");
-					System.out.println("5. 의학");
-					System.out.println("6. 예체능");
-					System.out.println("7. 교육학");
-					
-//					String major = sc.nextLine();
-//					sc.nextLine();
-//					
-//					switch(major) {
-//					}
+					String major = selectMajor(sc);
 					
 
 					pc.insertStudent(name, age, height, weight, grade, major);
@@ -312,10 +270,38 @@ public class PersonMenu {
 	}
 	
 	// 만약 전공에서 추가 선택지가 있을 경우는?
-//	private void majorStudent() {
-//		// 학생 전공 : 인문학, 사회과학, 자연과학, 공학, 의학, 예체능, 교육학
-//		
-//	}
+	private String selectMajor(Scanner sc) {
+		final String[] MAJORS = {"인문학", "사회과학", "자연과학", "공학", "의학", "예체능", "교육학"};
+		
+		while(true) {
+			System.out.println("전공을 선택해주세요 > ");
+			for(int i = 0; i < MAJORS.length; i++) {
+				System.out.println((i + 1) + ". " + MAJORS[i]);
+			}
+			System.out.print("번호(1~" + MAJORS.length + ") 입력 > ");
+			
+	        String line = sc.nextLine().trim(); //  문자열로 받고 파싱(Scanner 섞임 이슈 방지)
+	        
+	        int sel;
+	        
+	        try {
+	        	sel = Integer.parseInt(line);
+	        	
+	        } catch (NumberFormatException e) {
+	        	System.out.println("숫자로 입력해주세요.\n");
+	        	continue;
+	        }
+	        
+	        if(sel >= 1 && sel <= MAJORS.length) {
+	        	return MAJORS[sel - 1];
+	        } else {
+	        	System.out.println("1~" + MAJORS.length + " 사이의 번호를 입력해주세요.\n");
+	        }
+	        
+		}
+	}
+	
+	
 
 	// 객체배열에 저장된 학생 데이터를 출력하는 메소드
 	private void printStudent() {
