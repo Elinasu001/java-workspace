@@ -235,12 +235,15 @@
               - FileByteDao
                 - FileOutputStream
                   - write() : 1Byte
-                  - .close : 자원 반납
                 - FileInputStream
                   - read() : 1Byte
               - FileCharDao
               - Tip
                 - SimpleDateFormat
+                - .close()  자원 반납
+                - try ~ catch ~ finally 구문 (자원 반납)
+                - try ~ with ~ resource 구문 (자원 반납을 해주는 간결한 코드)
+                  - 대전제, closeable 구현할 것
           
           
         
