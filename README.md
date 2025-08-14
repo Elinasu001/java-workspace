@@ -239,6 +239,8 @@
                 - FileInputStream
                   - read() : 1Byte
               - FileCharDao
+              - Tip
+                - SimpleDateFormat
           
           
         
