@@ -170,7 +170,8 @@
     - try~catch
     - throws
 ---
-- API(Application Programming Interface)
+**API(Application Programming Interface)**
+- API
   - Java API
     - java.lang 패키지
       - Object
@@ -216,7 +217,7 @@
         - createNewFile() (파일 생성 메소드), (경로지정)
           - isFile(), getName(), getParent(), getAbsoluteFile()... (파일 클래스에서 제공하는 메소드)
         - mkDir() (폴더 생성 메소드)
-        - Stream(스트림)
+        - **Stream(스트림)**
           - 스트림의 특징
           - 스트림의 구분
             - 스트림의 사이즈
