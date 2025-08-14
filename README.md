@@ -198,6 +198,7 @@
           - 문자열.trim() : (String 공백문자 날리기)
           - 문자열.toUpperCase() : String (전부 대문자로 바꾸기)
           - 문자열.toLowerCase() : String (전부 소문자로 바꾸기)
+          - 자열.split(String 구분자) : String[] (문자열 분리시키기)
       
 ---
 🛠 개발 환경
