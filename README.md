@@ -173,37 +173,39 @@
   - Java API
     - java.lang
       - Object
-      - Math 클래스(수학)
-      - String 클래스(문자열 클래스) ⭐
-         1. 생성자를 호출해서 문자열(String) 객체를 생성(**new**)하는 방법 :heavy_check_mark:
-          - 오버라이딩
-            - toString(), equals(), hashCode()
-          - 정말 참조형 변수 식별할 수 있는 값을 알아내는 법
-            - System.identityHashCode(참조형변수)
-         2. 문자열 리터럴(**" "**) 대입 방식 :negative_squared_cross_mark:
-        - String Constant Pool
-        - StringBuffer
-          - append
-          - 동시제어기능(Thread-Safe)
-        - StringBuilder (보편적 사용) :heavy_check_mark:
-          - append
-        - 문자열과 관련된 메소드들
-          - 문자열.length() : int (길이반환)
-          - 문자열 .charAt(int index) : char (추출)
-          - 문자열.substring(int beginindex) : String (자르기)
-            - beginindex/endindex
-          - 문자열.indexOf(str) : int (몇번인덱스?)
-          - 문자열.toCharArray() : char[] (한행 씩 출력)
-          - char[] -> String
-            - System.out.println(String.valueOf(chArr));
-          - 문자열.replace(char old, char new) : String (치환)
-          - 문자열.trim() : (String 공백문자 날리기)
-          - 문자열.toUpperCase() : String (전부 대문자로 바꾸기)
-          - 문자열.toLowerCase() : String (전부 소문자로 바꾸기)
-          - 자열.split(String 구분자) : String[] (문자열 분리시키기)
-          -  java.util.StringTokenizer 클래스를 사용하는 방법
-            - 보통 전체 토큰을 사용하고 싶을 경우 : hasMoreTokens 사용
-      
+        - Math 클래스(수학)
+        - String 클래스(문자열 클래스) ⭐
+           1. 생성자를 호출해서 문자열(String) 객체를 생성(**new**)하는 방법 :heavy_check_mark:
+            - 오버라이딩
+              - toString(), equals(), hashCode()
+            - 정말 참조형 변수 식별할 수 있는 값을 알아내는 법
+              - System.identityHashCode(참조형변수)
+           2. 문자열 리터럴(**" "**) 대입 방식 :negative_squared_cross_mark:
+          - String Constant Pool
+          - StringBuffer
+            - append
+            - 동시제어기능(Thread-Safe)
+          - StringBuilder (보편적 사용) :heavy_check_mark:
+            - append
+          - 문자열과 관련된 메소드들
+            - 문자열.length() : int (길이반환)
+            - 문자열 .charAt(int index) : char (추출)
+            - 문자열.substring(int beginindex) : String (자르기)
+              - beginindex/endindex
+            - 문자열.indexOf(str) : int (몇번인덱스?)
+            - 문자열.toCharArray() : char[] (한행 씩 출력)
+            - char[] -> String
+              - System.out.println(String.valueOf(chArr));
+            - 문자열.replace(char old, char new) : String (치환)
+            - 문자열.trim() : (String 공백문자 날리기)
+            - 문자열.toUpperCase() : String (전부 대문자로 바꾸기)
+            - 문자열.toLowerCase() : String (전부 소문자로 바꾸기)
+            - 자열.split(String 구분자) : String[] (문자열 분리시키기)
+            -  java.util.StringTokenizer 클래스를 사용하는 방법
+              - 보통 전체 토큰을 사용하고 싶을 경우 : hasMoreTokens 사용
+      - Wrapper Class
+        - Boolean, Character, Byte, Short, Integer, Long, Float, Double
+        
 ---
 🛠 개발 환경
 AWS JDK 2021
