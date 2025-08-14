@@ -170,6 +170,7 @@
     - BufferedReader
     - IOException
     - try~catch
+      - try~catch~finally (return해도 무조건 지킬 수 있는 방법)
     - throws
 ---
 
