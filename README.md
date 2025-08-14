@@ -173,7 +173,12 @@
       - Object
       - Math 클래스(수학)
       - String 클래스(문자열 클래스) ⭐
-        - toString()
+        - 1. 생성자를 호출해서 문자열 객체를 생성하는 방법
+          - 오버라이딩
+            - toString(), equals(), hashCode()
+          - 정말 참조형 변수 식별할 수 있는 값을 알아내는 법
+            - System.identityHashCode(참조형변수)
+        - 2. 문자열 리터럴 대입 방식
       
 ---
 🛠 개발 환경
