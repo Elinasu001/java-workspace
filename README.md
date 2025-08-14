@@ -235,6 +235,7 @@
               - FileOutputStream
                 - write() : 1Byte
                 - .close : 자원 반납
+              - FileInputStream
           
           
         
