@@ -1,5 +1,6 @@
 package com.kh.chap02_byte.model.dao;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -79,8 +80,75 @@ public class FileByteDao {
 				e.printStackTrace();
 			}
 		}
-		
-		
 	
+	}
+	
+	// 프로그램 <== 외부매체(파일)
+	// 입력 : 파일로부터 데이터를 가지고 오겠다.
+	// FileInputStream
+	// 파일로부터 데이터를 가져와서 입력 받을건데, 1Byte 단위로 입력받겠다.
+	public void inputFromFile() {
+		
+		FileInputStream fis = null;
+		
+		try {
+			
+			// 1. 객체 생성 => 스트림연결하기
+			fis = new FileInputStream("a_byte.txt");
+			
+			// 2. 스트림으로 입력받기
+			// read()호출
+			// 1Byte단위로 읽어옴
+			// 정수로 반환된 걸 문자로 보고 싶다면? (char)으로 반환
+			
+		
+			System.out.println((char)fis.read()); //a
+			
+			/*
+			System.out.println(fis.read()); //98
+			System.out.println(fis.read()); //99
+			System.out.println(fis.read()); //101
+			System.out.println(fis.read()); //102
+			System.out.println(fis.read()); //103
+			System.out.println(fis.read()); //65
+			System.out.println(fis.read()); //66
+			System.out.println(fis.read()); //21
+			System.out.println(fis.read()); //24
+			System.out.println(fis.read()); //4
+			System.out.println(fis.read()); //-1
+			//... 이렇게 읽어 오는 거긴 하지만 중복 제거 하려면 ?
+			*/
+			/*
+			while(true) {
+				int value = fis.read();
+				
+				if(value != -1) {
+					System.out.println(value);
+				}else {
+					break;
+				}
+			}
+			*/
+			
+			// 축약 버전
+			int value = 0;
+			while((value = fis.read()) != -1) {
+				System.out.println((char)value);
+			}
+			
+		} catch(FileNotFoundException e) {
+			e.printStackTrace();
+		} catch(IOException e) {
+			e.printStackTrace();
+		} finally { // 3. 마지막으로 꼭 해야할 일 // 문자열 비교
+			try {
+				if(fis != null) {
+					fis.close();	
+				}
+			} catch(IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
 	}
 }

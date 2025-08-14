@@ -7,7 +7,8 @@ public class Run {
 	public static void main(String[] args) {
 		
 		FileByteDao fbd = new FileByteDao();
-		fbd.outputToFile();
+		//fbd.outputToFile();
+		fbd.inputFromFile();
 
 	}
 
