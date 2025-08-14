@@ -181,6 +181,9 @@
          2. 문자열 리터럴(**" "**) 대입 방식 :negative_squared_cross_mark:
         - String Constant Pool
         - StringBuffer
+          - append
+        - StringBuilder (보편적 사용):negative_squared_cross_mark:
+          - append
       
 ---
 🛠 개발 환경
