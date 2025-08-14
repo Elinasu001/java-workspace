@@ -232,7 +232,8 @@
           - 파일
             - DAO(Data Access Object)
               - FileOutputStream
-                - write()
+                - write() : 1Byte
+                - .close : 자원 반납
           
           
         
