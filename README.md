@@ -236,6 +236,7 @@
                 - write() : 1Byte
                 - .close : 자원 반납
               - FileInputStream
+                - read() : 1Byte
           
           
         
