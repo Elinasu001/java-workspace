@@ -247,7 +247,7 @@ public class PersonMenu {
 							sc.nextLine();
 						}
 					}
-
+					
 					System.out.println("전공을 입력해주세요 > ");
 					String major = sc.nextLine();
 
