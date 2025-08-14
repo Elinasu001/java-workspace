@@ -215,7 +215,6 @@
       - I/O(Input/Output)
         - createNewFile() (파일 생성 메소드), (경로지정)
           - isFile(), getName(), getParent(), getAbsoluteFile()... (파일 클래스에서 제공하는 메소드)
-          - DAO(Data Access Object)
         - mkDir() (폴더 생성 메소드)
         - Stream(스트림)
           - 스트림의 특징
@@ -226,6 +225,9 @@
             - 외부매체와의 직접적인 연결 여부
               - 기반 스트림
               - 보조 스트림
+          - 파일
+            - DAO(Data Access Object)
+              - FileOutputStream
           
           
         
