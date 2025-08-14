@@ -232,11 +232,13 @@
               - 보조 스트림
           - 파일
             - DAO(Data Access Object)
-              - FileOutputStream
-                - write() : 1Byte
-                - .close : 자원 반납
-              - FileInputStream
-                - read() : 1Byte
+              - FileByteDao
+                - FileOutputStream
+                  - write() : 1Byte
+                  - .close : 자원 반납
+                - FileInputStream
+                  - read() : 1Byte
+              - FileCharDao
           
           
         
