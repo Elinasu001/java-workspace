@@ -182,6 +182,7 @@
         - String Constant Pool
         - StringBuffer
           - append
+          - 동시제어기능(Thread-Safe)
         - StringBuilder (보편적 사용) :heavy_check_mark:
           - append
       
