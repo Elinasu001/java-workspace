@@ -7,7 +7,7 @@
 
 ## 📘 학습 내용 요약
 - 변수
-  - **Type Casting(자료형 변환)**
+  - **Type Casting(자료형 변환)** ⭐
     - Promotion(자동형 변환)
     - Type Casting(강제형 변환)
 - 상수
@@ -74,7 +74,7 @@
 
 ---
 
-**객체 지향 프로그래밍**
+**객체 지향 프로그래밍** ⭐
 - 역사
 - Object(객체)
   - Abstraction(추상화)
@@ -169,8 +169,10 @@
 ---
 - API(Application Programming Interface)
   - Java API
-    - Math 클래스(수학)
-- String
+    - java.lang
+      - Object
+      - Math 클래스(수학)
+      - String 클래스(문자열 클래스) ⭐
       
 ---
 🛠 개발 환경
