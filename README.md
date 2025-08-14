@@ -232,6 +232,7 @@
           - 파일
             - DAO(Data Access Object)
               - FileOutputStream
+                - write()
           
           
         
