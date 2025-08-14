@@ -201,6 +201,8 @@
           - 문자열.toUpperCase() : String (전부 대문자로 바꾸기)
           - 문자열.toLowerCase() : String (전부 소문자로 바꾸기)
           - 자열.split(String 구분자) : String[] (문자열 분리시키기)
+          -  java.util.StringTokenizer 클래스를 사용하는 방법
+            - 보통 전체 토큰을 사용하고 싶을 경우 : hasMoreTokens 사용
       
 ---
 🛠 개발 환경
