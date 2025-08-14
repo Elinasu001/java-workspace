@@ -6,7 +6,7 @@
 ---
 :pencil2: 박수현
 
-:paperclip: [JAVA 공부 기록 노션](https://ubiquitous-woodpecker-cc5.notion.site/JAVA-Basic-Projects-23f8e71b864f8041ba8bedf905319dc2?pvs=4)
+:paperclip: [JAVA 공부 기록 노션](https://ubiquitous-woodpecker-cc5.notion.site/JAVA-Basic-Projects-23f8e71b864f8041ba8bedf905319dc2?pvs=4) :pencil2:
 ---
 
 ## 📘 학습 내용 요약
@@ -190,7 +190,7 @@
               - toString(), equals(), hashCode()
             - 정말 참조형 변수 식별할 수 있는 값을 알아내는 법
               - System.identityHashCode(참조형변수)
-           2. 문자열 리터럴(**" "**) 대입 방식 :negative_squared_cross_mark:
+           2. 문자열 리터럴(**" "**) 대입 방식 :heavy_multiplication_x:
           - String Constant Pool
           - StringBuffer
             - append
