@@ -171,7 +171,7 @@
 ---
 - API(Application Programming Interface)
   - Java API
-    - java.lang
+    - java.lang 패키지
       - Object
         - Math 클래스(수학)
         - String 클래스(문자열 클래스) ⭐
@@ -210,7 +210,7 @@
           - 정렬구조시 : compareTo()
         - 파싱(parsing)
           - parseInt, parseDouble ...
-    - java.io
+    - java.io 패키지
       - I/O(Input/Output)
           
         
