@@ -137,13 +137,13 @@
   - Overriding(오버라이딩)_**정적**바인딩
     - @Override
   - toString()
-  -  **Polymorphism(다형성)**
+  -  **Polymorphism(다형성)** :cherry_blossom:
     - 메모리
     - 클래스 형 변환
       - 배열 사용
     -  Overriding(오버라이딩)_**동적**바인딩
       - @Override
-    - 다형성:cherry_blossom:
+    - 다형성
       - 변수/배열/다형성
       - abstract(추상 메소드)
       - Interface(인터페이스(구현))
