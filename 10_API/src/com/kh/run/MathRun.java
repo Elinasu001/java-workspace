@@ -14,7 +14,7 @@ public class MathRun {
 		/*
 		 * - 모든 필드와 메소드가 전부 다 static
 		 * - 객체를 생성할 필요가 없으므로 기본생성자의 접근제한자가 private
-		 * - java.lang 패키지에 있는 친구들(Math, Object..) 클래스 외부에서 사용시 import 해야되는데 이 패키지에 있는 것은 extends object 되어있으며 java.lang 패키지에 있음.
+		 * - JDK: java.lang 패키지에 있는 친구들(Math, Object..) 클래스 외부에서 사용시 import 해야되는데 이 패키지에 있는 것은 extends object 상속 되어있으며 java.lang 패키지에 있음.
 		 */
 		
 		// 필드
