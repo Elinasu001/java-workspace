@@ -154,7 +154,9 @@
         - abstract(추상메소드) vs Interface(인터페이스)
     - 상속실습과제
 ---
-- Excepiton(예외 처리)
+
+**Excepiton(예외 처리)**
+- Excepiton
   - RuntimeException
     - e.printStackTrace(); :  개발 및 디버깅 과정 o, 프로덕션 환경 x
     - InputMismatchException
@@ -170,6 +172,7 @@
     - try~catch
     - throws
 ---
+
 **API(Application Programming Interface)**
 - API
   - Java API
