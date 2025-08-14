@@ -167,7 +167,7 @@
     - try~catch
     - throws
 ---
-- API
+- API(Application Programming Interface)
       
 ---
 🛠 개발 환경
