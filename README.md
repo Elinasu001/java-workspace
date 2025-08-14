@@ -182,7 +182,7 @@
         - String Constant Pool
         - StringBuffer
           - append
-        - StringBuilder (보편적 사용):negative_squared_cross_mark:
+        - StringBuilder (보편적 사용) :heavy_check_mark:
           - append
       
 ---
