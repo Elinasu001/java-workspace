@@ -7,7 +7,7 @@
 :pencil2: 박수현
 
 **Ntion Java 정리**
-:paperclip: https://ubiquitous-woodpecker-cc5.notion.site/JAVA-Basic-Projects-23f8e71b864f8041ba8bedf905319dc2?pvs=4
+:paperclip: [JAVA 공부 기록용 노션](https://ubiquitous-woodpecker-cc5.notion.site/JAVA-Basic-Projects-23f8e71b864f8041ba8bedf905319dc2?pvs=4)
 ---
 
 ## 📘 학습 내용 요약
