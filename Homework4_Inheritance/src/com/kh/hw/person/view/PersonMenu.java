@@ -273,6 +273,12 @@ public class PersonMenu {
 		}
 
 	}
+	
+	// 만약 전공에서 추가 선택지가 있을 경우는?
+	private void majorStudent() {
+		// 학생 전공 : 인문학, 사회과학, 자연과학, 공학, 의학, 예체능, 교육학
+		
+	}
 
 	// 객체배열에 저장된 학생 데이터를 출력하는 메소드
 	private void printStudent() {
