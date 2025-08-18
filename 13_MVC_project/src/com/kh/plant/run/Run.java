@@ -1,5 +1,7 @@
 package com.kh.plant.run;
 
+import com.kh.plant.view.PlantView;
+
 public class Run {
 
 	public static void main(String[] args) {
@@ -27,7 +29,8 @@ public class Run {
 		 * 		- 사용자 입력을 처리하고 모델에 전달
 		 * 		- 모델에서 일어난 처리작업을 뷰에 반영
 		 */
-		
+		PlantView pv = new PlantView();
+		pv.mainMenu();
 		
 		
 	}
