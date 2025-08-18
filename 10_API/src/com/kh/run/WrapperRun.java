@@ -32,7 +32,7 @@ public class WrapperRun {
 		// System.out.println(i1);
 		
 		// 기본자료형 => Wrapper 로 포장 (참조자료형)
-		Integer i1 = num1;
+		Integer i1 = num1; // boxing
 		Integer i2 = num2;
 		System.out.println(i1.equals(i2)); // false
 		System.out.println(i1.compareTo(i2)); // -1 : 자바가지고 정렬구조 할경우 
