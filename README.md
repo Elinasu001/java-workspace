@@ -267,8 +267,8 @@
       - 요소 타입 제한
       - 형 변환 절차 없애기
 ---
-**ArrayList와 MVC 패턴(Model-View-Controller)**
--MVC(상세)
+** MVC 패턴에 ArrayList 적용하기(Model-View-Controller)**
+-MVC
   - 알아두기(정처기) : GoF 디자인 패턴
   - 정형화 된 디자인 패턴
     - Model
