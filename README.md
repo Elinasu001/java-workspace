@@ -271,6 +271,14 @@
 -MVC(상세)
   - 알아두기(정처기) : GoF 디자인 패턴
   - 정형화 된 디자인 패턴
+    - Model
+    - View
+      - CRUD
+        - Create
+        - Read
+        - Update
+        - Delete
+    - Controller
     
         
 ---
