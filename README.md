@@ -251,7 +251,9 @@
                   
 ---         
 - **자바의 컬렉션** ⭐⭐⭐
-  - Collection Framework       
+  - Collection Framework
+    - 배열과 컬렉션의 차이점과 컬렉션을 사용하는 이유
+    - ArrayList    
         
 ---
 🛠 개발 환경
