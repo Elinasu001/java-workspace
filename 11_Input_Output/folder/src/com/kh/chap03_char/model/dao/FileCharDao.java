@@ -61,8 +61,7 @@ public class FileCharDao {
 		 * 대전제 clseabe를 구현할 것
 		 * 
 		 */
-		try(FileWriter fw = new FileWriter("c_char.txt");
-				Scanner sc = new Scanner(System.in)){
+		try(FileWriter fw = new FileWriter("c_char.txt"); Scanner sc = new Scanner(System.in)){
 			fw.write("와...IO..ㅎㅎ");
 			fw.write("E");
 		} catch(IOException e) {
@@ -90,13 +89,17 @@ public class FileCharDao {
 		 
 		 //String fileName = titleDate + " 오늘의 학습일지.txt"; => 문자열과 문자열 더하기 안돼 !!!
 		 // => StringBuilder을 사용 하여 메모리 낭비 하지 말기!
+		 // String 객체는 변경 불가능 >  하나의 문자열을 다른 문자열과 연결하면 새 문자열이 생성되고, 이전 문자열은 가비지 컬렉터로 들어간다.
+		 // 문자열끼리 연결하는 작업 시에는 내부적으로 여러 작업이 발생하고, 
+		 // , 기존 문자열 값의 길이에 추가된 문자열의 크기를 더한 크기의 새로운 문자열이 생성된다.
+		 //  100만 번 수행시, 메모리를 많이 잡아먹게 되니  변경 가능한 문자열을 만들어 주는 StringBuilder 사용
 		 StringBuilder sb = new StringBuilder();
 		 sb.append(titleDate);
 		 sb.append(" 오늘의 학습일지.txt");
 		 FileWriter fw = null;
 		 Scanner sc = new Scanner(System.in);
 		 try {
-			 fw = new FileWriter(sb.toString());
+			 fw = new FileWriter(sb.toString()); // String에 StringBuilder를 그대로 넣을 순 없다. toString()을 붙여야 한다
 			 System.out.println("어디 오늘 배운 내용을 한 번 작성해보시오 > ");
 			 String content = sc.nextLine();
 			 fw.write("오늘 학습한 내용 : \t" + content);
@@ -112,5 +115,28 @@ public class FileCharDao {
 		 }
 		 
 	}
+	
+	public void writeTitle2() {
+		
+		Date now = new Date();
+		
+		String titleDate = new SimpleDateFormat("yyyy년 MM월 dd일").format(now);
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append(titleDate);
+		sb.append("연습 일지");
+		
+		try(FileWriter fw = new FileWriter(sb.toString()); Scanner sc = new Scanner(System.in)){
+			System.out.println("어디 오늘 배운 내용을 한 번 작성해보시오 > ");
+			String content = sc.nextLine();
+			fw.write("오늘 학습한 내용 : \t" + content);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+
 
 }

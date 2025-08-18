@@ -7,7 +7,8 @@ public class Run {
 	public static void main(String[] args) {
 		FileCharDao cd = new FileCharDao();
 		//cd.outputToFile();
-		cd.writeTil();
+		//cd.writeTil();
+		cd.writeTitle2();
 	}
 
 }
