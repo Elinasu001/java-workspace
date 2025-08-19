@@ -114,8 +114,32 @@ public class PlantController {
 				count++; // 지워질 때마다 ++
 			}
 		}
-		
 		return count;
+	}
+	
+	// 5.
+	// 일반적으로는 int 일단, 안해본걸로 진행
+	public boolean updatePlant(String name, String type, String newName, String newType) {
+		
+		// 요청 처리
+		for(int i = 0; i < plants.size(); i++) {
+			Plant p = plants.get(i); // 주소를 빼서 담기
+			if(name.equals(p.getName()) && type.equals(p.getType())) {
+				// 일치하는 식물 존재한다.
+				
+				// 방법 1.
+				// 사용자가 입력한 새 이름 및 새 타입으로 갱신!!
+				// set => 첫번째 인자인 인덱스 위치에 요소를
+				// 		  두번째 인자로 바꿔주는 메소드
+				// plants.set(i, new Plant());
+				
+				// 방법 2.[v]
+				p.setName(newName);
+				p.setType(newType);
+				return true;
+			}
+		}
+		return false;
 	}
 	
 }

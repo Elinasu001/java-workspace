@@ -48,7 +48,7 @@ public class PlantView {
 				case 2: readAll(); break;
 				case 3: findByKeyWord(); break;
 				case 4: deletePlant(); break;
-				case 5:break;
+				case 5: updatePlant(); break;
 				case 6:break;
 				case 0: System.out.println("프로그램을 종료합니다."); break;
 				default : System.out.println("없는 메뉴입니다. 다시 선택해주세요.");
@@ -179,5 +179,55 @@ public class PlantView {
 			System.out.println("삭제할 식물을 찾지 못했습니다.");
 		}
 		System.out.println();
+	}
+	
+	// 5. 특정 식물의 정보를 수정할 수 있는 화면을 출력해주는 기능
+	private void updatePlant() {
+		
+		System.out.println();
+		/*
+		 * 1. 이름 -> 이
+		 * 2. 타입 -> 타입
+		 * 3. 이름, 타입 -> 이름
+		 * 4. 이름, 타입 -> 타입
+		 * 5. 이름 -> 타입
+		 * 6. 타입 -> 이름
+		 * 7. 이름, 타입 -> 이름, 타입 [v]
+		 */
+		
+		/*
+		 * 사용자에게 식물의 이름 및 타입을 입력받아서
+		 * 일치하는 식물을 찾아서
+		 * 새로운 식물의 이름 및 타입으로 갱신 
+		 */
+		System.out.println("식물 정보 수정 서비스입니다.");
+		// 4개의 값 입력 받아야 한다 :: 사용자에게 받은 이름 및 타입, 새로운 이름 및 타입
+		
+		System.out.println("기존 식물 이름 > ");
+		String name = sc.nextLine();
+		
+		System.out.println("기존 식물 타입 > ");
+		String type = sc.nextLine();
+		
+		System.out.println("새 이름 이름 > ");
+		String newName = sc.nextLine();
+		
+		System.out.println("새 식물 타입 > ");
+		String newType = sc.nextLine();
+		
+		// view 할일 끝! - 1절
+		
+		boolean result = pc.updatePlant(name, type, newName, newType); // String 값들이 힙의 상수 풀에 올라간다.(특, 같은 리터럴은 들어갈 수 없음)
+													  // String 특, 불변이다.
+													  // 다시시보기 : 배열 특, 논리적 구조와 물리적 구조가 같다.
+		if(result) {
+			System.out.println("식물 정보 갱신 성공!");
+		} else {
+			System.out.println("식물이 존재하지 않습니다.");
+		}
+		
+		
+		System.out.println();
+		
 	}
 }
