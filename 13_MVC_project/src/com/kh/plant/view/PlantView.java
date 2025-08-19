@@ -35,7 +35,7 @@ public class PlantView {
 			System.out.println("4. 특정 식물 삭제");
 			System.out.println("5. 특정 식물 수정");
 			System.out.println("6. 식물 목록을 파일로 저장");
-			System.out.println("0. 식물 목록을 파일로 저장");
+			System.out.println("0. 프로그램을 종료");
 			System.out.println();
 			
 			System.out.println("어떤 기능을 이용하시겠어요 > ");
@@ -217,7 +217,7 @@ public class PlantView {
 		
 		// view 할일 끝! - 1절
 		
-		boolean result = pc.updatePlant(name, type, newName, newType); // String 값들이 힙의 상수 풀에 올라간다.(특, 같은 리터럴은 들어갈 수 없음)
+		boolean result = pc.updatePlant(name, type, newName, newType); // String pool : String 값들이 힙의 상수 풀에 올라간다.(특, 같은 리터럴은 들어갈 수 없음)
 													  // String 특, 불변이다.
 													  // 다시시보기 : 배열 특, 논리적 구조와 물리적 구조가 같다.
 		if(result) {

@@ -21,7 +21,7 @@ public class PlantDao {
 			
 			for(int i = 0; i < plants.size(); i++) {
 				wr.write((i+1) + "번" + plants.get(i).getName()
-								+ "\t\t\t" + plants.get(i).getType());
+							   + "\t\t\t" + plants.get(i).getType());
 				wr.newLine();
 			}
 		} catch (Exception e) {}
