@@ -11,6 +11,7 @@
 
 ## 📘 학습 내용 요약
 - 변수
+  - 원시자료형과 참조형
   - **Type Casting(자료형 변환)** ⭐
     - Promotion(자동형 변환)
     - Type Casting(강제형 변환)
