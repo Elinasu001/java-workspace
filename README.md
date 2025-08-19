@@ -271,7 +271,7 @@
       - 요소 타입 제한
       - 형 변환 절차 없애기
     - HashSet
-    - MAP
+    - HashMap
 ---
 **MVC 패턴에 ArrayList 적용하기(Model-View-Controller)**
 -MVC
