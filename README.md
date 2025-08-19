@@ -248,6 +248,8 @@
                 - try ~ catch ~ finally 구문 (자원 반납)
                 - try ~ with ~ resource 구문 (자원 반납을 해주는 간결한 코드)
                   - 대전제, closeable 구현할 것
+              - assist
+                - BufferedDao
                   
 ---         
 - **자바의 컬렉션** ⭐⭐⭐
@@ -267,7 +269,7 @@
       - 요소 타입 제한
       - 형 변환 절차 없애기
 ---
-** MVC 패턴에 ArrayList 적용하기(Model-View-Controller)**
+**MVC 패턴에 ArrayList 적용하기(Model-View-Controller)**
 -MVC
   - 알아두기(정처기) : GoF 디자인 패턴
   - 정형화 된 디자인 패턴
