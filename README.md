@@ -272,6 +272,9 @@
       - 형 변환 절차 없애기
     - HashSet
     - HashMap
+    - Properties
+      - Map
+        
 ---
 **MVC 패턴에 ArrayList 적용하기(Model-View-Controller)**
 -MVC
