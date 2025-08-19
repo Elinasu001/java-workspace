@@ -250,6 +250,8 @@
                   - 대전제, closeable 구현할 것
               - assist
                 - BufferedDao
+                - ObjectDao
+                - Serializable (직렬화)
                   
 ---         
 - **자바의 컬렉션** ⭐⭐⭐
@@ -268,6 +270,7 @@
     - Generic
       - 요소 타입 제한
       - 형 변환 절차 없애기
+    - HashSet
 ---
 **MVC 패턴에 ArrayList 적용하기(Model-View-Controller)**
 -MVC
