@@ -1,7 +1,7 @@
 package com.kh.chpa04_assist.model.vo;
 
 import java.io.Serializable;
-// 직렬화 필요 ObjectDao 에서 byte 를 String 로
+// 직렬화(Serializable) : 객체(object)를 바이트(byte) 형태로 전환 하기 위함
 public class Plant implements Serializable {
 	
 	private String name;
