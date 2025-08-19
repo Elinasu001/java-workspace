@@ -49,7 +49,7 @@ public class PlantView {
 				case 3: findByKeyWord(); break;
 				case 4: deletePlant(); break;
 				case 5: updatePlant(); break;
-				case 6:break;
+				case 6: pc.outputFile(); break; // 식물의 종류를 가지고 있는 controller 에 필드로 두기.
 				case 0: System.out.println("프로그램을 종료합니다."); break;
 				default : System.out.println("없는 메뉴입니다. 다시 선택해주세요.");
 				}

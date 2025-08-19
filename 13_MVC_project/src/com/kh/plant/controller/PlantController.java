@@ -3,15 +3,16 @@ package com.kh.plant.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.kh.plant.model.dao.PlantDao;
 import com.kh.plant.model.vo.Plant;
 
 // Controller : 사용자가 View 를 통해 요청했을 때
 // 요청을 받아 처리해준 뒤 다시 처리결과를 View 로 반환해줌
 public class PlantController {
 	
-	// 식물저장소
+	// 식물저장소 값 필드 plant, 모두 담은 list, 누가 가짐? controller 
 	private List<Plant> plants = new ArrayList(); // List : 타입부를 ArrayList 말고 List로 하는게 좋음
-												  // <Plant> : 혹시나 다른 타입이 들어갈 수 있으니 Generic 사용
+	private PlantDao pd = new PlantDao(); // 필드로 두기								  // <Plant> : 혹시나 다른 타입이 들어갈 수 있으니 Generic 사용
 	
 	// 초기화 블록 :: 순서 (first ! 생성자 블록 이전에 호출)
 	{
@@ -142,4 +143,9 @@ public class PlantController {
 		return false;
 	}
 	
+	
+	// 6.
+	public void outputFile() {
+		pd.outputFile(plants); // 파일 뺴달라 요청하기
+	}
 }
