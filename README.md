@@ -274,6 +274,7 @@
     - HashMap
     - Properties
       - Map
+      - XML
         
 ---
 **MVC 패턴에 ArrayList 적용하기(Model-View-Controller)**
