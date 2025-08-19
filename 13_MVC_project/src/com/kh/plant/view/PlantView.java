@@ -123,7 +123,21 @@ public class PlantView {
 		System.out.println("식물 검색 서비스입니다.");
 		System.out.println("검색어를 입력해주세요 > ");
 		String keyword = sc.nextLine();
-		// View 가 할 일 끝 !
+		// View 가 할 일 끝 ! - 1절
+		
+		//- 2절
+		List<Plant> searched = pc.findByKeyword(keyword); // 참조자료형은 무조건 주소값!
+		
+		// 주소결과가 있는 경우, 없는 경우
+		if(searched.isEmpty()) {
+			System.out.println("검색 결과가 존재하지 않습니다.");
+		}else {
+			System.out.println("검색 결과가 총" + searched.size() + "건 존재합니다.");
+			for(Plant p : searched) {
+				System.out.println("----------------------------------------------");
+				System.out.println("이름 : " + p.getName() + ", 종류 : " + p.getType());
+			}
+		}
 		
 	}
 	

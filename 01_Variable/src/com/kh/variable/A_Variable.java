@@ -55,9 +55,9 @@ public class A_Variable {
 		System.out.println("변수를 사용해 봅시다!");
 		System.out.println("시즌 메뉴 :");
 		
-		// 메뉴명고 가격이라는 값을 담은 공간
+		// 메뉴명과 가격이라는 값을 담은 공간
 		// 즉, 변수를 선언하고 변수공간에 값을 대입해서 사용	
-		String seasonMenu = "딸기라떼"; // seasonMenu : 변수식별자, string : 변수, = : 대입연산자(assignment) => ram에 값을 값을 저장하기 위한 공간에 식별자를 선언함., 왼쪽은 공간 = 오른쪽은 값 단, string 은 다름.
+		String seasonMenu = "딸기라떼"; // seasonMenu : 변수식별자, string : 변수, = : 대입연산자(assignment) => ram 에 값을 값을 저장하기 위한 공간에 식별자를 선언함., 왼쪽은 공간 = 오른쪽은 값 단, string 은 다름.
 		int price = 4700;
 		
 		/*

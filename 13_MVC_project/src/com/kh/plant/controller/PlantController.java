@@ -36,6 +36,41 @@ public class PlantController {
 		return plants;
 	}
 	
+	public List<Plant> findByKeyword(String keyword) {
+		
+		/*
+		 * 1. Plant[] => 배열 몇칸으로 해야될 지 알 수 없다.
+		 * 2. List<Plant> => 그래서 식물들을 담을 수 있는 List를 담고 <Plant>만 담을 수 있게 해준다.[v]
+		 */
+		List<Plant> searched = new ArrayList();
+		
+		/*
+		 * 식물의 이름 또는 타입에 사용자가 입력한 키워드가 포함되어있을 경우
+		 * 싸그리 몽땅 다 들고가서 출력 해줄 것
+		 * 
+		 * 조회 => 사용자가 입력한 keyword 가 포함된 Plant 객체의 필드값을 확인
+		 * plants 의 요소를 전부 다 하나하나 확인하면서 체크체크
+		 */
+		
+		//1. plants의 요소의 개수만큼 반복
+		for(int i = 0; i < plants.size(); i++) {
+			
+			// 2. 요소를 변수에 대입 (기본 자료형이나 참조 자료형(대문자 및 주소값)인지 생각부터 하기, 공간에 대입 꼭 잊지말기)
+			Plant plant = plants.get(i);
+			// 2.2. plant 객체의 name 필드 또는 type 필드에
+			//  	사용자가 입력한 keyword 가 포함되어 있다면 !
+			
+			// contains : 포함되어 있는지 없는지 사용할 경우 (boolean),
+			// || 파이프라인
+			if(plant.getName().contains(keyword) || 
+			   plant.getType().contains(keyword)) {
+				searched.add(plant); // 담아담아
+			}
+		}
+		return searched;
+		
+	}
+	
 	// 4. View 에서 식물 삭제 요청이 왔을 때 호출되는 메소드
 	public int detetePlant(String name, String type) {
 		/*
