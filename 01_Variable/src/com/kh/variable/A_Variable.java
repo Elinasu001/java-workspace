@@ -170,9 +170,9 @@ public class A_Variable {
 		// 지역변수(localVariable)은 
 		// 초기화(Initialized)를 하지 않으면 사용할 수 없음
 		isTrue = true; // 초기화
-		System.out.println(isTrue);
+		System.out.println(isTrue); // true
 		isTrue = false; // 대입
-		System.out.println(isTrue);
+		System.out.println(isTrue); // false
 		
 		
 		/*
@@ -215,7 +215,7 @@ public class A_Variable {
 		
 		
 		// 논리자료형 1개
-		System.out.println("논리 자료형 :" + isTrue);
+		System.out.println("논리 자료형 :" + isTrue); // 논리 자료형 :false
 		
 		// 정수자료형 4개
 		System.out.println("정수 자료형 : " + byteNumber);

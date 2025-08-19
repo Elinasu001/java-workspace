@@ -6,10 +6,11 @@ import com.kh.hw.person.model.vo.Student;
 
 public class PersonController {
 
-	private Student[] s = new Student[SIZE1];
 	public static final int SIZE1 = 3;
-	private Employee[] e = new Employee[SIZE2];
 	public static final int SIZE2 = 10;
+	
+	private Student[] s = new Student[SIZE1];
+	private Employee[] e = new Employee[SIZE2];
 
 	{ 	// 학생
 		s[0] = new Student("난학생", 22, 169, 50, 4, "컴퓨터과학과");
