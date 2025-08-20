@@ -296,9 +296,14 @@
     - Controller
 ---
 **NetWork**
-  - MAC(Media Address Controller) Address / IP(Internet Protocol) Address
+  - 네트워크(Network)
+  - 통신 장치
+  - 주소 체계
   - Server 와 Client
-  - Client - Server Model     
+  - InetAddress 클래스
+  - 도메인 네임(Domain Name)
+  - Client-Server Model
+  - 소켓(Socket)    
 ---
 🛠 개발 환경
 AWS JDK 2021
