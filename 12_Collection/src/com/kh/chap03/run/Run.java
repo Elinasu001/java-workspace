@@ -115,7 +115,7 @@ public class Run {
 		System.out.println(it.next());
 		System.out.println(it.next());
 		// 문제는 요소가 다 뽑히면 NoSuchElementException 발생
-//		System.out.println(it.next());
+		//System.out.println(it.next());
 		
 		while(it.hasNext()) {
 			System.out.println(it.next());
