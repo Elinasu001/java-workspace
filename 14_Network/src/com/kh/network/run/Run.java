@@ -52,11 +52,58 @@ public class Run {
 			InetAddress localHost = InetAddress.getLocalHost();
 						// localHost : 현재 프로그램을 동작시킨 장치를 의미
 						// getLocalHost() : 작업하고 있는 Host 의 정보를 반환해주는 메소드
+			
 			System.out.println(localHost); // DESKTOP-T0OOHL3/192.168.10.38
+										   // PC 이름 / IP 주소
+			
+			System.out.println(localHost.getHostName()); // DESKTOP-T0OOHL3
+			System.out.println(localHost.getHostAddress()); // 192.168.10.38
+			System.out.println("=============================");
+			
+			/*
+			 * 도메인네임을 통해서 서버컴퓨터와 관련된 정보를 얻어낼 수 있음
+			 * 
+			 * DomainName : 사용자가 서비스를 이용할 때 서버의 IP 주소를 외우기 어려우니까
+			 * 				외우기 쉬운구조로 사용자에게 제공되는 이름
+			 * 
+			 * www.google.com => host파일 => DNS(Domain Name System)
+			 * google 서버의 IP 주소를 가지고 웹서버로 HTTP(s)요청
+			 */
+
+			
+			InetAddress googleHost = InetAddress.getByName("www.google.com");
+			// getByName() : 도메인네임을 이용해 서버의 정보를 반환
+			System.out.println(googleHost); // www.google.com/142.250.198.196
+			System.out.println(googleHost.getHostName()); // www.google.com
+			System.out.println(googleHost.getHostAddress()); // 142.250.198.196
+			
+			// 서버는 분산 구조로 이루어져있음 (로드밸런싱...)
 			
 		} catch(UnknownHostException e) {
 			e.printStackTrace();
 		}
+		
+		/*
+		 * Client - Server Model
+		 * 
+		 * 현재 구동중인 서버가 존재하다면 클라이언트는 언제든 서버로 요청을 보낼 수 있음
+		 * => 무조건 응답 결과를 돌려 주어야함
+		 * 
+		 * "요청(request)" 과 응답(response)"으로 프로그램이 동작(통신) 함
+		 * 	웹에서의 통신 방식 : HTTPS(Hyper Text Transfer Protocol Secure)
+		 * 
+		 * 
+		 * 순수 자바만을 사용해서 클라이언트와 서버의 간단한 통신 해보기
+		 * 
+		 * 소켓(Socket)
+		 * 
+		 * Process(프로그램이 메모리에 적재된 상태) 간의 통신을 담당
+		 * 
+		 */
+		
+		// 결과물
+		
+		
 		
 	}
 
