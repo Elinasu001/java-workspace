@@ -87,6 +87,9 @@ public class ServerProgram {
 			while(true) {
 				// 7_1) 입력받기
 				String message = br.readLine();
+				if(message.equals(null)) {
+					break;
+				}
 				System.out.println("클라이언트로 부터 받은 메시지 : " + message);
 				
 				//7_2) 출력하기
