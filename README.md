@@ -302,7 +302,8 @@
     - Controller
 ---
 14_Network
-**Network**
+
+- Network
   - 네트워크(Network)
   - 통신 장치
   - 주소 체계
