@@ -129,7 +129,7 @@ public class F_Logical {
 	 * 
 	 * true && true : true
 	 * true && false : false
-	 * true && true : false
+	 * false && true : false
 	 * false && false : false
 	 * 
 	 * OR(||) : 두 개의 조건 중 하나라도 true 일 경우 true
