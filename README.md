@@ -10,52 +10,41 @@
 ---
 
 ## 📘 학습 내용 요약
-- Variable(변수)
+01_Variable
+- 변수 (Variable)
   - 원시자료형
     - 논리자료형, 숫자자료형, 문자열
   - 참조형
     - 주소값
   - 변수 선언 방법
-  - **Type Casting(자료형 변환)** ⭐
-    - Promotion(자동형 변환)
-    - Type Casting(강제형 변환)
-- Constant(상수)
-- 스캐너
-- 자료형 변환
-- 연산자
-  - 산술 연산자_이항 연산자
-  - 증감 연산자
+  - **형변환 (Casting)** ⭐
+    - 자동형 변환 (Promotion)
+    - 강제형 변환 (Type Casting)
+- 상수 (Constant)
+- 스캐너 (Scanner)
+---
+02_Operator
+- 연산자 (Operator)
+  - 산술 연산자 (Arithmetic)
+  - 증감 연산자 (InDecrease)
     - 전위 연산
     - 후위 연산
-  - 복합 연산자
-  - 논리(값) 부정 연산자
-  - 비교 연산자(관계 연산자)
-  - 동등 비교
-  - 대소 비교
-  - 삼항 연산자
-    - 홀짝 구하기
-    - 알파벳 대소문자 구하기
+  - 복합 연산자 (Compund)
+  - 논리(값) 부정 연산자 (LogicalNagation)
+  - 비교 연산자(관계 연산자) (Comparison)
+    - 동등 비교
+    - 대소 비교
+  - 논리 연산자 (Logical)
+  - 삼항 연산자 (Triple)
+---
+03_Condition
 - 조건문
   - (단일) If문
-    - login
-    - 날씨에 따른 메뉴 추천
-    - 홀짝 구하기
-    - 메뉴 주문하기_01
-    - 메뉴 주문하기_02(개인)
   - If ~ Else If ~ Else문
-    - 정수 입력받기
   - Switch문
-    - 메뉴 주문받기
-    - 메뉴 주문받기(중복제거)
-    - 메뉴 주문받기(return)
-    - login
 - 조건문(Loop)
   - For문
-    - 구구단 만들기
-    - 정사각형 만들기
-    - 하트찍기
     - 향상된 for문
-      - for(값을 받아줄 변수 선언 : 순차적으로 요소에 접근할 배열 || 컬렉션) { }
   - While문
     - 정수 중 짝수의 합계 구하기
     - 랜덤 합계 구하기(Math.random())
@@ -66,6 +55,8 @@
     - Break(Scanner)
   - Continue
     - 회원가입 서비스
+---
+04_Array
 - Array
   - hasCode()
   - 로또번호_Arrays.toString()
