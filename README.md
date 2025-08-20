@@ -305,7 +305,7 @@
   - Client-Server Model
   - 소켓(Socket)
     - ServerSocket
-    - SERVER 와 [CLIENT](https://github.com/Elinasu001/client-workspace.git) 연결
+    - [SERVER](https://github.com/Elinasu001/java-workspace.git) 와 [CLIENT](https://github.com/Elinasu001/client-workspace.git) 연결
 ---
 🛠 개발 환경
 AWS JDK 2021
