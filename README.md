@@ -11,6 +11,7 @@
 
 ## 📘 학습 내용 요약
 01_Variable
+
 - 변수 (Variable)
   - 원시자료형
     - 논리자료형, 숫자자료형, 문자열
@@ -24,6 +25,7 @@
 - 스캐너 (Scanner)
 ---
 02_Operator
+
 - 연산자 (Operator)
   - 산술 연산자 (Arithmetic)
   - 증감 연산자 (InDecrease)
@@ -38,6 +40,7 @@
   - 삼항 연산자 (Triple)
 ---
 03_Condition
+
 - 조건문
   - (단일) If문
   - If ~ Else If ~ Else문
@@ -46,27 +49,24 @@
   - For문
     - 향상된 for문
   - While문
-    - 정수 중 짝수의 합계 구하기
-    - 랜덤 합계 구하기(Math.random())
+    + Math.random()
   - Do ~ While문
 - Escape
   - Break
-    - Break(Math.random())
-    - Break(Scanner)
   - Continue
-    - 회원가입 서비스
 ---
 04_Array
+
 - Array
-  - hasCode()
-  - 로또번호_Arrays.toString()
-  - Exception
+  + hasCode()
+  + 로또번호_Arrays.toString()
+  + Exception
     - 배열범위문제(ArrayIndexOutOfBounds)
     - null 배열처리(NullPointerException)
     - 타입호환성(AraayStoreException)
-  - Scanner_중복 변수 처리_최소값 출력
-  - G.C (Garbage Collector)
-  - 일반적인 사용 방식
+  + Scanner_중복 변수 처리_최소값 출력
+  + G.C (Garbage Collector)
+  + 일반적인 사용 방식
   - 배열 복사
     - **얕은 복사**
     - 깊은 복사
@@ -75,25 +75,21 @@
       - clone()
 
 ---
+05_Object
 
 **객체 지향 프로그래밍** ⭐
 - 역사
-- Object(객체)
-  - Abstraction(추상화)
+- 객체 (Object)
+  - 추상화 (Abstraction)
   - 객체 생성 (Object(이론적의미) / instance화(기술적의미))
   - 설계도
   - Scanner
     - 강아지 케어
-  - Encapsulation(캡슐화)
-    - Information Hiding(정보 은닉)
+  - 캡슐화 (Encapsulation)
+    - 정보 은닉 (Information Hiding)
       - 객체의 내부적 관점 / 외부적 관점
     - Setter()_DTO 전 VO로 진행
        - 개인 실습과제
-        - CreateChallenge
-        - ChallengeUser
-        - UserPoint
-        - GymUser
-        - LectureProgress
       - this()
       - 매개변수를 이용한 제어
       - 이름 및 주소 수정하기
@@ -111,7 +107,7 @@
       - (#)protected
       - (~)default
       - **(-)private
-  - Constructor(생성자)
+  - 생성자 (Constructor)
     - **기본 생성자(매개 변수 없음)**
       - JVM
     - **매개변수가 존재하는 생성자**
@@ -132,15 +128,25 @@
     - model은 데이터 다룰 경우 생성
     - 리모컨 동작
   - 과제 : 클래스다이어그램
+---
+06_ObjectArray
+
 - ObjectArray(객체배열)
   - 중복제거 및 확장성
   - 객체배열실습과제(mvc)
-- Inheritance(상속(확장)) ( == Heredity )
+---
+07_Interitance
+
+- 상속 (Inheritance)  == 확장
   - 부모/자식 클래스
-  - Overriding(오버라이딩)_**정적**바인딩
+  - Overriding(오버라이딩)
+    - **정적**바인딩
     - @Override
   - toString()
-  -  **Polymorphism(다형성)** :cherry_blossom:
+---
+08_Polymorphism
+
+  -  **다형성 (Polymorphism)** :cherry_blossom:
       - 메모리
       - 클래스 형 변환
         - 배열 사용
@@ -154,8 +160,9 @@
         - abstract(추상메소드) vs Interface(인터페이스)
     - 상속실습과제
 ---
+09_Exception
 
-**Excepiton(예외 처리)**
+**예외 처리 (Excepiton)**
 - Excepiton
   - RuntimeException
     - e.printStackTrace(); :  개발 및 디버깅 과정 o, 프로덕션 환경 x
@@ -173,6 +180,7 @@
       - try~catch~finally (return해도 무조건 지킬 수 있는 방법)
     - throws
 ---
+10_API
 
 **API(Application Programming Interface)**
 - API
@@ -216,40 +224,45 @@
           - 정렬구조시 : compareTo()
         - 파싱(parsing)
           - parseInt, parseDouble ...
-    - java.io 패키지
-      - I/O(Input/Output)
-        - createNewFile() (파일 생성 메소드), (경로지정)
-          - isFile(), getName(), getParent(), getAbsoluteFile()... (파일 클래스에서 제공하는 메소드)
-        - mkDir() (폴더 생성 메소드)
-        - **Stream(스트림)**
-          - 스트림의 특징
-          - 스트림의 구분
-            - 스트림의 사이즈
-              - 바이트 스트림
-              - 문자 스트림
-            - 외부매체와의 직접적인 연결 여부
-              - 기반 스트림
-              - 보조 스트림
-          - 파일
-            - DAO(Data Access Object)
-              - FileByteDao
-                - FileOutputStream
-                  - write() : 1Byte
-                - FileInputStream
-                  - read() : 1Byte
-              - FileCharDao
-              - Tip
-                - SimpleDateFormat
-                - .close()  자원 반납
-                - try ~ catch ~ finally 구문 (자원 반납)
-                - try ~ with ~ resource 구문 (자원 반납을 해주는 간결한 코드)
-                  - 대전제, closeable 구현할 것
-              - assist
-                - BufferedDao
-                - ObjectDao
-                - Serializable (직렬화)
+---
+11_Input_Output
+
+- java.io 패키지
+- I/O(Input/Output)
+- createNewFile() (파일 생성 메소드), (경로지정)
+  - isFile(), getName(), getParent(), getAbsoluteFile()... (파일 클래스에서 제공하는 메소드)
+- mkDir() (폴더 생성 메소드)
+- **Stream(스트림)**
+  - 스트림의 특징
+  - 스트림의 구분
+    - 스트림의 사이즈
+      - 바이트 스트림
+      - 문자 스트림
+    - 외부매체와의 직접적인 연결 여부
+      - 기반 스트림
+      - 보조 스트림
+  - 파일
+    - DAO(Data Access Object)
+      - FileByteDao
+        - FileOutputStream
+          - write() : 1Byte
+        - FileInputStream
+          - read() : 1Byte
+      - FileCharDao
+      - Tip
+        - SimpleDateFormat
+        - .close()  자원 반납
+        - try ~ catch ~ finally 구문 (자원 반납)
+        - try ~ with ~ resource 구문 (자원 반납을 해주는 간결한 코드)
+          - 대전제, closeable 구현할 것
+      - assist
+        - BufferedDao
+        - ObjectDao
+        - Serializable (직렬화)
                   
 ---         
+12_Collection
+
 - **자바의 컬렉션** ⭐⭐⭐
   - Collection Framework
     - 배열과 컬렉션의 차이점과 컬렉션을 사용하는 이유
@@ -273,6 +286,8 @@
       - XML
         
 ---
+13_MVC_project
+
 **MVC 패턴에 ArrayList 적용하기(Model-View-Controller)**
 -MVC
   - 알아두기(정처기) : GoF 디자인 패턴
@@ -286,7 +301,8 @@
         - Delete
     - Controller
 ---
-**NetWork**
+14_Network
+**Network**
   - 네트워크(Network)
   - 통신 장치
   - 주소 체계
