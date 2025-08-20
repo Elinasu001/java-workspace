@@ -303,7 +303,8 @@
   - InetAddress 클래스
   - 도메인 네임(Domain Name)
   - Client-Server Model
-  - 소켓(Socket)    
+  - 소켓(Socket)
+    - ServerSocket
 ---
 🛠 개발 환경
 AWS JDK 2021
