@@ -106,6 +106,7 @@ public class B_While {
 		System.out.println("가공이 끝난 무작위 정수 : " + randomNum);
 		// (int)(Math.random() * 몇개의 랜덤값) + 시작값;
 		
+		
 		// 3단계. 누적합계 구하기
 		// 1부터 랜덤한 수 (1 ~ 10) 까지를 모두 더한 합계
 		
