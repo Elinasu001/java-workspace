@@ -102,11 +102,38 @@ public class ServerProgram {
 			e.printStackTrace();
 		} finally {
 			
+			// 8) 자원 반납 => 생성의 역순으로
+			try {
+				if(pw != null) {
+					pw.close();
+				}
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+			
+			try {
+				if(sc != null) {
+					sc.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			try {
+				if(br != null) {
+					br.close();
+				}
+			} catch(Exception e ) {
+				e.printStackTrace();
+			}
+			
+			try {
+				if(server != null) {
+					server.close();
+				}
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
 		}
-		
-		
-		
-		
 	}
-
 }
