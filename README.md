@@ -296,7 +296,9 @@
     - Controller
 ---
 **NetWork**
-        
+  - MAC(Media Address Controller) Address / IP(Internet Protocol) Address
+  - Server 와 Client
+  - Client - Server Model     
 ---
 🛠 개발 환경
 AWS JDK 2021
