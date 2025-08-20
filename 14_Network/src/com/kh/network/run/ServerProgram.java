@@ -84,10 +84,11 @@ public class ServerProgram {
 			
 			// 7) 데이터 주고받기
 			// Client 와 데이터를 주거니 받거니 하도록 구성
-			while(true) {
+			String message;
+			while((message = br.readLine()) != null) {
 				// 7_1) 입력받기
-				String message = br.readLine();
-				if(message.equals(null)) {
+//				String message = br.readLine();
+				if("그만하고 싶어요".equals(message)) {
 					break;
 				}
 				System.out.println("클라이언트로 부터 받은 메시지 : " + message);
