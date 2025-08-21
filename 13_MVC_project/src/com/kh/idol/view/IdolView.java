@@ -36,8 +36,8 @@ public class IdolView {
 			
 			switch(menuNo) {
 			case 1 : infoMenu(); break;
-			case 2 : break;
-			case 3 : break;
+			case 2 : signUp(); break;
+			case 3 : login(); break;
 			case 4 : break;
 			case 5 : break;
 			default : System.out.println("잘못된 메뉴를 선택하셨스니다.");
@@ -45,6 +45,7 @@ public class IdolView {
 		}
 	}
 	
+	// 에스파 정보보기
 	private void infoMenu() {
 		System.out.println();
 		System.out.println("정보보기 서비스입니다.");
@@ -66,12 +67,24 @@ public class IdolView {
 		}
 	}
 	
+	// 멤버 정보보기
 	private void findMember(int menuNo) {
 		//특정 멤버의 주소값을 반환 해줄래?
-		ic.findMember(menuNo); // controller 에 값을 받아오기 위함.
-	}
-	private void findAll() {
+		Idol idol = ic.findMember(menuNo); // controller 에 값을 받아오기 위함.
 		
+		System.out.println();
+		System.out.println("💜                   "+ idol.getName() +"                   💜");
+		System.out.println("🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣");
+		System.out.println(idol.getImage());
+		System.out.println("🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣");
+		System.out.println("포지션 : " + idol.getPosition());
+		System.out.println("전투 기술 : " + idol.getSkill());
+		System.out.println("🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣🟣");
+		System.out.println();
+	}
+	
+	// 모든 멤버 정보보기
+	private void findAll() {
 		// 1. controller 에서 정보를 받아옴 = 메소드 호출
 		// 모든 멤버의 접근할 수 있는 값을 줘
 		// controller 갔다오니 주소값 옴~
@@ -84,6 +97,7 @@ public class IdolView {
 		} else {
 			// 에스파가 한명이라도 있으면~
 			for(Idol i : aespa) {
+				System.out.println();
 				System.out.println("✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨");
 				System.out.println();
 				System.out.println("프로필 이미지 : " + i.getImage());
@@ -96,4 +110,76 @@ public class IdolView {
 			System.out.println("✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨");
 		}	
 	}	
+	
+	public void signUp() {
+		//Fan 이라는 자료형에 맞춰 필드에 set 할 값 3개를 사용자에게 입력받음
+		System.out.println("\n에스파 커뮤니티에 오신것을 환영합니다.");
+		System.out.println("회원가입 서비스입니다.");
+		
+		//입력 => userId, userPwd, nickName;
+		
+		//제약조건 => 아이디는 4글자에서 10글자 사이일 것
+		//		=> 아이디는 다른 Fan 의 아이디와 중복되면 안될 것
+		
+		String userId;
+		while(true){
+			System.out.print("가입하실 아이디를 입력해주세요 > ");
+			userId = sc.nextLine();
+			
+			// 하나의 메소드는 하나의 기능만을 수행해야한다.
+			// 하지만 지금 이 회원가입 메소드는
+			// 회원 가입 뿐만 아니라 아이디값에 대한 유효성 검증을 진행하고 있다.
+			// 이렇게 되면 이 메소드는 하는 일이
+			// 1. 유효성 검증
+			// 2. 회원가임
+			// 두 개가 되어버리기 때문에 하는 일이 너무 많은 것이다.
+			// 분리를 하는 것이 올바르지만 아직은 너무 이른 것 같아 나중에 다시 돌아오겠음
+			
+			// 1. 아이디는 4글자에서 10글자 사이만 가능 // 길이 메소드
+			if(!(3 < userId.length() && userId.length() < 11)) {
+				System.out.print("아이디는 4글자에서 10자 사이만 사용 가능합니다.");
+				continue;
+			}
+			
+			// 2. 중복체크
+			boolean duplicateId = ic.checkId(userId);
+			
+			if(duplicateId) {
+				System.out.println("이미 존재하는 아이디입니다. 다시 입력해주세요!");
+			} else {
+				System.out.println("사용 가능한 아이디입니다.");
+				break;
+			}
+		}
+		System.out.print("비밀번호를 입력해주세요 > ");
+		String userPwd = sc.nextLine();
+		
+		System.out.print("닉네임을 입력해주세요 > ");
+		String nickName = sc.nextLine();
+		// 뷰는 일단 자신의 할일을 1절까지 마무리함
+		
+		// 사용자가 입력한 아이디와 비밀번호와 닉네임을 가지고 Fan 객체를 생성해서 필드에 담아서
+		// Controller 에 있는 fans 라는 List 의 요소로 추가
+		boolean result = ic.signUp(userId, userPwd, nickName);// controller 야 (userId, userPwd, nickName); 값을 줄게~~
+		if(result) {
+			System.out.println("회원가입에 실패했습니다. 다시 시도해주세요~"); // true 중복있어~
+		} else {
+			System.out.println("추카추카포카");
+		}
+	}
+	
+	//로그인
+	private void login() {
+		System.out.println("\n로그인 서비스 입니다.");
+		
+		// 대전제 : 회원가입 되어있고 받은 값을 전달
+		System.out.println("아이디를 입력해주세요 > ");
+		String userId = sc.nextLine();
+		
+		System.out.println("비밀번호를 입력해주세요 > ");
+		String userPwd = sc.nextLine();
+		
+		// 값을 전달 해서 중복 하는지 확인
+		ic.login(userId, userPwd);
+	}
 }
