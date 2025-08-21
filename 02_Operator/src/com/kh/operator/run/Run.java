@@ -26,7 +26,7 @@ public class Run {
 		//b.method3();
 		
 		C_Compund c = new C_Compund();
-		//c.method1();
+		c.method1();
 		
 		D_LogicalNagation d = new D_LogicalNagation();
 		//d.method1();

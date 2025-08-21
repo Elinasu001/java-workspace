@@ -49,16 +49,21 @@ public class C_Compund {
 		System.out.print("정수값을 하나만 입력해주세요 > ");
 		
 		int number = sc.nextInt();
-		System.out.println(number);
+		System.out.println(number); // 8
 		
 		// 사용자가 입력한 정수 값은 알 수 없음
 		// 사용자가 입력한 값에서 10을 뺸 값을 출력
+		// number = 8 - 10
+		// number = -2
 		number = number - 10;
-		System.out.println("10을 감소시킨 정수 값 : " + number);
+		System.out.println("10을 감소시킨 정수 값 : " + number); // 10을 감소시킨 정수 값 : -2
 		
 		// 복합대입 연산자를 이용하면 줄일 수 있음
+		// number = -2 - 10
+		// number = -12
 		number -= 10;
-		System.out.println("20을 감소시킨 정수 값 : " + number);
+		System.out.println("20을 감소시킨 정수 값 : " + number); // 20을 감소시킨 정수 값 : -12
+
 		
 	}
 	
