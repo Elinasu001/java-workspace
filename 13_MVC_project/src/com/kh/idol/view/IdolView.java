@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.kh.idol.controller.IdolController;
+import com.kh.idol.model.vo.Fan;
 import com.kh.idol.model.vo.Idol;
 
 public class IdolView {
@@ -180,6 +181,12 @@ public class IdolView {
 		String userPwd = sc.nextLine();
 		
 		// 값을 전달 해서 중복 하는지 확인
-		ic.login(userId, userPwd);
+		Fan fan = ic.login(userId, userPwd);
+		
+		if(fan != null) {
+			System.out.println(fan.getNickName() + "님 환영합니다~");
+		} else {
+			System.out.println("로그인 실패 아이디 또는 비밀번호를 확인해주세요...");
+		}
 	}
 }
