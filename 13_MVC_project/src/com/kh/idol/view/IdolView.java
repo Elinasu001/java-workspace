@@ -11,10 +11,12 @@ public class IdolView {
 	
 	//필드부
 	private Scanner sc = new Scanner(System.in);	// 스캐너가 필드일 때 단점 : 반납 안됨.
-	IdolController ic = new IdolController();
+	private IdolController ic = new IdolController();
+	// 로그인에 성공한 회원의 정보를 담아줄 필드
+	private Fan loginFan;
+	
 	
 	//생성자
-	
 	
 	
 	//메소드부
@@ -39,7 +41,7 @@ public class IdolView {
 			case 1 : infoMenu(); break;
 			case 2 : signUp(); break;
 			case 3 : login(); break;
-			case 4 : break;
+			case 4 : boardMenu(); break;
 			case 5 : break;
 			default : System.out.println("잘못된 메뉴를 선택하셨스니다.");
 			}
@@ -185,8 +187,57 @@ public class IdolView {
 		
 		if(fan != null) {
 			System.out.println(fan.getNickName() + "님 환영합니다~");
+			loginFan = fan; // 로그인 유무를 위해 로그인 된 값을 담음. // 얕은 복사 :: 같은 주소 값 가리킴
 		} else {
 			System.out.println("로그인 실패 아이디 또는 비밀번호를 확인해주세요...");
 		}
+	}
+	
+	private void boardMenu() {
+		while(true) {
+			System.out.println("\n 에스파 게시판입니다.");
+			System.out.println("이용하실 메뉴를 선택해주세요.");
+			System.out.println("1. 게시글 작성");
+			System.out.println("2. 게시글 전체 조회");
+			System.out.println("3. 게시글 상세 조회");
+			System.out.println("4. 메인 메뉴로 돌아가기");
+			System.out.println("번호를 선택해주세요  > ");
+			int menuNo = sc.nextInt();
+			sc.nextLine();
+			
+			switch(menuNo) {
+			case 1: post(); break;
+			case 2: break;
+			case 3: break;
+			case 4: return;
+			}
+		}
+	}
+	
+	private void post() {
+		
+		System.out.println("\n 게실글 작성 서비스입니다.");
+		// 전제조건 : 로그인할 사용자만 게시글을 작성할 수 있음
+		// 객관식~~ 내가 무엇을 사용해야될지 생각부터 하자
+		// 1. 변수?
+		// 2. if?
+		// 3. for?
+		
+		if(loginFan != null) {
+			
+			System.out.println("게시글 제목을 입력해주세요 > ");
+			String boardTitle = sc.nextLine();
+			
+			System.out.println("게시글 내용을 입력해주세요 > ");
+			String boardContent = sc.nextLine();
+			
+			// 입력 받은 값 전달 : 메소드 호출하면서 인자값 전달
+			ic.post(boardTitle, boardContent, loginFan.getUserPwd());
+			
+			System.out.println("게시글 작성 성공 ~!");
+		} else {
+			System.out.println("로그인 후 이용가능한 서비스입니다.");
+		}
+		
 	}
 }

@@ -4,11 +4,11 @@ import java.util.Objects;
 
 public class Board {
 	
-	private int boardNo; // 식별자 역할
-	private String boardTitle;
-	private String boardContent;
-	private String userId;
-	private String createDate;
+	private int boardNo; // 식별자 역할, 1씩 증가시키기
+	private String boardTitle; // 게시판 제목
+	private String boardContent; // 게시판 내용
+	private String userId; // 게시판 작성한 유저의 아이디를 담을 값
+	private String createDate; // 게시판 작성 시 작성일
 	
 	public Board() {
 		super();
