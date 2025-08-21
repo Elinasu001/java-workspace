@@ -185,13 +185,25 @@ public class IdolController {
 		boards.add(board); // 게시글 목록은 boards 안에 있음!
 	}
 	
-	
+	// 게시글 담겨있는 전체 목록 돌려주기
 	public List<Board> selectBoardList() {
 		
 		// View 에 요청에 의해 호출되며,
 		// 게시글 목록이 담겨있는 것을 되돌려주어야함
 		return boards;
-		
 	}
 	
+	// 받은 번호로 
+	public Board findByBoardNo(int boardNo) {
+	
+	 // 해당 코드는 지금 상태에서는 가능하지만 삭제 기능이 추가되면 indexOutOfException 가 발생한다
+	 // 만약, 입력 받은 게 내 필드값보다 클 때  예외도 고려해야한다.
+	 //boards.get(boardNo -1);
+		
+		if(boardNo > this.boardNo) {
+			return null;
+		}
+		return boards.get(boardNo - 1);
+		
+	}
 }
