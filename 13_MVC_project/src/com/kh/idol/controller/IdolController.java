@@ -182,8 +182,16 @@ public class IdolController {
 		board.setCreateDate(createDate);
 		
 		// 2. 요청처리 _ 원래는 성공 실패도 해야함.
-		boards.add(board);
+		boards.add(board); // 게시글 목록은 boards 안에 있음!
 	}
 	
+	
+	public List<Board> selectBoardList() {
+		
+		// View 에 요청에 의해 호출되며,
+		// 게시글 목록이 담겨있는 것을 되돌려주어야함
+		return boards;
+		
+	}
 	
 }
