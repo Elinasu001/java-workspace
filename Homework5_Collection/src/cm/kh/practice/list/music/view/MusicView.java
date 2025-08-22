@@ -116,7 +116,7 @@ public class MusicView {
 	
 	private void searchMusic() {
 		System.out.println("****** 특정 곡 검색 ******");
-		System.out.println("삭제 할 곡 제목을 입력해주세요 > ");
+		System.out.println("검색 할 곡 제목을 입력해주세요 > ");
 		String title = sc.nextLine();
 		
 		Music searched = mc.searchMusic(title);
@@ -125,6 +125,7 @@ public class MusicView {
 			System.out.println();
 			System.out.println("==========================");
 			System.out.println("검색한 곡은" + searched.getTitle() + "입니다.");
+			System.out.println("가수 명은 " + searched.getSinger() + "입니다.");
 			System.out.println("==========================");
 			System.out.println();
 		} else {
@@ -138,20 +139,53 @@ public class MusicView {
 	}
 	
 	private void removeMusic() {
+		System.out.println("****** 특정 곡 삭제 ******");
+		System.out.println("삭제할 곡 제목을 입력해주세요 > ");
+		String title = sc.nextLine();
 		
+		Music delMusic = mc.removeMusic(title);
+		
+		if(delMusic != null) {
+			System.out.println();
+			System.out.println("==========================");
+			System.out.println(delMusic.getTitle() + "을 삭제 했습니다.");
+			System.out.println("==========================");
+			System.out.println();
+		} else {
+			System.out.println("삭제할 곡이 없습니다.");
+		}
 	}
 	
 	private void setMusic() {
+		System.out.println("****** 특정 곡 정보 수정 ******");
+		System.out.println("기존 곡 명을 입력해주세요 > ");
+		String title = sc.nextLine();
 		
+		Music getTitle = mc.searchMusic(title);
+		
+		if(getTitle != null) {
+			System.out.println("수정할 곡을 입력해주세요 > ");
+			String newTitle = sc.nextLine();
+			System.out.println("수정할 가수 명을 입력해주세요 > ");
+			String newSinger = sc.nextLine();
+
+			Music music = new Music(newTitle, newSinger);
+			
+			System.out.println("곡 명 : " + music.getTitle() + "과 가수 명 : " + music.getSinger() + "의 값이 변경되었습니다.");
+			
+		} else {
+			System.out.println("수정할 곡이 없습니다.");
+		}
 	}
 	
 	
 	private void ascTitle() {
+		System.out.println("****** 곡 명 오름차순 정렬 ******");
 		
 	}
 	
 	private void descSinger() {
-		
+		System.out.println("****** 가수 명 내림차순 정렬 ******");
 	}
 	
 }
