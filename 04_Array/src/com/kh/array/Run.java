@@ -13,6 +13,6 @@ public class Run {
 		//a.methodD();
 		//a.methodE();
 		//a.methodF();
-		//a.methodG();
+		a.methodG();
 	}
 }

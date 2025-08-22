@@ -54,13 +54,13 @@ public class Casting {
 		// 1. int(정수, 4Byte) => double(실수, 8Byte)
 		// 변수 선언!과 동시에 초기화
 		int intNum = 10;
-		System.out.println(intNum);
+		System.out.println(intNum); //10
 		double doubleNum = (double)intNum; // 자료형을 앞에 자료형으로 바꿔준다 (사실 안 붙이지만 개념적으로 적음)
-		System.out.println(doubleNum);
+		System.out.println(doubleNum); // 10.0
 		
 		// 2. int(정수, 4Byte)-> long(정수, 8Byte)
 		int bigInteger = 120;
-		long smallLong = /*(long)*/bigInteger;
+		long smallLong = /*(long)*/bigInteger; // 120
 		System.out.println(smallLong);
 		
 		System.out.println("================================");
@@ -83,11 +83,11 @@ public class Casting {
 		
 		// 4. char(2Byte) => int(4Byte) 
 		char ch = 'a';
-		System.out.println(ch);
+		System.out.println(ch); //a
 		int num = ch;
-		System.out.println(num);
+		System.out.println(num); // 97
 		char ch2 = 97;
-		System.out.println(ch2);
+		System.out.println(ch2); //a
 		
 		System.out.println("================================");
 		

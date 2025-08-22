@@ -20,7 +20,7 @@ public class Run {
 		
 		
 		Casting c = new Casting();
-		//c.autoCasting();
+		c.autoCasting();
 		
 		//c.forceCasting();
 	
