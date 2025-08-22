@@ -1,5 +1,6 @@
 package cm.kh.practice.list.music.view;
 
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -25,20 +26,26 @@ public class MusicView {
 			System.out.println("8. 가수명 내림차순 정렬");
 			System.out.println("9. 종료");
 			
-			System.out.println("번호를 선택해 주세요");
-			int menuNo = sc.nextInt();
-			sc.nextLine();
-			switch(menuNo) {
-			case 1 : addList(); break;
-			case 2 : addAtZero(); break;
-			case 3 : printAll();break;
-			case 4 : searchMusic();break;
-			case 5 : removeMusic(); break;
-			case 6 : setMusic(); break;
-			case 7 : ascTitle(); break;
-			case 8 : descSinger(); break;
-			case 9 : return;
+			System.out.println("번호를 선택해 주세요 > ");
+			try {
+				int menuNo = sc.nextInt();
+				sc.nextLine();
+				switch(menuNo) {
+				case 1 : addList(); break;
+				case 2 : addAtZero(); break;
+				case 3 : printAll();break;
+				case 4 : searchMusic();break;
+				case 5 : removeMusic(); break;
+				case 6 : setMusic(); break;
+				case 7 : ascTitle(); break;
+				case 8 : descSinger(); break;
+				case 9 : return;
+				}
+			} catch (InputMismatchException e) {
+				System.out.println("====== 숫자만 입력해주세요 ======");
+				sc.nextLine(); // 무한반복 막기
 			}
+			
 		}
 	}
 	
