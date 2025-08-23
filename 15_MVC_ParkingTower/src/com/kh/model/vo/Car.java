@@ -10,7 +10,6 @@ public class Car {
 	
 	public Car() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 	public Car(int parkingNum, int carNum, int carType, String owner) {
@@ -56,34 +55,16 @@ public class Car {
 	}
 	
 	@Override
-	public int hashCode() {
-		return Objects.hash(carNum, carType, owner, parkingNum);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Car other = (Car) obj;
-		return carNum == other.carNum && carType == other.carType && Objects.equals(owner, other.owner)
-				&& parkingNum == other.parkingNum;
-	}
-	
-	@Override
 	public String toString() {
-		String carType = "";
-		switch(carType){
-			case 1: ListCar(); break;
+		String carTypeStr = "";
+		switch(carType) {
+		case 1 : carTypeStr = "경차"; break;
+		case 2 : carTypeStr = "세단"; break;
+		case 3 : carTypeStr = "SUV"; break;
+		case 4 : carTypeStr = "트럭"; break;
+		default : carTypeStr = "알 수 없음"; break;
 		}
-		return "[ carType=" + carType + "]";
-	}
-
-	private int ListCar(String carType) {
-		return this.carType;
+		return "주차번호 : " + parkingNum + ", 차량번호 : " + carNum + ", 차량종류" + carTypeStr + ", 소유자" + owner;
 	}
 
 }
