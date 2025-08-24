@@ -1,9 +1,11 @@
 package com.kh.view;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.kh.controller.ParkingTowerController;
+import com.kh.model.vo.Car;
 
 public class ParkingTowerView {
 	private Scanner sc = new Scanner(System.in);
@@ -31,7 +33,7 @@ public class ParkingTowerView {
 				case 2: deleteCar(); break;
 				case 3: searchCar(); break;
 				case 4: selectList(); break;
-				case 0: return;
+				case 0: System.out.println("서비스가 종료되었습니다."); return;
 				}
 			} catch (InputMismatchException e) {
 				System.out.println("======== 번호로 선택해주세요 ========");
@@ -58,7 +60,6 @@ public class ParkingTowerView {
 				System.out.println("숫자로 입력해주세요 :) ");
 				sc.nextLine();
 			}
-			
 		}
 		while(true) {
 			try {
@@ -72,7 +73,6 @@ public class ParkingTowerView {
 				System.out.println("숫자로 입력해주세요 :) ");
 				sc.nextLine();
 			}
-			break;
 		}
 		
 		System.out.println("소유자 이름을 입력하세요 > ");
@@ -92,15 +92,62 @@ public class ParkingTowerView {
 	}
 	// 출차 : 차량번호로 검색 -> 존재하면 remove -> 1반환, 없으면 0
 	private void deleteCar() {
+		System.out.println("\n========== 차량 출차 ==========");
 		
+		int carNum = 0;
+		while(true) {
+			try {
+				 System.out.println();
+				 System.out.print("출차할 차량번호를 입력하세요 > ");
+				 carNum = sc.nextInt();
+				 sc.nextLine();
+				 break;
+			        
+			} catch (InputMismatchException e) {
+				System.out.println("숫자로 입력해주세요 :) ");
+				sc.nextLine();
+			}
+		}
+		
+		int result = ptc.deleteCar(carNum);
+        
+        if(result == 1) {
+        	System.out.println("차량이 성공적으로 출차되었습니다!");
+        } else {
+        	System.out.println("해당 번호를 찾을 수 없습니다.");
+        }
+       
 	}
 	// 검색(read 조건) : 소유자명으로 필터 -> 결과 리스트 반환
 	private void searchCar() {
-		
+		System.out.println("\n========== 주차된 차량 검색 ==========");
+        System.out.print("검색할 소유자 이름을 입력하세요 : ");
+        String owner = sc.nextLine();
+        
+        ArrayList<Car> searchResult = ptc.searchCar(owner);
+
+        if(searchResult.isEmpty()) {
+            System.out.println("해당 소유자의 차량을 찾을 수 없습니다.");
+        } else {
+            System.out.println("\n검색 결과:");
+            for(Car car : searchResult) {
+                System.out.println(car.toString());
+            }
+        }
+        
 	}
 	// 전체조회(read 전체) : 리스트 반환 -> view 에서 순회 출력
 	private void selectList() {
 		
+		 System.out.println("\n========== 전체 주차 현황 ==========");
+		 ArrayList<Car> allCars = ptc.selectList();
+		 
+		 if(allCars.isEmpty()) {
+			 System.out.println("주차된 차량이 없습니다.");
+		 } else{
+			 System.out.println("전체 주차된 차량 결과입니다.");
+			 System.out.println(allCars.toString());
+		 }
 	}
 	
 	

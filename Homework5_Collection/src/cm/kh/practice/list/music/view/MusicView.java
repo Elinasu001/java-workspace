@@ -79,10 +79,10 @@ public class MusicView {
 	private void addAtZero() {
 		System.out.println("****** 첫 위치에 곡 추가 ******");
 		
-		System.out.println("곡 명을 입력해주세요");
+		System.out.println("곡 명을 입력해주세요 > ");
 		String title = sc.nextLine();
 		
-		System.out.println("가수 명을 입력해주세요.");
+		System.out.println("가수 명을 입력해주세요. > ");
 		String singer = sc.nextLine();
 		
 		Music music = new Music(title, singer);

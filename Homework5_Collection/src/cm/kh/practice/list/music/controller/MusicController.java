@@ -22,7 +22,7 @@ public class MusicController {
 		// 첫 번째 리스트에 객체 저장, 1 리턴
 
 		list.add(0, music);
-		return 0;
+		return 1;
 	}
 	
 	public List<Music> printAll() {
@@ -70,12 +70,12 @@ public class MusicController {
 	public int ascTitle() {
 		// 리스트 곡 명 오름차순 정렬, 제목이 같으면 가수 명으로 오름차순 정렬, 1 리턴
 		
-		return 0;
+		return 1;
 	}
 	
 	public int descSinger() {
 		// 리스트 가수 명 내림차순 정렬, 1 리턴
-		return 0;
+		return 1;
 	}
 
 	
