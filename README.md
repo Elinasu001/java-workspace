@@ -315,6 +315,8 @@
     - ServerSocket
     - [SERVER](https://github.com/Elinasu001/java-workspace.git) 와 [CLIENT](https://github.com/Elinasu001/client-workspace.git) 연결
 ---
+- 마지막 : Lambda & Stream
+---
 🛠 개발 환경
 AWS JDK 2021
 Eclipse 2024.06
