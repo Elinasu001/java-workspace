@@ -146,14 +146,14 @@ public class Run {
 		}
 		System.out.println(nameLength); // [5, 2, 4, 5, 4]
 		
-		System.out.println("----ㅡmap_스트림 방식 + collect----");
+		System.out.println("----map_스트림 방식 + collect----");
 		List<Integer> lengths = coffee.stream()
 										//.map(c -> c.length())
 										.map(String::length) // 람다식도 사용 안하고 싶을 경우 
 										.collect(Collectors.toList());
 	
 		System.out.println(lengths); // [5, 2, 4, 5, 4]
-		System.out.println("==========map_람다식 + collect_단독 출력 람다식=========");
+		System.out.println("----map_스트림 방식 + collect_단독 출력----");
 		// 단독 출력 람다식
 		coffee.stream().map(c -> c + "의 길이 : " + c.length())
 						//.forEach(1 -> System.out.println(1)); // 람다식도 사용 안하고 싶을 경우
