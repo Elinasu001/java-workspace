@@ -1,7 +1,9 @@
 package com.kh.last;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Run {
 
@@ -12,7 +14,7 @@ public class Run {
 			System.out.println(name + "은(는) 정말 못말려~");
 		}
 		
-		System.out.println("==========람다식 호출=========");
+		System.out.println("==========람다식 호출 + map + forEach=========");
 		// Stream API + 람다식
 		// 반복문을 돌릴 때 for 문을 사용하지 않고 데이터를 동일하게 출력 할 수 있다.
 		names.stream().map(name -> name + "은(는) 못말려~~").forEach(System.out::println);
@@ -38,7 +40,7 @@ public class Run {
 		
 		double average = (double)sum / count;
 		System.out.println(average);
-		System.out.println("==========람다식 호출=========");
+		System.out.println("==========람다식 호출 + filter + average + orElse =========");
 		double streamAvg = Arrays.stream(scores).filter(score -> score >= 60).average().orElse(0.0);
 		System.out.println(streamAvg);
 		// filter : 조건을 적는다.
@@ -101,13 +103,56 @@ public class Run {
 		System.out.println("2 + 4 = " + adder2.cal(2,  4));
 		System.out.println("2 - 4 = " + minuser2.cal(2, 4));
 		
+		// map(), filter() ★★★★★★★ 많이 사용
+		
+		System.out.println("==========filter_정통적인 방식=========");
+		// filter => 조건에 맞는 것만필터링 할 수 있음
+		List<String> coffee = Arrays.asList("아메리카노", "라떼", "콜드브루", "에스프레소", "헤이즐넛");
+		List<String> longNameCoffee = new ArrayList();
+		
+		for(String c: coffee) {
+			if(c.length() == 5) {
+				longNameCoffee.add(c);
+			}
+		}
+		System.out.println(longNameCoffee); // [아메리카노, 에스프레소]
+		
+		System.out.println("==========filter_람다식 + collect=========");
+		List<String> coffeeList = coffee.stream().filter(c -> c.length() == 5).collect(Collectors.toList());
+		System.out.println(coffeeList); // [아메리카노, 에스프레소]
+		
+		System.out.println("==========map_전통적인 방식=========");
+		// map -> 스트림을 이용해서 데이터 변환하는 용도
+		List<Integer> nameLength = new ArrayList();
+		for(String name : coffee) {
+			nameLength.add(name.length());
+		}
+		System.out.println(nameLength); // [5, 2, 4, 5, 4]
+		
+		System.out.println("==========map_람다식 + collect=========");
+		List<Integer> lengths = coffee.stream()
+										//.map(c -> c.length())
+										.map(String::length) // 람다식도 사용 안하고 싶을 경우 
+										.collect(Collectors.toList());
+	
+		System.out.println(lengths); // [5, 2, 4, 5, 4]
+		System.out.println("==========map_람다식 + collect_단독 출력 람다식=========");
+		// 단독 출력 람다식
+		coffee.stream().map(c -> c + "의 길이 : " + c.length())
+						//.forEach(1 -> System.out.println(1)); // 람다식도 사용 안하고 싶을 경우
+						.forEach(System.out::println);
+		
+		
+		System.out.println("==========다시 전체 써보기=========");
+		
+		
+		
 	}
 	
 	// 함수형 인터페이스 선언
-	@FunctionalInterface // 클래스 내부에 인터페이스 
+	@FunctionalInterface // 클래스 내부 인터페이스 , 인터페이스 함수형으로 컴파일러가 아 이거 함수형 인터페이스구나 라고 인식함
 	interface SimpleCal{
-		int cal(int a, int b); // 추상 메소드
+		int cal(int a, int b); // ** 하나의 추상 메소드만 가지고 있어야함
 	}
-	
 
 }
