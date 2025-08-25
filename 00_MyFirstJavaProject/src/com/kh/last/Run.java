@@ -6,6 +6,21 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Run {
+	/*
+	 * 스트림의 주요 중간 연산
+	 * 
+	 * 1. filter() : 조건에 맞는 요소만 필터링
+	 * 2. map() : 요소를 반환할 때 사용하는 연산
+	 * 3. distinct() : 요소의 중복을 제거할 때 사용
+	 * 
+	 * 스트림의 주요 최종 연산
+	 * 
+	 * 1. collect() : 결과를 컬렉션으로 변환
+	 * 2. forEach() : 모든 요소에 대한 작업 수행
+	 * 3. count() : 요소의 개수 반환
+	 * 4. reduce() : 요소를 결합해서 단일 결과 만들어 낼 때
+	 * 
+	 */
 
 	public static void main(String[] args) {
 		
@@ -41,7 +56,8 @@ public class Run {
 		double average = (double)sum / count;
 		System.out.println(average);
 		System.out.println("==========람다식 호출 + filter + average + orElse =========");
-		double streamAvg = Arrays.stream(scores).filter(score -> score >= 60).average().orElse(0.0);
+		double streamAvg = Arrays.stream(scores).filter(score -> score >= 60)
+												.average().orElse(0.0);
 		System.out.println(streamAvg);
 		// filter : 조건을 적는다.
 		// 람다식 : score -> score >= 60 
@@ -96,7 +112,7 @@ public class Run {
 		System.out.println("5 - 3 = " + minuser.cal(5, 3));
 		
 		
-		System.out.println("==========람다식 호출=========");
+		System.out.println("----람다식 호출----");
 		// 람다식 호출
 		SimpleCal adder2 = (a, b) -> a + b; // a, b를 호출 하여 a + b로 리턴
 		SimpleCal minuser2 = (a, b) -> a -b;
@@ -105,7 +121,7 @@ public class Run {
 		
 		// map(), filter() ★★★★★★★ 많이 사용
 		
-		System.out.println("==========filter_정통적인 방식=========");
+		System.out.println("----filter_원래 방식----");
 		// filter => 조건에 맞는 것만필터링 할 수 있음
 		List<String> coffee = Arrays.asList("아메리카노", "라떼", "콜드브루", "에스프레소", "헤이즐넛");
 		List<String> longNameCoffee = new ArrayList();
@@ -117,11 +133,12 @@ public class Run {
 		}
 		System.out.println(longNameCoffee); // [아메리카노, 에스프레소]
 		
-		System.out.println("==========filter_람다식 + collect=========");
-		List<String> coffeeList = coffee.stream().filter(c -> c.length() == 5).collect(Collectors.toList());
+		System.out.println("----filter_스트림 방식 + collect----");
+		List<String> coffeeList = coffee.stream().filter(c -> c.length() == 5)
+				                                 .collect(Collectors.toList());
 		System.out.println(coffeeList); // [아메리카노, 에스프레소]
 		
-		System.out.println("==========map_전통적인 방식=========");
+		System.out.println("----map_원래 방식----");
 		// map -> 스트림을 이용해서 데이터 변환하는 용도
 		List<Integer> nameLength = new ArrayList();
 		for(String name : coffee) {
@@ -129,7 +146,7 @@ public class Run {
 		}
 		System.out.println(nameLength); // [5, 2, 4, 5, 4]
 		
-		System.out.println("==========map_람다식 + collect=========");
+		System.out.println("----ㅡmap_스트림 방식 + collect----");
 		List<Integer> lengths = coffee.stream()
 										//.map(c -> c.length())
 										.map(String::length) // 람다식도 사용 안하고 싶을 경우 
@@ -143,9 +160,32 @@ public class Run {
 						.forEach(System.out::println);
 		
 		
-		System.out.println("==========다시 전체 써보기=========");
+		System.out.println("==========다시 전체 써보기(Person)=========");
+		List<Person> people = Arrays.asList(new Person("홍길동", "한양", 15),
+											new Person("고길동", "서울", 40),
+											new Person("춘향이", "남원", 20),
+											new Person("콩쥐", "서울", 23));
 		
+		System.out.println("==서울 사람만 출력하기==");
+		System.out.println("----원래 방식----");
+		for(Person person : people) {
+			if("서울".equals(person.getAddress())) {
+				System.out.println(person);
+			}
+		}
+		System.out.println("----스트림 방식----");
+		people.stream().filter(person -> "서울".equals(person.getAddress()))
+					   .forEach(System.out::println);
 		
+		// 이름과 주소 출력하기
+		System.out.println("==이름과 주소 출력하기==");
+		System.out.println("----원래 방식----");
+		for(Person person : people) {
+			System.out.println(person.getName() + "님은 " + person.getAddress() + "에 삽니다.");
+		}
+		System.out.println("----스트림 방식----");
+		people.stream().map(person -> person.getName() + "님은 " + person.getAddress() + "에 삽니다.")
+					   .forEach(System.out::println);
 		
 	}
 	
